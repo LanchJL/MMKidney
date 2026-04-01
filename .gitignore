@@ -1,0 +1,34 @@
+# Data
+data/
+datasets/
+
+# Checkpoints / model weights
+checkpoints/
+*.pth
+*.pt
+*.ckpt
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Logs / outputs
+logs/
+runs/
+outputs/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
