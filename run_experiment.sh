@@ -106,9 +106,16 @@ for f in "${TRAIN_JSON}" "${VAL_JSON}"; do
 done
 
 # Fast preflight: check whether at least one referenced H5 file exists.
-FIRST_H5="$(rg -m1 '\"h5\"\\s*:' "${TRAIN_JSON}" | sed -E 's/.*\"h5\"\\s*:\\s*\"([^\"]+)\".*/\1/' || true)"
-if [[ -z "${FIRST_H5}" ]]; then
-  FIRST_H5="$(rg -m1 '\\.h5\"' "${TRAIN_JSON}" | sed -E 's/.*\"([^\"]+\\.h5)\".*/\1/' || true)"
+if command -v rg >/dev/null 2>&1; then
+  FIRST_H5="$(rg -m1 '\"h5\"\\s*:' "${TRAIN_JSON}" | sed -E 's/.*\"h5\"\\s*:\\s*\"([^\"]+)\".*/\1/' || true)"
+  if [[ -z "${FIRST_H5}" ]]; then
+    FIRST_H5="$(rg -m1 '\\.h5\"' "${TRAIN_JSON}" | sed -E 's/.*\"([^\"]+\\.h5)\".*/\1/' || true)"
+  fi
+else
+  FIRST_H5="$(grep -m1 -E '\"h5\"[[:space:]]*:' "${TRAIN_JSON}" | sed -E 's/.*\"h5\"[[:space:]]*:[[:space:]]*\"([^\"]+)\".*/\1/' || true)"
+  if [[ -z "${FIRST_H5}" ]]; then
+    FIRST_H5="$(grep -m1 -E '\.h5\"' "${TRAIN_JSON}" | sed -E 's/.*\"([^\"]+\.h5)\".*/\1/' || true)"
+  fi
 fi
 if [[ -n "${FIRST_H5}" && ! -f "${FIRST_H5}" ]]; then
   echo "[WARN] Referenced H5 not found: ${FIRST_H5}"
