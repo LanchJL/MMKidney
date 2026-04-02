@@ -10,7 +10,7 @@ from data import make_dataloader
 from models import HierMultiLabelNet, HierMultiLabelMIL, HierMultiLabelMIL_MultiStain
 from losses import HierMultiLabelLoss, attention_diversity_loss
 from hierarchy import build_parent_map_auto
-from utils import TrainConfig, set_seed, evaluate, save_json
+from utils import TrainConfig, set_seed, evaluate, save_json, move_labels_to_device
 
 
 def train_loop(
@@ -47,6 +47,7 @@ def train_loop(
                     xs = [x.to(device) for x in xs]
                 else:
                     xs = [{k: v.to(device) for k, v in x.items()} for x in xs]
+                labels = move_labels_to_device(labels, device)
                 extra = extra.to(device) if extra is not None else None
                 logits, aux = model(xs, extra=extra, return_attn=True)
                 loss = loss_fn(logits, labels, parent_map=parent_map)
@@ -55,6 +56,7 @@ def train_loop(
             else:
                 feats, labels, ids, extra = batch
                 feats = feats.to(device)
+                labels = move_labels_to_device(labels, device)
                 extra = extra.to(device) if extra is not None else None
                 logits = model(feats, extra=extra)
                 loss = loss_fn(logits, labels, parent_map=parent_map)
