@@ -10,7 +10,14 @@ from data import make_dataloader
 from models import HierMultiLabelNet, HierMultiLabelMIL, HierMultiLabelMIL_MultiStain
 from losses import HierMultiLabelLoss, attention_diversity_loss
 from hierarchy import build_parent_map_auto
-from utils import TrainConfig, set_seed, evaluate, save_json, move_labels_to_device
+from utils import (
+    TrainConfig,
+    set_seed,
+    evaluate,
+    save_json,
+    move_labels_to_device,
+    fit_per_class_thresholds,
+)
 
 
 def train_loop(
@@ -157,6 +164,31 @@ def run_training(conf: TrainConfig, train_samples, val_samples, test_samples=Non
     )
     print(f"[OK] best model saved at: {best_path}")
 
+    # Fit per-class thresholds on validation set using the best checkpoint.
+    state = torch.load(best_path, map_location=device)
+    model.load_state_dict(state, strict=True)
+
+    if is_mil or is_mil_ms:
+        def forward_fn_eval(xs, extra):
+            out = model(xs, extra=extra, return_attn=False)
+            return out[0] if isinstance(out, tuple) else out
+    else:
+        def forward_fn_eval(x, extra):
+            out = model(x, extra=extra)
+            return out[0] if isinstance(out, tuple) else out
+
+    tuned_thresholds = fit_per_class_thresholds(model, val_loader, forward_fn_eval, device)
+    save_json(os.path.join(conf.out_dir, "val_per_class_thresholds.json"), tuned_thresholds)
+    val_metrics_tuned = evaluate(model, val_loader, forward_fn_eval, device, thresholds=tuned_thresholds)
+    save_json(os.path.join(conf.out_dir, "val_best_metrics_tuned.json"), val_metrics_tuned)
+
+    print(
+        "[VAL-TUNED] "
+        f"L1 F1@tuned={val_metrics_tuned.get('L1', {}).get('F1@tuned', 'nan'):.4f} | "
+        f"L2 F1@tuned={val_metrics_tuned.get('L2', {}).get('F1@tuned', 'nan'):.4f} | "
+        f"L3 F1@tuned={val_metrics_tuned.get('L3', {}).get('F1@tuned', 'nan'):.4f}"
+    )
+
     if test_samples:
         test_loader = make_dataloader(
             test_samples,
@@ -166,20 +198,11 @@ def run_training(conf: TrainConfig, train_samples, val_samples, test_samples=Non
             num_workers=conf.num_workers,
             max_patches=conf.max_patches,
         )
-        state = torch.load(best_path, map_location=device)
-        model.load_state_dict(state, strict=True)
-
-        if is_mil or is_mil_ms:
-            def forward_fn_eval(xs, extra):
-                out = model(xs, extra=extra, return_attn=False)
-                return out[0] if isinstance(out, tuple) else out
-        else:
-            def forward_fn_eval(x, extra):
-                out = model(x, extra=extra)
-                return out[0] if isinstance(out, tuple) else out
 
         test_metrics = evaluate(model, test_loader, forward_fn_eval, device)
         save_json(os.path.join(conf.out_dir, "test_metrics.json"), test_metrics)
+        test_metrics_tuned = evaluate(model, test_loader, forward_fn_eval, device, thresholds=tuned_thresholds)
+        save_json(os.path.join(conf.out_dir, "test_metrics_tuned.json"), test_metrics_tuned)
 
         print(
             "[TEST] "
@@ -192,6 +215,12 @@ def run_training(conf: TrainConfig, train_samples, val_samples, test_samples=Non
             f"L3 AUC={test_metrics.get('L3', {}).get('AUROC', 'nan'):.4f} "
             f"AUPRC={test_metrics.get('L3', {}).get('AUPRC', 'nan'):.4f} "
             f"F1={test_metrics.get('L3', {}).get('F1@0.5', 'nan'):.4f}"
+        )
+        print(
+            "[TEST-TUNED] "
+            f"L1 F1@tuned={test_metrics_tuned.get('L1', {}).get('F1@tuned', 'nan'):.4f} | "
+            f"L2 F1@tuned={test_metrics_tuned.get('L2', {}).get('F1@tuned', 'nan'):.4f} | "
+            f"L3 F1@tuned={test_metrics_tuned.get('L3', {}).get('F1@tuned', 'nan'):.4f}"
         )
 
 
