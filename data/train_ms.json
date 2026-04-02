@@ -1,0 +1,4022 @@
+[
+  {
+    "id": "15S27549",
+    "h5s": {
+      "CD19": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S27549-CD19.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S27549-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S27549-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S27549-CD4.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S27549-CD8.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S27549-EBER.h5",
+      "Foxp3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S27549-Foxp3.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S27549-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S27549-HE.h5",
+      "LCA": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S27549-LCA.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S27549-Perforin.h5",
+      "RS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S27549-RS.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S27549-SV40.h5",
+      "TIA": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S27549-TIA.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "15S31368",
+    "h5s": {
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S31368-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S31368-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S31368-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S31368-CD4.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S31368-CD8.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S31368-CMV.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S31368-EBER.h5",
+      "Foxp3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S31368-Foxp3.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S31368-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S31368-HE.h5",
+      "LCA": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S31368-LCA.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S31368-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S31368-SV40.h5",
+      "TIA": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S31368-TIA.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  {
+    "id": "15S36662",
+    "h5s": {
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S36662-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S36662-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S36662-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S36662-CD4.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S36662-CD8.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S36662-CMV.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S36662-EBER.h5",
+      "Foxp3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S36662-Foxp3.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S36662-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S36662-HE.h5",
+      "LCA": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S36662-LCA.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S36662-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S36662-SV40.h5",
+      "TIA": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S36662-TIA.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "15S40413",
+    "h5s": {
+      "CD19": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S40413-CD19.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S40413-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S40413-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S40413-CD4.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S40413-CD8.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S40413-EBER.h5",
+      "Foxp3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S40413-Foxp3.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S40413-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S40413-HE.h5",
+      "LCA": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S40413-LCA.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S40413-Perforin.h5",
+      "RS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S40413-RS.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S40413-SV40.h5",
+      "TIA": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/15S40413-TIA.h5"
+    },
+    "labels": {
+      "L1": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "16S09839",
+    "h5s": {
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S09839-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S09839-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S09839-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S09839-CD4.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S09839-CD8.h5",
+      "Foxp3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S09839-Foxp3.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S09839-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S09839-HE.h5",
+      "PAS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S09839-PAS.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S09839-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S09839-SV40.h5",
+      "TIA": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S09839-TIA.h5"
+    },
+    "labels": {
+      "L1": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  {
+    "id": "16S13481",
+    "h5s": {
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S13481-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S13481-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S13481-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S13481-CD4.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S13481-CD8.h5",
+      "CK": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S13481-CK.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S13481-CMV.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S13481-EBER.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S13481-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S13481-HE.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S13481-Perforin.h5",
+      "RS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S13481-RS.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "16S14749",
+    "h5s": {
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S14749-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S14749-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S14749-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S14749-CD4.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S14749-CD8.h5",
+      "CK": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S14749-CK.h5",
+      "Foxp3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S14749-Foxp3.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S14749-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S14749-HE.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S14749-Perforin.h5",
+      "RS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S14749-RS.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S14749-SV40.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "16S27058",
+    "h5s": {
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S27058-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S27058-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S27058-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S27058-CD4.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S27058-CD8.h5",
+      "CK": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S27058-CK.h5",
+      "Foxp3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S27058-Foxp3.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S27058-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S27058-HE.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S27058-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/16S27058-SV40.h5"
+    },
+    "labels": {
+      "L1": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "17S03933",
+    "h5s": {
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S03933-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S03933-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S03933-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S03933-CD4.h5",
+      "CD68": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S03933-CD68.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S03933-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S03933-CD8.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S03933-CMV.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S03933-EBER.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S03933-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S03933-HE.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S03933-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S03933-SV40.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S03933-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "17S20637",
+    "h5s": {
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S20637-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S20637-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S20637-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S20637-CD4.h5",
+      "CD68": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S20637-CD68.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S20637-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S20637-CD8.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S20637-CMV.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S20637-EBER.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S20637-GranB.h5",
+      "HBcAg": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S20637-HBcAg.h5",
+      "HBsAg": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S20637-HBsAg.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S20637-HE.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S20637-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S20637-SV40.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S20637-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "17S22509",
+    "h5s": {
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S22509-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S22509-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S22509-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S22509-CD4.h5",
+      "CD68": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S22509-CD68.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S22509-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S22509-CD8.h5",
+      "CK": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S22509-CK.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S22509-CMV.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S22509-EBER.h5",
+      "Foxp3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S22509-Foxp3.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S22509-GranB.h5",
+      "HBcAg": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S22509-HBcAg.h5",
+      "HBsAg": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S22509-HBsAg.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S22509-HE.h5",
+      "HE_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S22509-HE_v2.h5",
+      "HE_v3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S22509-HE_v3.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S22509-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S22509-SV40.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S22509-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "17S26254",
+    "h5s": {
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S26254-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S26254-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S26254-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S26254-CD4.h5",
+      "CD4_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S26254-CD4_v2.h5",
+      "CD68": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S26254-CD68.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S26254-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S26254-CD8.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S26254-CMV.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S26254-EBER.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S26254-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S26254-HE.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S26254-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S26254-SV40.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S26254-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "17S26999",
+    "h5s": {
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S26999-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S26999-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S26999-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S26999-CD4.h5",
+      "CD68": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S26999-CD68.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S26999-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S26999-CD8.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S26999-CMV.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S26999-EBER.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S26999-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S26999-HE.h5",
+      "PAS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S26999-PAS.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S26999-Perforin.h5",
+      "RS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S26999-RS.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S26999-SV40.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S26999-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  {
+    "id": "17S44231",
+    "h5s": {
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S44231-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S44231-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S44231-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S44231-CD4.h5",
+      "CD68": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S44231-CD68.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S44231-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S44231-CD8.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S44231-CMV.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S44231-EBER.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S44231-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S44231-HE.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S44231-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S44231-SV40.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S44231-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "17S44321",
+    "h5s": {
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S44321-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S44321-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S44321-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S44321-CD4.h5",
+      "CD68": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S44321-CD68.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S44321-CD8.h5",
+      "CK": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S44321-CK.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S44321-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S44321-HE.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S44321-MASSON.h5",
+      "PAS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S44321-PAS.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S44321-SV40.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "17S47825",
+    "h5s": {
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S47825-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S47825-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S47825-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S47825-CD4.h5",
+      "CD68": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S47825-CD68.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S47825-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S47825-CD8.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S47825-CMV.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S47825-EBER.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S47825-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S47825-HE.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S47825-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S47825-SV40.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S47825-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  {
+    "id": "17S49755",
+    "h5s": {
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S49755-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S49755-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S49755-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S49755-CD4.h5",
+      "CD68": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S49755-CD68.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S49755-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S49755-CD8.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S49755-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S49755-HE.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S49755-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S49755-SV40.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S49755-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  {
+    "id": "17S55318",
+    "h5s": {
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S55318-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S55318-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S55318-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S55318-CD4.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S55318-CD8.h5",
+      "CK": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S55318-CK.h5",
+      "Foxp3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S55318-Foxp3.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S55318-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S55318-HE.h5",
+      "PAS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S55318-PAS.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S55318-Perforin.h5",
+      "RS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S55318-RS.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S55318-SV40.h5"
+    },
+    "labels": {
+      "L1": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "17S55320",
+    "h5s": {
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S55320-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S55320-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S55320-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S55320-CD4.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S55320-CD8.h5",
+      "CK": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S55320-CK.h5",
+      "Foxp3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S55320-Foxp3.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S55320-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S55320-HE.h5",
+      "PAS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S55320-PAS.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S55320-Perforin.h5",
+      "RS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S55320-RS.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/17S55320-SV40.h5"
+    },
+    "labels": {
+      "L1": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  {
+    "id": "18S02937",
+    "h5s": {
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S02937-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S02937-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S02937-CD3.h5",
+      "CD3_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S02937-CD3_v2.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S02937-CD4.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S02937-CD8.h5",
+      "CK": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S02937-CK.h5",
+      "Foxp3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S02937-Foxp3.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S02937-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S02937-HE.h5",
+      "PAS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S02937-PAS.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S02937-SV40.h5"
+    },
+    "labels": {
+      "L1": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "18S02938",
+    "h5s": {
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S02938-C4d.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S02938-CD3.h5",
+      "CD3_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S02938-CD3_v2.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S02938-CD4.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S02938-CD8.h5",
+      "CK": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S02938-CK.h5",
+      "Foxp3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S02938-Foxp3.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S02938-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S02938-HE.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S02938-SV40.h5"
+    },
+    "labels": {
+      "L1": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "18S10787",
+    "h5s": {
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S10787-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S10787-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S10787-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S10787-CD4.h5",
+      "CD68": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S10787-CD68.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S10787-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S10787-CD8.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S10787-CMV.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S10787-EBER.h5",
+      "Foxp3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S10787-Foxp3.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S10787-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S10787-HE.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S10787-SV40.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S10787-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "18S21748",
+    "h5s": {
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S21748-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S21748-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S21748-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S21748-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S21748-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S21748-CD8.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S21748-CMV.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S21748-EBER.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S21748-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S21748-HE.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S21748-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S21748-SV40.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S21748-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "18S30179",
+    "h5s": {
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S30179-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S30179-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S30179-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S30179-CD4.h5",
+      "CK": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S30179-CK.h5",
+      "CK8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S30179-CK8.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S30179-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S30179-HE.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S30179-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S30179-SV40.h5",
+      "TIA": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S30179-TIA.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  {
+    "id": "18S38832",
+    "h5s": {
+      "BM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S38832-BM.h5",
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S38832-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S38832-CD20.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S38832-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S38832-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S38832-CD8.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S38832-CMV.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S38832-EBER.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S38832-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S38832-HE.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S38832-MASSON.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S38832-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S38832-SV40.h5",
+      "TLXW": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S38832-TLXW.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S38832-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "18S38887",
+    "h5s": {
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S38887-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S38887-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S38887-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S38887-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S38887-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S38887-CD8.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S38887-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S38887-HE.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S38887-SV40.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S38887-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "18S06104",
+    "h5s": {
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S06104-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S06104-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S06104-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S06104-CD4.h5",
+      "CD68": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S06104-CD68.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S06104-CD8.h5",
+      "CK": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S06104-CK.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S06104-CMV.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S06104-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S06104-HE.h5",
+      "KI67": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S06104-KI67.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S06104-SV40.h5"
+    },
+    "labels": {
+      "L1": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "18S39901",
+    "h5s": {
+      "BM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S39901-BM.h5",
+      "BM_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S39901-BM_v2.h5",
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S39901-C4d.h5",
+      "C4d_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S39901-C4d_v2.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S39901-CD20.h5",
+      "CD20_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S39901-CD20_v2.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S39901-CD3.h5",
+      "CD3_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S39901-CD3_v2.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S39901-CD4.h5",
+      "CD4_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S39901-CD4_v2.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S39901-CD79.h5",
+      "CD79_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S39901-CD79_v2.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S39901-CD8.h5",
+      "CD8_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S39901-CD8_v2.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S39901-CMV.h5",
+      "CMV_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S39901-CMV_v2.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S39901-EBER.h5",
+      "EBER_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S39901-EBER_v2.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S39901-GranB.h5",
+      "GranB_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S39901-GranB_v2.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S39901-HE.h5",
+      "HE_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S39901-HE_v2.h5",
+      "HE_v3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S39901-HE_v3.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S39901-MASSON.h5",
+      "MASSON_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S39901-MASSON_v2.h5",
+      "PAS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S39901-PAS.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S39901-Perforin.h5",
+      "Perforin_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S39901-Perforin_v2.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S39901-SV40.h5",
+      "SV40_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S39901-SV40_v2.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S39901-ck_pan_.h5",
+      "ck_pan__v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S39901-ck_pan__v2.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "19S43137",
+    "h5s": {
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S43137-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S43137-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S43137-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S43137-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S43137-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S43137-CD8.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S43137-CMV.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S43137-EBER.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S43137-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S43137-HE.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S43137-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S43137-SV40.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S43137-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "20S75822",
+    "h5s": {
+      "BM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S75822-BM.h5",
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S75822-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S75822-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S75822-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S75822-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S75822-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S75822-CD8.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S75822-CMV.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S75822-EBER.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S75822-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S75822-HE.h5",
+      "HE_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S75822-HE_v2.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S75822-MASSON.h5",
+      "PAS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S75822-PAS.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S75822-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S75822-SV40.h5",
+      "TLXW": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S75822-TLXW.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S75822-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "22S047898",
+    "h5s": {
+      "BP": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S047898-BP.h5",
+      "BP_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S047898-BP_v2.h5",
+      "BP_v3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S047898-BP_v3.h5",
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S047898-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S047898-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S047898-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S047898-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S047898-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S047898-CD8.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S047898-CMV.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S047898-EBER.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S047898-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S047898-HE.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S047898-MASSON.h5",
+      "PAS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S047898-PAS.h5",
+      "PASM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S047898-PASM.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S047898-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S047898-SV40.h5",
+      "TLXW": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S047898-TLXW.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S047898-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "23S076711",
+    "h5s": {
+      "BM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S076711-BM.h5",
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S076711-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S076711-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S076711-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S076711-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S076711-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S076711-CD8.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S076711-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S076711-HE.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S076711-MASSON.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S076711-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S076711-SV40.h5",
+      "TLXW": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S076711-TLXW.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S076711-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "24S040542",
+    "h5s": {
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S040542-HE.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "18S52000",
+    "h5s": {
+      "BM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S52000-BM.h5",
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S52000-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S52000-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S52000-CD3.h5",
+      "CD3_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S52000-CD3_v2.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S52000-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S52000-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S52000-CD8.h5",
+      "CK": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S52000-CK.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S52000-CMV.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S52000-EBER.h5",
+      "Foxp3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S52000-Foxp3.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S52000-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S52000-HE.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S52000-MASSON.h5",
+      "PAS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S52000-PAS.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S52000-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S52000-SV40.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S52000-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ]
+    }
+  },
+  {
+    "id": "18S53634",
+    "h5s": {
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S53634-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S53634-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S53634-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S53634-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S53634-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S53634-CD8.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S53634-CMV.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S53634-EBER.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S53634-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S53634-HE.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S53634-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S53634-SV40.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S53634-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "18S63214",
+    "h5s": {
+      "BM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S63214-BM.h5",
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S63214-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S63214-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S63214-CD3.h5",
+      "CD3_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S63214-CD3_v2.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S63214-CD4.h5",
+      "CD68": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S63214-CD68.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S63214-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S63214-CD8.h5",
+      "CK": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S63214-CK.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S63214-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S63214-HE.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S63214-MASSON.h5",
+      "PAS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S63214-PAS.h5",
+      "RS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S63214-RS.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S63214-SV40.h5",
+      "TIA": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/18S63214-TIA.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "19S04855",
+    "h5s": {
+      "BM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S04855-BM.h5",
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S04855-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S04855-CD20.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S04855-CD4.h5",
+      "CD68": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S04855-CD68.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S04855-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S04855-CD8.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S04855-CMV.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S04855-EBER.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S04855-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S04855-HE.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S04855-MASSON.h5",
+      "MASSON_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S04855-MASSON_v2.h5",
+      "PAS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S04855-PAS.h5",
+      "PAS_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S04855-PAS_v2.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S04855-SV40.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S04855-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ]
+    }
+  },
+  {
+    "id": "19S07602",
+    "h5s": {
+      "BM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S07602-BM.h5",
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S07602-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S07602-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S07602-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S07602-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S07602-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S07602-CD8.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S07602-CMV.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S07602-EBER.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S07602-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S07602-HE.h5",
+      "HE_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S07602-HE_v2.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S07602-MASSON.h5",
+      "PAS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S07602-PAS.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S07602-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S07602-SV40.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S07602-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "19S18928",
+    "h5s": {
+      "BM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S18928-BM.h5",
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S18928-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S18928-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S18928-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S18928-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S18928-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S18928-CD8.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S18928-CMV.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S18928-EBER.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S18928-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S18928-HE.h5",
+      "HE_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S18928-HE_v2.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S18928-MASSON.h5",
+      "PAS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S18928-PAS.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S18928-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S18928-SV40.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S18928-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  {
+    "id": "19S21721",
+    "h5s": {
+      "BM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S21721-BM.h5",
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S21721-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S21721-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S21721-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S21721-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S21721-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S21721-CD8.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S21721-CMV.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S21721-EBER.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S21721-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S21721-HE.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S21721-MASSON.h5",
+      "PAS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S21721-PAS.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S21721-Perforin.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S21721-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ]
+    }
+  },
+  {
+    "id": "19S22695",
+    "h5s": {
+      "BM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S22695-BM.h5",
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S22695-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S22695-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S22695-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S22695-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S22695-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S22695-CD8.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S22695-CMV.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S22695-EBER.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S22695-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S22695-HE.h5",
+      "HE_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S22695-HE_v2.h5",
+      "HE_v3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S22695-HE_v3.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S22695-MASSON.h5",
+      "PAS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S22695-PAS.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S22695-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S22695-SV40.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S22695-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "19S30868",
+    "h5s": {
+      "BM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S30868-BM.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S30868-CMV.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S30868-EBER.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S30868-HE.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S30868-MASSON.h5",
+      "PAS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S30868-PAS.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S30868-Perforin.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  {
+    "id": "19S35430",
+    "h5s": {
+      "BM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S35430-BM.h5",
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S35430-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S35430-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S35430-CD3.h5",
+      "CD3_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S35430-CD3_v2.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S35430-CD4.h5",
+      "CD68": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S35430-CD68.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S35430-CD8.h5",
+      "CK": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S35430-CK.h5",
+      "CK_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S35430-CK_v2.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S35430-CMV.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S35430-EBER.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S35430-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S35430-HE.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S35430-MASSON.h5",
+      "PAS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S35430-PAS.h5",
+      "RS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S35430-RS.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S35430-SV40.h5"
+    },
+    "labels": {
+      "L1": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "19S67105",
+    "h5s": {
+      "BM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S67105-BM.h5",
+      "BM_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S67105-BM_v2.h5",
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S67105-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S67105-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S67105-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S67105-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S67105-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S67105-CD8.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S67105-CMV.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S67105-EBER.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S67105-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S67105-HE.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S67105-MASSON.h5",
+      "MASSON_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S67105-MASSON_v2.h5",
+      "PAS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S67105-PAS.h5",
+      "PAS_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S67105-PAS_v2.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S67105-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S67105-SV40.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/19S67105-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  {
+    "id": "20S00673",
+    "h5s": {
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S00673-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S00673-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S00673-CD3.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S00673-CD8.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S00673-CMV.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S00673-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S00673-HE.h5",
+      "HE_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S00673-HE_v2.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S00673-MASSON.h5",
+      "PAS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S00673-PAS.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S00673-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S00673-SV40.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S00673-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "20S02948",
+    "h5s": {
+      "BM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S02948-BM.h5",
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S02948-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S02948-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S02948-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S02948-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S02948-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S02948-CD8.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S02948-CMV.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S02948-EBER.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S02948-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S02948-HE.h5",
+      "HE_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S02948-HE_v2.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S02948-MASSON.h5",
+      "PAS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S02948-PAS.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S02948-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S02948-SV40.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S02948-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "20S03512",
+    "h5s": {
+      "BM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S03512-BM.h5",
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S03512-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S03512-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S03512-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S03512-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S03512-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S03512-CD8.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S03512-CMV.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S03512-EBER.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S03512-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S03512-HE.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S03512-MASSON.h5",
+      "PAS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S03512-PAS.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S03512-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S03512-SV40.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S03512-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "20S04415",
+    "h5s": {
+      "BM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S04415-BM.h5",
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S04415-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S04415-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S04415-CD3.h5",
+      "CD3_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S04415-CD3_v2.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S04415-CD4.h5",
+      "CD68": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S04415-CD68.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S04415-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S04415-CD8.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S04415-CMV.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S04415-EBER.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S04415-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S04415-HE.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S04415-MASSON.h5",
+      "PAS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S04415-PAS.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S04415-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S04415-SV40.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S04415-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "20S06030",
+    "h5s": {
+      "BM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S06030-BM.h5",
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S06030-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S06030-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S06030-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S06030-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S06030-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S06030-CD8.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S06030-EBER.h5",
+      "EBER_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S06030-EBER_v2.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S06030-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S06030-HE.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S06030-MASSON.h5",
+      "PAS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S06030-PAS.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S06030-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S06030-SV40.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S06030-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "20S16256",
+    "h5s": {
+      "BM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S16256-BM.h5",
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S16256-C4d.h5",
+      "CD163": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S16256-CD163.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S16256-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S16256-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S16256-CD4.h5",
+      "CD68": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S16256-CD68.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S16256-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S16256-CD8.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S16256-CMV.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S16256-EBER.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S16256-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S16256-HE.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S16256-MASSON.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S16256-SV40.h5",
+      "TLXW": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S16256-TLXW.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "20S24486",
+    "h5s": {
+      "BM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S24486-BM.h5",
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S24486-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S24486-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S24486-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S24486-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S24486-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S24486-CD8.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S24486-CMV.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S24486-EBER.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S24486-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S24486-HE.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S24486-MASSON.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S24486-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S24486-SV40.h5",
+      "TLXW": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S24486-TLXW.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S24486-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    }
+  },
+  {
+    "id": "20S29079",
+    "h5s": {
+      "BM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S29079-BM.h5",
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S29079-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S29079-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S29079-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S29079-CD4.h5",
+      "CD68": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S29079-CD68.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S29079-CD8.h5",
+      "CK": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S29079-CK.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S29079-CMV.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S29079-EBER.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S29079-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S29079-HE.h5",
+      "KI67": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S29079-KI67.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S29079-MASSON.h5",
+      "PAS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S29079-PAS.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S29079-SV40.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "20S42254",
+    "h5s": {
+      "BM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S42254-BM.h5",
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S42254-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S42254-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S42254-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S42254-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S42254-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S42254-CD8.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S42254-CMV.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S42254-EBER.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S42254-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S42254-HE.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S42254-MASSON.h5",
+      "PAS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S42254-PAS.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S42254-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S42254-SV40.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S42254-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "20S53211",
+    "h5s": {
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S53211-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S53211-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S53211-CD3.h5",
+      "CD3_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S53211-CD3_v2.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S53211-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S53211-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S53211-CD8.h5",
+      "CK": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S53211-CK.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S53211-CMV.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S53211-EBER.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S53211-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S53211-HE.h5",
+      "KI67": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S53211-KI67.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S53211-MASSON.h5",
+      "PAS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S53211-PAS.h5",
+      "PASM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S53211-PASM.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S53211-Perforin.h5",
+      "RS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S53211-RS.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S53211-SV40.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S53211-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "L3": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ]
+    }
+  },
+  {
+    "id": "20S73049",
+    "h5s": {
+      "BM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S73049-BM.h5",
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S73049-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S73049-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S73049-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S73049-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S73049-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S73049-CD8.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S73049-CMV.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S73049-EBER.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S73049-GranB.h5",
+      "HBcAg": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S73049-HBcAg.h5",
+      "HBsAg": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S73049-HBsAg.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S73049-HE.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S73049-MASSON.h5",
+      "PAS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S73049-PAS.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S73049-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S73049-SV40.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S73049-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "L2": [
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    }
+  },
+  {
+    "id": "20S73778",
+    "h5s": {
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S73778-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S73778-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S73778-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S73778-CD4.h5",
+      "CD68": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S73778-CD68.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S73778-CD79.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S73778-CMV.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S73778-EBER.h5",
+      "Foxp3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S73778-Foxp3.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S73778-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S73778-HE.h5",
+      "HE_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S73778-HE_v2.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S73778-MASSON.h5",
+      "PAS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S73778-PAS.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S73778-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S73778-SV40.h5",
+      "TIA": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/20S73778-TIA.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ]
+    }
+  },
+  {
+    "id": "21S16773",
+    "h5s": {
+      "BM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S16773-BM.h5",
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S16773-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S16773-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S16773-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S16773-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S16773-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S16773-CD8.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S16773-CMV.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S16773-EBER.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S16773-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S16773-HE.h5",
+      "HE_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S16773-HE_v2.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S16773-MASSON.h5",
+      "PAS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S16773-PAS.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S16773-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S16773-SV40.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S16773-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "21S17276",
+    "h5s": {
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S17276-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S17276-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S17276-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S17276-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S17276-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S17276-CD8.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S17276-CMV.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S17276-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S17276-HE.h5",
+      "HE_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S17276-HE_v2.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S17276-SV40.h5",
+      "TLXW": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S17276-TLXW.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S17276-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "L3": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ]
+    }
+  },
+  {
+    "id": "21S26313",
+    "h5s": {
+      "BM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S26313-BM.h5",
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S26313-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S26313-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S26313-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S26313-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S26313-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S26313-CD8.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S26313-CMV.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S26313-EBER.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S26313-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S26313-HE.h5",
+      "HE_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S26313-HE_v2.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S26313-MASSON.h5",
+      "PAS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S26313-PAS.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S26313-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S26313-SV40.h5",
+      "TLXW": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S26313-TLXW.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S26313-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "21S33363",
+    "h5s": {
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S33363-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S33363-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S33363-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S33363-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S33363-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S33363-CD8.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S33363-CMV.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S33363-HE.h5",
+      "HE_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S33363-HE_v2.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S33363-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S33363-SV40.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S33363-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "21S33676",
+    "h5s": {
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S33676-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S33676-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S33676-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S33676-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S33676-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S33676-CD8.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S33676-CMV.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S33676-EBER.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S33676-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S33676-HE.h5",
+      "HE_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S33676-HE_v2.h5",
+      "PAS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S33676-PAS.h5",
+      "PASM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S33676-PASM.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S33676-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S33676-SV40.h5",
+      "TLXW": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S33676-TLXW.h5"
+    },
+    "labels": {
+      "L1": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "21S37091",
+    "h5s": {
+      "BM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S37091-BM.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S37091-HE.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S37091-MASSON.h5",
+      "PAS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S37091-PAS.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "21S59175",
+    "h5s": {
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S59175-HE.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  {
+    "id": "21S60374",
+    "h5s": {
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S60374-HE.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "21S72741",
+    "h5s": {
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S72741-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S72741-CD20.h5",
+      "CD20_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S72741-CD20_v2.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S72741-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S72741-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S72741-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S72741-CD8.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S72741-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S72741-HE.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S72741-MASSON.h5",
+      "PASM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S72741-PASM.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S72741-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S72741-SV40.h5",
+      "TLXW": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S72741-TLXW.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S72741-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "21S74327",
+    "h5s": {
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S74327-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S74327-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S74327-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S74327-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S74327-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S74327-CD8.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S74327-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S74327-HE.h5",
+      "HE_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S74327-HE_v2.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S74327-MASSON.h5",
+      "PAS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S74327-PAS.h5",
+      "PASM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S74327-PASM.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S74327-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S74327-SV40.h5",
+      "TLXW": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S74327-TLXW.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/21S74327-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "22S002705",
+    "h5s": {
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S002705-HE.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "22S014430",
+    "h5s": {
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S014430-HE.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "22S017881",
+    "h5s": {
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S017881-HE.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  {
+    "id": "22S026112",
+    "h5s": {
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S026112-HE.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S026112-MASSON.h5",
+      "PAS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S026112-PAS.h5",
+      "PASM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S026112-PASM.h5",
+      "RS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S026112-RS.h5",
+      "TLXW": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S026112-TLXW.h5",
+      "VG": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S026112-VG.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  {
+    "id": "22S027202",
+    "h5s": {
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S027202-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S027202-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S027202-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S027202-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S027202-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S027202-CD8.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S027202-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S027202-HE.h5",
+      "HE_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S027202-HE_v2.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S027202-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S027202-SV40.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S027202-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "22S028272",
+    "h5s": {
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S028272-HE.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "22S030826",
+    "h5s": {
+      "BM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S030826-BM.h5",
+      "BP": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S030826-BP.h5",
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S030826-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S030826-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S030826-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S030826-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S030826-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S030826-CD8.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S030826-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S030826-HE.h5",
+      "HE_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S030826-HE_v2.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S030826-MASSON.h5",
+      "PAS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S030826-PAS.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S030826-Perforin.h5",
+      "RS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S030826-RS.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S030826-SV40.h5",
+      "TLXW": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S030826-TLXW.h5",
+      "VG": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S030826-VG.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S030826-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "22S053218",
+    "h5s": {
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S053218-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S053218-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S053218-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S053218-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S053218-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S053218-CD8.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S053218-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S053218-HE.h5",
+      "HE_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S053218-HE_v2.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S053218-MASSON.h5",
+      "PASM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S053218-PASM.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S053218-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S053218-SV40.h5",
+      "TLXW": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S053218-TLXW.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/22S053218-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "22S0600871",
+    "h5s": {
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/22S0600871-HE.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "23S027249",
+    "h5s": {
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S027249-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S027249-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S027249-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S027249-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S027249-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S027249-CD8.h5",
+      "CMV": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S027249-CMV.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S027249-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S027249-HE.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S027249-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S027249-SV40.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S027249-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  {
+    "id": "23S055829",
+    "h5s": {
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S055829-C4d.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S055829-HE.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S055829-SV40.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "23S055830",
+    "h5s": {
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S055830-C4d.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S055830-HE.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S055830-SV40.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "23S077449",
+    "h5s": {
+      "BM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S077449-BM.h5",
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S077449-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S077449-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S077449-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S077449-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S077449-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S077449-CD8.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S077449-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S077449-HE.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S077449-MASSON.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S077449-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S077449-SV40.h5",
+      "TLXW": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S077449-TLXW.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S077449-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "23S088474",
+    "h5s": {
+      "BM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S088474-BM.h5",
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S088474-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S088474-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S088474-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S088474-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S088474-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S088474-CD8.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S088474-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S088474-HE.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S088474-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S088474-SV40.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S088474-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "23S101279",
+    "h5s": {
+      "BM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S101279-BM.h5",
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S101279-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S101279-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S101279-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S101279-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S101279-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S101279-CD8.h5",
+      "EBER": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S101279-EBER.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S101279-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S101279-HE.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S101279-MASSON.h5",
+      "PAS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S101279-PAS.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S101279-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S101279-SV40.h5",
+      "TLXW": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S101279-TLXW.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S101279-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "23S109253",
+    "h5s": {
+      "BM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S109253-BM.h5",
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S109253-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S109253-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S109253-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S109253-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S109253-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S109253-CD8.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S109253-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S109253-HE.h5",
+      "HE_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S109253-HE_v2.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S109253-MASSON.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S109253-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S109253-SV40.h5",
+      "TLXW": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S109253-TLXW.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S109253-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "23S117014",
+    "h5s": {
+      "BM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S117014-BM.h5",
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S117014-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S117014-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S117014-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S117014-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S117014-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S117014-CD8.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S117014-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S117014-HE.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S117014-MASSON.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S117014-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S117014-SV40.h5",
+      "TLXW": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S117014-TLXW.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/23S117014-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "24S027038",
+    "h5s": {
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S027038-HE.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "24S048762",
+    "h5s": {
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S048762-HE.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "24S049048",
+    "h5s": {
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S049048-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S049048-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S049048-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S049048-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S049048-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S049048-CD8.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S049048-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S049048-HE.h5",
+      "HE_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S049048-HE_v2.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S049048-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S049048-SV40.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S049048-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "24S080843",
+    "h5s": {
+      "BM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S080843-BM.h5",
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S080843-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S080843-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S080843-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S080843-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S080843-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S080843-CD8.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S080843-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S080843-HE.h5",
+      "HE_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S080843-HE_v2.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S080843-MASSON.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S080843-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S080843-SV40.h5",
+      "TLXW": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S080843-TLXW.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S080843-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "24S089167",
+    "h5s": {
+      "BM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S089167-BM.h5",
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S089167-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S089167-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S089167-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S089167-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S089167-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S089167-CD8.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S089167-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S089167-HE.h5",
+      "PAS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S089167-PAS.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S089167-Perforin.h5",
+      "RS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S089167-RS.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S089167-SV40.h5",
+      "TLXW": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S089167-TLXW.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S089167-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ]
+    }
+  },
+  {
+    "id": "24S091725",
+    "h5s": {
+      "BM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S091725-BM.h5",
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S091725-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S091725-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S091725-CD3.h5",
+      "CD3_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S091725-CD3_v2.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S091725-CD4.h5",
+      "CD68": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S091725-CD68.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S091725-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S091725-CD8.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S091725-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S091725-HE.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S091725-MASSON.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S091725-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S091725-SV40.h5",
+      "TLXW": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S091725-TLXW.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S091725-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "24S123010",
+    "h5s": {
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S123010-HE.h5"
+    },
+    "labels": {
+      "L1": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "24S125366",
+    "h5s": {
+      "BM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S125366-BM.h5",
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S125366-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S125366-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S125366-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S125366-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S125366-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S125366-CD8.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S125366-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S125366-HE.h5",
+      "HE_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S125366-HE_v2.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S125366-MASSON.h5",
+      "PAS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S125366-PAS.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S125366-Perforin.h5",
+      "RS": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S125366-RS.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S125366-SV40.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S125366-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  {
+    "id": "24S130781",
+    "h5s": {
+      "BM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S130781-BM.h5",
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S130781-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S130781-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S130781-CD3.h5",
+      "CD3_v2": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S130781-CD3_v2.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S130781-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S130781-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S130781-CD8.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S130781-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S130781-HE.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S130781-MASSON.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S130781-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S130781-SV40.h5",
+      "TLXW": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S130781-TLXW.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S130781-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": "24S135201",
+    "h5s": {
+      "BM": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S135201-BM.h5",
+      "C4d": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S135201-C4d.h5",
+      "CD20": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S135201-CD20.h5",
+      "CD3": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S135201-CD3.h5",
+      "CD4": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S135201-CD4.h5",
+      "CD79": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S135201-CD79.h5",
+      "CD8": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S135201-CD8.h5",
+      "GranB": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S135201-GranB.h5",
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S135201-HE.h5",
+      "MASSON": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S135201-MASSON.h5",
+      "Perforin": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S135201-Perforin.h5",
+      "SV40": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S135201-SV40.h5",
+      "TLXW": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S135201-TLXW.h5",
+      "ck_pan_": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S135201-ck_pan_.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ]
+    }
+  },
+  {
+    "id": "24S135890",
+    "h5s": {
+      "HE": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/WSIs_patch/20x_512px_0px_overlap/features_conch_v15/24S135890-HE.h5"
+    },
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  }
+]

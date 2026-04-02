@@ -1,0 +1,2728 @@
+[
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/15S27549-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "15S27549-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/15S31368-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    "id": "15S31368-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/15S36662-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "15S36662-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/15S40413-HE.h5",
+    "labels": {
+      "L1": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "15S40413-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/16S09839-HE.h5",
+    "labels": {
+      "L1": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "id": "16S09839-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/16S13481-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "16S13481-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/16S14749-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "id": "16S14749-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/16S27058-HE.h5",
+    "labels": {
+      "L1": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "16S27058-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/17S03933-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "17S03933-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/17S20637-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "17S20637-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/17S22509-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "17S22509-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/17S26254-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "17S26254-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/17S26999-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "id": "17S26999-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/17S44231-HE.h5",
+    "labels": {
+      "L1": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "17S44231-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/17S44321-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "17S44321-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/17S47825-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    "id": "17S47825-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/17S49755-HE.h5",
+    "labels": {
+      "L1": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "id": "17S49755-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/17S55318-HE.h5",
+    "labels": {
+      "L1": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "17S55318-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/17S55320-HE.h5",
+    "labels": {
+      "L1": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "id": "17S55320-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/18S02937-HE.h5",
+    "labels": {
+      "L1": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "18S02937-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/18S02938-HE.h5",
+    "labels": {
+      "L1": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "18S02938-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/18S10787-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "18S10787-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/18S21748-HE.h5",
+    "labels": {
+      "L1": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "18S21748-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/18S30179-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "id": "18S30179-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/18S38832-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "18S38832-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/18S38887-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "18S38887-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/18S06104-HE.h5",
+    "labels": {
+      "L1": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "18S06104-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/18S39901-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "18S39901-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/19S43137-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "19S43137-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/20S75822-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "20S75822-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/22S047898-HE.h5",
+    "labels": {
+      "L1": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "22S047898-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/23S076711-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "23S076711-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/24S040542-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "24S040542-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/18S52000-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    "id": "18S52000-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/18S53634-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "18S53634-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/18S63214-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "18S63214-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/19S04855-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    "id": "19S04855-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/19S07602-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "19S07602-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/19S18928-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    "id": "19S18928-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/19S21721-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    "id": "19S21721-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/19S22695-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    "id": "19S22695-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/19S30868-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    "id": "19S30868-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/19S35430-HE.h5",
+    "labels": {
+      "L1": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    "id": "19S35430-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/19S67105-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    "id": "19S67105-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/20S00673-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "id": "20S00673-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/20S02948-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "20S02948-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/20S03512-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "20S03512-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/20S04415-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "20S04415-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/20S06030-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "20S06030-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/20S16256-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "20S16256-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/20S24486-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    "id": "20S24486-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/20S29079-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "20S29079-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/20S42254-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "20S42254-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/20S53211-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "L3": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    "id": "20S53211-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/20S73049-HE.h5",
+    "labels": {
+      "L1": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "L2": [
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    "id": "20S73049-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/20S73778-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ]
+    },
+    "id": "20S73778-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/21S16773-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "21S16773-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/21S17276-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "L3": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    "id": "21S17276-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/21S26313-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "21S26313-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/21S33363-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    "id": "21S33363-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/21S33676-HE.h5",
+    "labels": {
+      "L1": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    "id": "21S33676-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/21S37091-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "21S37091-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/21S59175-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    "id": "21S59175-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/21S60374-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "21S60374-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/21S72741-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "21S72741-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/21S74327-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "21S74327-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/22S002705-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "22S002705-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/22S014430-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    "id": "22S014430-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/22S017881-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    "id": "22S017881-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/22S026112-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    "id": "22S026112-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/22S027202-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "22S027202-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/22S028272-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "22S028272-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/22S030826-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "22S030826-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/22S053218-HE.h5",
+    "labels": {
+      "L1": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "22S053218-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/22S0600871-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "22S0600871-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/23S027249-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    "id": "23S027249-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/23S055829-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "23S055829-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/23S055830-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "23S055830-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/23S077449-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "23S077449-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/23S088474-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "23S088474-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/23S101279-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "23S101279-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/23S109253-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "23S109253-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/23S117014-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "23S117014-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/24S027038-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "24S027038-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/24S048762-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "24S048762-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/24S049048-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "24S049048-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/24S080843-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "24S080843-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/24S089167-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    "id": "24S089167-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/24S091725-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "24S091725-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/24S123010-HE.h5",
+    "labels": {
+      "L1": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "24S123010-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/24S125366-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "L2": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "id": "24S125366-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/24S130781-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "24S130781-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/24S135201-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "L2": [
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "L3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    "id": "24S135201-HE"
+  },
+  {
+    "h5": "/media/a6000/3E5C99E35C9995ED/jcy/ACMIL/ACMIL-main/titan_processed/20x_512px_0px_overlap/features_conch_v15/24S135890-HE.h5",
+    "labels": {
+      "L1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "L2": [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "L3": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "id": "24S135890-HE"
+  }
+]

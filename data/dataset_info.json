@@ -1,0 +1,3143 @@
+[
+    {
+        "slide_id": "02266223S048744-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/02266223S048744-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            1
+        ],
+        "label_L2": 2,
+        "label_multi_L2": [
+            2
+        ],
+        "case_id": 0,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 2,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "15S19353-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/15S19353-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            7
+        ],
+        "case_id": 1,
+        "split_info_single_L1": 2,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 2,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "15S27549-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/15S27549-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            7
+        ],
+        "case_id": 2,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "15S28767-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/15S28767-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            0,
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            1,
+            7
+        ],
+        "case_id": 3,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "15S31368-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/15S31368-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            2,
+            7
+        ],
+        "case_id": 4,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "15S31538-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/15S31538-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            1
+        ],
+        "label_L2": 2,
+        "label_multi_L2": [
+            2
+        ],
+        "case_id": 5,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "15S36662-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/15S36662-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            1
+        ],
+        "label_L2": 2,
+        "label_multi_L2": [
+            2
+        ],
+        "case_id": 6,
+        "split_info_single_L1": 1,
+        "split_info_single_L2": 1,
+        "split_info_multi_L1": 2,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "15S40413-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/15S40413-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            0,
+            1,
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            1,
+            2,
+            7
+        ],
+        "case_id": 7,
+        "split_info_single_L1": 2,
+        "split_info_single_L2": 2,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "23S027249-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/23S027249-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            4,
+            7
+        ],
+        "case_id": 8,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 2,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "23S030290-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/23S030290-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            3,
+            7
+        ],
+        "case_id": 9,
+        "split_info_single_L1": 1,
+        "split_info_single_L2": 1,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "23S055070-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/23S055070-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            1
+        ],
+        "label_L2": 2,
+        "label_multi_L2": [
+            2
+        ],
+        "case_id": 10,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 1
+    },
+    {
+        "slide_id": "23S064609-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/23S064609-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            1
+        ],
+        "label_L2": 2,
+        "label_multi_L2": [
+            2
+        ],
+        "case_id": 11,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 1,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "17S02536-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/17S02536-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            7
+        ],
+        "case_id": 12,
+        "split_info_single_L1": 2,
+        "split_info_single_L2": 2,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "17S02537-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/17S02537-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            7
+        ],
+        "case_id": 13,
+        "split_info_single_L1": 2,
+        "split_info_single_L2": 1,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 2
+    },
+    {
+        "slide_id": "17S03933-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/17S03933-HE.mrxs",
+        "label_L1": 2,
+        "label_multi_L1": [
+            2
+        ],
+        "label_L2": 5,
+        "label_multi_L2": [
+            5
+        ],
+        "case_id": 14,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "17S04976-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/17S04976-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            1
+        ],
+        "label_L2": 2,
+        "label_multi_L2": [
+            2
+        ],
+        "case_id": 15,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "17S09314-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/17S09314-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            7
+        ],
+        "case_id": 16,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "17S12712-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/17S12712-HE.mrxs",
+        "label_L1": 0,
+        "label_multi_L1": [
+            0
+        ],
+        "label_L2": 1,
+        "label_multi_L2": [
+            1
+        ],
+        "case_id": 17,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "17S49755-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/17S49755-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            0,
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            1,
+            7
+        ],
+        "case_id": 18,
+        "split_info_single_L1": 1,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "17S50253-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/17S50253-HE.mrxs",
+        "label_L1": 3,
+        "label_multi_L1": [
+            3,
+            4
+        ],
+        "label_L2": 6,
+        "label_multi_L2": [
+            6,
+            7
+        ],
+        "case_id": 19,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "17S51016-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/17S51016-HE.mrxs",
+        "label_L1": 0,
+        "label_multi_L1": [
+            0,
+            1
+        ],
+        "label_L2": 1,
+        "label_multi_L2": [
+            1,
+            3
+        ],
+        "case_id": 20,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 2,
+        "split_info_multi_L1": 1,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "17S51020-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/17S51020-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            2,
+            7
+        ],
+        "case_id": 21,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 1,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "17S55318-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/17S55318-HE.mrxs",
+        "label_L1": 0,
+        "label_multi_L1": [
+            0
+        ],
+        "label_L2": 1,
+        "label_multi_L2": [
+            1
+        ],
+        "case_id": 22,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 1,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "17S55320-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/17S55320-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            0,
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            1,
+            7
+        ],
+        "case_id": 23,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 1,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "18S02937-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/18S02937-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            0,
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            1,
+            7
+        ],
+        "case_id": 24,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "18S02938-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/18S02938-HE.mrxs",
+        "label_L1": 0,
+        "label_multi_L1": [
+            0
+        ],
+        "label_L2": 1,
+        "label_multi_L2": [
+            1
+        ],
+        "case_id": 25,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 2
+    },
+    {
+        "slide_id": "18S05110-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/18S05110-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            2,
+            7
+        ],
+        "case_id": 26,
+        "split_info_single_L1": 1,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "18S05674-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/18S05674-HE.mrxs",
+        "label_L1": 2,
+        "label_multi_L1": [
+            2
+        ],
+        "label_L2": 5,
+        "label_multi_L2": [
+            5
+        ],
+        "case_id": 27,
+        "split_info_single_L1": 1,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "19S51486-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/19S51486-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            0,
+            1,
+            4
+        ],
+        "label_L2": 2,
+        "label_multi_L2": [
+            0,
+            1,
+            2
+        ],
+        "case_id": 28,
+        "split_info_single_L1": 2,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "20S29079-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/20S29079-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            1
+        ],
+        "label_L2": 2,
+        "label_multi_L2": [
+            2
+        ],
+        "case_id": 29,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "21S16773-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/21S16773-HE.mrxs",
+        "label_L1": 2,
+        "label_multi_L1": [
+            2
+        ],
+        "label_L2": 5,
+        "label_multi_L2": [
+            5
+        ],
+        "case_id": 30,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "19S38971-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/19S38971-HE.mrxs",
+        "label_L1": 3,
+        "label_multi_L1": [
+            1,
+            3
+        ],
+        "label_L2": 6,
+        "label_multi_L2": [
+            3,
+            6
+        ],
+        "case_id": 31,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "19S41972-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/19S41972-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            0,
+            2,
+            7
+        ],
+        "case_id": 32,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "19S42316-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/19S42316-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            2,
+            7
+        ],
+        "case_id": 33,
+        "split_info_single_L1": 2,
+        "split_info_single_L2": 1,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "19S48009-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/19S48009-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            2,
+            7
+        ],
+        "case_id": 34,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 1,
+        "split_info_multi_L2": 1
+    },
+    {
+        "slide_id": "19S51251-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/19S51251-HE.mrxs",
+        "label_L1": 3,
+        "label_multi_L1": [
+            1,
+            3
+        ],
+        "label_L2": 6,
+        "label_multi_L2": [
+            2,
+            6
+        ],
+        "case_id": 35,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "20S03512-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/20S03512-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            1
+        ],
+        "label_L2": 3,
+        "label_multi_L2": [
+            3
+        ],
+        "case_id": 36,
+        "split_info_single_L1": 1,
+        "split_info_single_L2": 2,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "20S04415-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/20S04415-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            2,
+            7
+        ],
+        "case_id": 37,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 1,
+        "split_info_multi_L2": 1
+    },
+    {
+        "slide_id": "20S06030-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/20S06030-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            1
+        ],
+        "label_L2": 2,
+        "label_multi_L2": [
+            2
+        ],
+        "case_id": 38,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 2
+    },
+    {
+        "slide_id": "20S07042-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/20S07042-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            2,
+            7
+        ],
+        "case_id": 39,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "20S14577-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/20S14577-HE.mrxs",
+        "label_L1": 3,
+        "label_multi_L1": [
+            1,
+            3
+        ],
+        "label_L2": 6,
+        "label_multi_L2": [
+            4,
+            6
+        ],
+        "case_id": 40,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 1,
+        "split_info_multi_L2": 2
+    },
+    {
+        "slide_id": "20S19489-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/20S19489-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            2,
+            7
+        ],
+        "case_id": 41,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "20S22499-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/20S22499-HE.mrxs",
+        "label_L1": 0,
+        "label_multi_L1": [
+            0
+        ],
+        "label_L2": 1,
+        "label_multi_L2": [
+            1
+        ],
+        "case_id": 42,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "20S24486-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/20S24486-HE.mrxs",
+        "label_L1": 3,
+        "label_multi_L1": [
+            3
+        ],
+        "label_L2": 6,
+        "label_multi_L2": [
+            6
+        ],
+        "case_id": 43,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 2,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "20S73778-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/20S73778-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            0,
+            3,
+            7
+        ],
+        "case_id": 44,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 2
+    },
+    {
+        "slide_id": "20S75212-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/20S75212-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            1
+        ],
+        "label_L2": 2,
+        "label_multi_L2": [
+            2
+        ],
+        "case_id": 45,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "20S75822-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/20S75822-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            3,
+            7
+        ],
+        "case_id": 46,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 1,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "20S76909-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/20S76909-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            2,
+            7
+        ],
+        "case_id": 47,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "20S76913-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/20S76913-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            4
+        ],
+        "label_L2": 0,
+        "label_multi_L2": [
+            0,
+            7
+        ],
+        "case_id": 48,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 1
+    },
+    {
+        "slide_id": "21S00400-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/21S00400-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            0,
+            1
+        ],
+        "label_L2": 2,
+        "label_multi_L2": [
+            1,
+            2
+        ],
+        "case_id": 49,
+        "split_info_single_L1": 1,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 2,
+        "split_info_multi_L2": 2
+    },
+    {
+        "slide_id": "21S02418-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/21S02418-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            1
+        ],
+        "label_L2": 2,
+        "label_multi_L2": [
+            2
+        ],
+        "case_id": 50,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 2,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 1
+    },
+    {
+        "slide_id": "22S007792-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/22S007792-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            2,
+            7
+        ],
+        "case_id": 51,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "22S017881-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/22S017881-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            2,
+            7
+        ],
+        "case_id": 52,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 1
+    },
+    {
+        "slide_id": "22S026112-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/22S026112-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            2,
+            7
+        ],
+        "case_id": 53,
+        "split_info_single_L1": 1,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 1,
+        "split_info_multi_L2": 1
+    },
+    {
+        "slide_id": "22S027202-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/22S027202-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            1
+        ],
+        "label_L2": 3,
+        "label_multi_L2": [
+            3
+        ],
+        "case_id": 54,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 1,
+        "split_info_multi_L1": 2,
+        "split_info_multi_L2": 1
+    },
+    {
+        "slide_id": "22S028272-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/22S028272-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            1
+        ],
+        "label_L2": 3,
+        "label_multi_L2": [
+            3
+        ],
+        "case_id": 55,
+        "split_info_single_L1": 1,
+        "split_info_single_L2": 1,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "22S030826-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/22S030826-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            1
+        ],
+        "label_L2": 3,
+        "label_multi_L2": [
+            3
+        ],
+        "case_id": 56,
+        "split_info_single_L1": 2,
+        "split_info_single_L2": 2,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "22S032756-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/22S032756-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            1
+        ],
+        "label_L2": 2,
+        "label_multi_L2": [
+            2
+        ],
+        "case_id": 57,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 1,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "23S090015-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/23S090015-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            0,
+            1
+        ],
+        "label_L2": 3,
+        "label_multi_L2": [
+            1,
+            3
+        ],
+        "case_id": 58,
+        "split_info_single_L1": 2,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 2,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "23S101279-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/23S101279-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            2,
+            7
+        ],
+        "case_id": 59,
+        "split_info_single_L1": 2,
+        "split_info_single_L2": 2,
+        "split_info_multi_L1": 2,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "23S102694-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/23S102694-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            0,
+            1
+        ],
+        "label_L2": 4,
+        "label_multi_L2": [
+            1,
+            4
+        ],
+        "case_id": 60,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "23S109253-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/23S109253-HE.mrxs",
+        "label_L1": 2,
+        "label_multi_L1": [
+            2
+        ],
+        "label_L2": 5,
+        "label_multi_L2": [
+            5
+        ],
+        "case_id": 61,
+        "split_info_single_L1": 2,
+        "split_info_single_L2": 2,
+        "split_info_multi_L1": 2,
+        "split_info_multi_L2": 1
+    },
+    {
+        "slide_id": "24S026882-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/24S026882-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            1
+        ],
+        "label_L2": 3,
+        "label_multi_L2": [
+            3
+        ],
+        "case_id": 62,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "24S049048-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/24S049048-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            7
+        ],
+        "case_id": 63,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 2,
+        "split_info_multi_L2": 2
+    },
+    {
+        "slide_id": "24S080223-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/24S080223-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            7
+        ],
+        "case_id": 64,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "24S089167-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/24S089167-HE.mrxs",
+        "label_L1": 3,
+        "label_multi_L1": [
+            1,
+            3
+        ],
+        "label_L2": 6,
+        "label_multi_L2": [
+            4,
+            6
+        ],
+        "case_id": 65,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "24S091726-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/24S091726-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            2,
+            7
+        ],
+        "case_id": 66,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "24S123010-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/24S123010-HE.mrxs",
+        "label_L1": 0,
+        "label_multi_L1": [
+            0,
+            1
+        ],
+        "label_L2": 1,
+        "label_multi_L2": [
+            1,
+            2
+        ],
+        "case_id": 67,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 2,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "22S080298-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/22S080298-HE.mrxs",
+        "label_L1": 0,
+        "label_multi_L1": [
+            0
+        ],
+        "label_L2": 1,
+        "label_multi_L2": [
+            1
+        ],
+        "case_id": 68,
+        "split_info_single_L1": 2,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "21S42537-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/21S42537-HE.mrxs",
+        "label_L1": 0,
+        "label_multi_L1": [
+            0,
+            1
+        ],
+        "label_L2": 1,
+        "label_multi_L2": [
+            1,
+            2
+        ],
+        "case_id": 69,
+        "split_info_single_L1": 2,
+        "split_info_single_L2": 1,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "21S47239-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/21S47239-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            3,
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            3,
+            6,
+            7
+        ],
+        "case_id": 70,
+        "split_info_single_L1": 1,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 2,
+        "split_info_multi_L2": 2
+    },
+    {
+        "slide_id": "21S51025-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/21S51025-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            1
+        ],
+        "label_L2": 3,
+        "label_multi_L2": [
+            3
+        ],
+        "case_id": 71,
+        "split_info_single_L1": 1,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 1
+    },
+    {
+        "slide_id": "21S59090-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/21S59090-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            1
+        ],
+        "label_L2": 3,
+        "label_multi_L2": [
+            3
+        ],
+        "case_id": 72,
+        "split_info_single_L1": 1,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 2,
+        "split_info_multi_L2": 1
+    },
+    {
+        "slide_id": "21S59175-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/21S59175-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            3,
+            7
+        ],
+        "case_id": 73,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 1,
+        "split_info_multi_L1": 1,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "19S10629-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/19S10629-HE.mrxs",
+        "label_L1": 0,
+        "label_multi_L1": [
+            0,
+            1
+        ],
+        "label_L2": 1,
+        "label_multi_L2": [
+            1,
+            2
+        ],
+        "case_id": 74,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 2
+    },
+    {
+        "slide_id": "19S10630-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/19S10630-HE.mrxs",
+        "label_L1": 0,
+        "label_multi_L1": [
+            0,
+            1,
+            4
+        ],
+        "label_L2": 1,
+        "label_multi_L2": [
+            0,
+            1,
+            2
+        ],
+        "case_id": 75,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "19S15823-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/19S15823-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 0,
+        "label_multi_L2": [
+            0,
+            4
+        ],
+        "case_id": 76,
+        "split_info_single_L1": 1,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "19S15824-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/19S15824-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 0,
+        "label_multi_L2": [
+            0,
+            4
+        ],
+        "case_id": 77,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "19S16050-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/19S16050-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            1
+        ],
+        "label_L2": 3,
+        "label_multi_L2": [
+            3
+        ],
+        "case_id": 78,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "18S21748-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/18S21748-HE.mrxs",
+        "label_L1": 0,
+        "label_multi_L1": [
+            0,
+            1
+        ],
+        "label_L2": 1,
+        "label_multi_L2": [
+            1,
+            2
+        ],
+        "case_id": 79,
+        "split_info_single_L1": 1,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 1,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "18S22049-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/18S22049-HE.mrxs",
+        "label_L1": 3,
+        "label_multi_L1": [
+            1,
+            3,
+            4
+        ],
+        "label_L2": 6,
+        "label_multi_L2": [
+            2,
+            6,
+            7
+        ],
+        "case_id": 80,
+        "split_info_single_L1": 1,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 2,
+        "split_info_multi_L2": 1
+    },
+    {
+        "slide_id": "16S09839-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/16S09839-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            0,
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            1,
+            7
+        ],
+        "case_id": 81,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 2,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 1
+    },
+    {
+        "slide_id": "16S13424-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/16S13424-HE.mrxs",
+        "label_L1": 0,
+        "label_multi_L1": [
+            0,
+            1
+        ],
+        "label_L2": 1,
+        "label_multi_L2": [
+            1,
+            2
+        ],
+        "case_id": 82,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 2,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "16S13481-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/16S13481-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            1
+        ],
+        "label_L2": 2,
+        "label_multi_L2": [
+            2
+        ],
+        "case_id": 83,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 1,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "16S14749-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/16S14749-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            4
+        ],
+        "label_L2": 0,
+        "label_multi_L2": [
+            0
+        ],
+        "case_id": 84,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 1,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "16S27058-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/16S27058-HE.mrxs",
+        "label_L1": 0,
+        "label_multi_L1": [
+            0,
+            1
+        ],
+        "label_L2": 1,
+        "label_multi_L2": [
+            1,
+            2
+        ],
+        "case_id": 85,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 1
+    },
+    {
+        "slide_id": "16S28081-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/16S28081-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            7
+        ],
+        "case_id": 86,
+        "split_info_single_L1": 1,
+        "split_info_single_L2": 2,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "16S32595-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/16S32595-HE.mrxs",
+        "label_L1": 0,
+        "label_multi_L1": [
+            0,
+            1
+        ],
+        "label_L2": 1,
+        "label_multi_L2": [
+            1,
+            2
+        ],
+        "case_id": 87,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 2,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "16S38266-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/16S38266-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            2,
+            7
+        ],
+        "case_id": 88,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 2,
+        "split_info_multi_L2": 1
+    },
+    {
+        "slide_id": "17S01005-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/17S01005-HE.mrxs",
+        "label_L1": 0,
+        "label_multi_L1": [
+            0,
+            4
+        ],
+        "label_L2": 1,
+        "label_multi_L2": [
+            1,
+            7
+        ],
+        "case_id": 89,
+        "split_info_single_L1": 1,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 2,
+        "split_info_multi_L2": 2
+    },
+    {
+        "slide_id": "17S18050-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/17S18050-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            1
+        ],
+        "label_L2": 2,
+        "label_multi_L2": [
+            2
+        ],
+        "case_id": 90,
+        "split_info_single_L1": 2,
+        "split_info_single_L2": 2,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "17S20637-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/17S20637-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            7
+        ],
+        "case_id": 91,
+        "split_info_single_L1": 1,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 2,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "17S22509-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/17S22509-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            7
+        ],
+        "case_id": 92,
+        "split_info_single_L1": 2,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 1
+    },
+    {
+        "slide_id": "17S25224-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/17S25224-HE.mrxs",
+        "label_L1": 2,
+        "label_multi_L1": [
+            2
+        ],
+        "label_L2": 5,
+        "label_multi_L2": [
+            5
+        ],
+        "case_id": 93,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 1,
+        "split_info_multi_L2": 2
+    },
+    {
+        "slide_id": "17S26254-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/17S26254-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            7
+        ],
+        "case_id": 94,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 1,
+        "split_info_multi_L1": 2,
+        "split_info_multi_L2": 1
+    },
+    {
+        "slide_id": "17S26999-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/17S26999-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            7
+        ],
+        "case_id": 95,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "17S44231-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/17S44231-HE.mrxs",
+        "label_L1": 0,
+        "label_multi_L1": [
+            0,
+            1
+        ],
+        "label_L2": 1,
+        "label_multi_L2": [
+            1,
+            2
+        ],
+        "case_id": 96,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 1
+    },
+    {
+        "slide_id": "17S44321-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/17S44321-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            4,
+            7
+        ],
+        "case_id": 97,
+        "split_info_single_L1": 1,
+        "split_info_single_L2": 2,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "17S47528-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/17S47528-HE.mrxs",
+        "label_L1": 3,
+        "label_multi_L1": [
+            3
+        ],
+        "label_L2": 6,
+        "label_multi_L2": [
+            6
+        ],
+        "case_id": 98,
+        "split_info_single_L1": 2,
+        "split_info_single_L2": 1,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "17S47825-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/17S47825-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            2,
+            7
+        ],
+        "case_id": 99,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 1,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 2
+    },
+    {
+        "slide_id": "18S05850-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/18S05850-HE.mrxs",
+        "label_L1": 2,
+        "label_multi_L1": [
+            2
+        ],
+        "label_L2": 5,
+        "label_multi_L2": [
+            5
+        ],
+        "case_id": 100,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 1,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "18S06104-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/18S06104-HE.mrxs",
+        "label_L1": 0,
+        "label_multi_L1": [
+            0
+        ],
+        "label_L2": 1,
+        "label_multi_L2": [
+            1
+        ],
+        "case_id": 101,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "18S07629-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/18S07629-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            1
+        ],
+        "label_L2": 2,
+        "label_multi_L2": [
+            2
+        ],
+        "case_id": 102,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 1,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "18S10328-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/18S10328-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            7
+        ],
+        "case_id": 103,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 1,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "18S10787-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/18S10787-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            1
+        ],
+        "label_L2": 2,
+        "label_multi_L2": [
+            2
+        ],
+        "case_id": 104,
+        "split_info_single_L1": 2,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "18S11808-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/18S11808-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            3,
+            7
+        ],
+        "case_id": 105,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 2
+    },
+    {
+        "slide_id": "18S16165-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/18S16165-HE.mrxs",
+        "label_L1": 0,
+        "label_multi_L1": [
+            0,
+            1,
+            4
+        ],
+        "label_L2": 1,
+        "label_multi_L2": [
+            1,
+            2,
+            7
+        ],
+        "case_id": 106,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "18S17762-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/18S17762-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            7
+        ],
+        "case_id": 107,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "18S18794-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/18S18794-HE.mrxs",
+        "label_L1": 2,
+        "label_multi_L1": [
+            2
+        ],
+        "label_L2": 5,
+        "label_multi_L2": [
+            5
+        ],
+        "case_id": 108,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "18S21185-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/18S21185-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            3,
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            2,
+            6,
+            7
+        ],
+        "case_id": 109,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "23S076711-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/23S076711-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            1
+        ],
+        "label_L2": 2,
+        "label_multi_L2": [
+            2
+        ],
+        "case_id": 110,
+        "split_info_single_L1": 2,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 2
+    },
+    {
+        "slide_id": "23S083004-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/23S083004-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            2,
+            7
+        ],
+        "case_id": 111,
+        "split_info_single_L1": 2,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "20S00673-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/20S00673-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            4
+        ],
+        "label_L2": 0,
+        "label_multi_L2": [
+            0
+        ],
+        "case_id": 112,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 2,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "20S01422-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/20S01422-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            0,
+            1
+        ],
+        "label_L2": 2,
+        "label_multi_L2": [
+            1,
+            2
+        ],
+        "case_id": 113,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 2,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "20S01813-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/20S01813-HE.mrxs",
+        "label_L1": 3,
+        "label_multi_L1": [
+            1,
+            3,
+            4
+        ],
+        "label_L2": 6,
+        "label_multi_L2": [
+            2,
+            6,
+            7
+        ],
+        "case_id": 114,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "20S02948-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/20S02948-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            1
+        ],
+        "label_L2": 4,
+        "label_multi_L2": [
+            4
+        ],
+        "case_id": 115,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 2,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "20S30401-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/20S30401-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            7
+        ],
+        "case_id": 116,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 1,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "20S42254-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/20S42254-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            1
+        ],
+        "label_L2": 2,
+        "label_multi_L2": [
+            2
+        ],
+        "case_id": 117,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 1,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "20S52842-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/20S52842-HE.mrxs",
+        "label_L1": 3,
+        "label_multi_L1": [
+            1,
+            3,
+            4
+        ],
+        "label_L2": 6,
+        "label_multi_L2": [
+            2,
+            6,
+            7
+        ],
+        "case_id": 118,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 2,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "20S53211-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/20S53211-HE.mrxs",
+        "label_L1": 3,
+        "label_multi_L1": [
+            1,
+            3,
+            4
+        ],
+        "label_L2": 6,
+        "label_multi_L2": [
+            2,
+            6,
+            7
+        ],
+        "case_id": 119,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 2,
+        "split_info_multi_L2": 1
+    },
+    {
+        "slide_id": "20S61616-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/20S61616-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            4,
+            7
+        ],
+        "case_id": 120,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "20S68690-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/20S68690-HE.mrxs",
+        "label_L1": 3,
+        "label_multi_L1": [
+            0,
+            1,
+            3
+        ],
+        "label_L2": 6,
+        "label_multi_L2": [
+            1,
+            2,
+            6
+        ],
+        "case_id": 121,
+        "split_info_single_L1": 1,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "20S73049-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/20S73049-HE.mrxs",
+        "label_L1": 3,
+        "label_multi_L1": [
+            0,
+            3
+        ],
+        "label_L2": 6,
+        "label_multi_L2": [
+            1,
+            6
+        ],
+        "case_id": 122,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 1,
+        "split_info_multi_L1": 1,
+        "split_info_multi_L2": 1
+    },
+    {
+        "slide_id": "21S26313-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/21S26313-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            1
+        ],
+        "label_L2": 2,
+        "label_multi_L2": [
+            2
+        ],
+        "case_id": 123,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 1,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "21S28412-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/21S28412-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 0,
+        "label_multi_L2": [
+            0,
+            3
+        ],
+        "case_id": 124,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "21S30275-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/21S30275-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 0,
+        "label_multi_L2": [
+            0,
+            3
+        ],
+        "case_id": 125,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "21S32963-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/21S32963-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            3,
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            2,
+            6,
+            7
+        ],
+        "case_id": 126,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "21S32979-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/21S32979-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 0,
+        "label_multi_L2": [
+            0,
+            2,
+            7
+        ],
+        "case_id": 127,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 2,
+        "split_info_multi_L1": 2,
+        "split_info_multi_L2": 2
+    },
+    {
+        "slide_id": "21S33363-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/21S33363-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 3,
+        "label_multi_L2": [
+            0,
+            3
+        ],
+        "case_id": 128,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "21S33675-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/21S33675-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            1
+        ],
+        "label_L2": 4,
+        "label_multi_L2": [
+            4
+        ],
+        "case_id": 129,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 1,
+        "split_info_multi_L2": 1
+    },
+    {
+        "slide_id": "21S33676-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/21S33676-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            0,
+            1,
+            4
+        ],
+        "label_L2": 0,
+        "label_multi_L2": [
+            0,
+            1,
+            3
+        ],
+        "case_id": 130,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 2,
+        "split_info_multi_L2": 1
+    },
+    {
+        "slide_id": "21S37091-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/21S37091-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            1
+        ],
+        "label_L2": 2,
+        "label_multi_L2": [
+            2
+        ],
+        "case_id": 131,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 2
+    },
+    {
+        "slide_id": "22S0412301-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/22S0412301-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            2,
+            7
+        ],
+        "case_id": 132,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 2,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "22S047898-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/22S047898-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            0,
+            1
+        ],
+        "label_L2": 4,
+        "label_multi_L2": [
+            1,
+            4
+        ],
+        "case_id": 133,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 2,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "22S051113-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/22S051113-HE.mrxs",
+        "label_L1": 3,
+        "label_multi_L1": [
+            1,
+            3,
+            4
+        ],
+        "label_L2": 6,
+        "label_multi_L2": [
+            2,
+            6,
+            7
+        ],
+        "case_id": 134,
+        "split_info_single_L1": 1,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 1,
+        "split_info_multi_L2": 2
+    },
+    {
+        "slide_id": "22S053218-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/22S053218-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            0,
+            1
+        ],
+        "label_L2": 4,
+        "label_multi_L2": [
+            1,
+            4
+        ],
+        "case_id": 135,
+        "split_info_single_L1": 2,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "23S117014-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/23S117014-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            3,
+            7
+        ],
+        "case_id": 136,
+        "split_info_single_L1": 1,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "24S002280-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/24S002280-HE.mrxs",
+        "label_L1": 0,
+        "label_multi_L1": [
+            0,
+            1
+        ],
+        "label_L2": 1,
+        "label_multi_L2": [
+            1,
+            3
+        ],
+        "case_id": 137,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "24S013582-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/24S013582-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            1
+        ],
+        "label_L2": 4,
+        "label_multi_L2": [
+            4
+        ],
+        "case_id": 138,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 2,
+        "split_info_multi_L2": 1
+    },
+    {
+        "slide_id": "24S028935-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/24S028935-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            7
+        ],
+        "case_id": 139,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "24S040542-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/24S040542-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 0,
+        "label_multi_L2": [
+            0,
+            4
+        ],
+        "case_id": 140,
+        "split_info_single_L1": 2,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "24S048762-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/24S048762-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            1
+        ],
+        "label_L2": 4,
+        "label_multi_L2": [
+            4
+        ],
+        "case_id": 141,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 1,
+        "split_info_multi_L1": 2,
+        "split_info_multi_L2": 1
+    },
+    {
+        "slide_id": "24S063631-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/24S063631-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            1
+        ],
+        "label_L2": 2,
+        "label_multi_L2": [
+            2
+        ],
+        "case_id": 142,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 2,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "24S068945-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/24S068945-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            1
+        ],
+        "label_L2": 2,
+        "label_multi_L2": [
+            2
+        ],
+        "case_id": 143,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 1,
+        "split_info_multi_L2": 1
+    },
+    {
+        "slide_id": "24S076370-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/24S076370-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            1
+        ],
+        "label_L2": 2,
+        "label_multi_L2": [
+            2
+        ],
+        "case_id": 144,
+        "split_info_single_L1": 1,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "24S100095-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/24S100095-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            1
+        ],
+        "label_L2": 2,
+        "label_multi_L2": [
+            2
+        ],
+        "case_id": 145,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "24S100197-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/24S100197-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            1
+        ],
+        "label_L2": 2,
+        "label_multi_L2": [
+            2
+        ],
+        "case_id": 146,
+        "split_info_single_L1": 2,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 1,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "24S125366-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/24S125366-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            7
+        ],
+        "case_id": 147,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "24S135201-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/24S135201-HE.mrxs",
+        "label_L1": 3,
+        "label_multi_L1": [
+            1,
+            3
+        ],
+        "label_L2": 6,
+        "label_multi_L2": [
+            2,
+            6
+        ],
+        "case_id": 148,
+        "split_info_single_L1": 2,
+        "split_info_single_L2": 2,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "23S019489-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/23S019489-HE.mrxs",
+        "label_L1": 0,
+        "label_multi_L1": [
+            0,
+            1
+        ],
+        "label_L2": 1,
+        "label_multi_L2": [
+            1,
+            2
+        ],
+        "case_id": 149,
+        "split_info_single_L1": 1,
+        "split_info_single_L2": 2,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 2
+    },
+    {
+        "slide_id": "21S74327-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/21S74327-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            4,
+            7
+        ],
+        "case_id": 150,
+        "split_info_single_L1": 2,
+        "split_info_single_L2": 2,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 2
+    },
+    {
+        "slide_id": "21S84206-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/21S84206-HE.mrxs",
+        "label_L1": 0,
+        "label_multi_L1": [
+            0,
+            1
+        ],
+        "label_L2": 1,
+        "label_multi_L2": [
+            1,
+            3
+        ],
+        "case_id": 151,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 1,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 2
+    },
+    {
+        "slide_id": "22S000153-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/22S000153-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            1
+        ],
+        "label_L2": 2,
+        "label_multi_L2": [
+            2
+        ],
+        "case_id": 152,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 1,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "22S000826-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/22S000826-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            1
+        ],
+        "label_L2": 2,
+        "label_multi_L2": [
+            2
+        ],
+        "case_id": 153,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 2
+    },
+    {
+        "slide_id": "19S18928-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/19S18928-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 0,
+        "label_multi_L2": [
+            0,
+            3,
+            7
+        ],
+        "case_id": 154,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 1,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 2
+    },
+    {
+        "slide_id": "19S21721-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/19S21721-HE.mrxs",
+        "label_L1": 3,
+        "label_multi_L1": [
+            1,
+            3,
+            4
+        ],
+        "label_L2": 6,
+        "label_multi_L2": [
+            0,
+            3,
+            6
+        ],
+        "case_id": 155,
+        "split_info_single_L1": 2,
+        "split_info_single_L2": 1,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "19S22411-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/19S22411-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 3,
+        "label_multi_L2": [
+            3,
+            7
+        ],
+        "case_id": 156,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "19S22695-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/19S22695-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 3,
+        "label_multi_L2": [
+            0,
+            3
+        ],
+        "case_id": 157,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "19S26530-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/19S26530-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            2,
+            7
+        ],
+        "case_id": 158,
+        "split_info_single_L1": 1,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 1,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "19S35419-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/19S35419-HE.mrxs",
+        "label_L1": 0,
+        "label_multi_L1": [
+            0,
+            1
+        ],
+        "label_L2": 1,
+        "label_multi_L2": [
+            1,
+            2
+        ],
+        "case_id": 159,
+        "split_info_single_L1": 1,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "19S35430-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/19S35430-HE.mrxs",
+        "label_L1": 0,
+        "label_multi_L1": [
+            0,
+            1,
+            4
+        ],
+        "label_L2": 1,
+        "label_multi_L2": [
+            0,
+            1,
+            3
+        ],
+        "case_id": 160,
+        "split_info_single_L1": 2,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 1,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "18S48989-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/18S48989-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 0,
+        "label_multi_L2": [
+            0,
+            2
+        ],
+        "case_id": 161,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "18S49781-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/18S49781-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            7
+        ],
+        "case_id": 162,
+        "split_info_single_L1": 2,
+        "split_info_single_L2": 2,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "18S49951-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/18S49951-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            0,
+            1,
+            4
+        ],
+        "label_L2": 0,
+        "label_multi_L2": [
+            0,
+            1,
+            3
+        ],
+        "case_id": 163,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 1,
+        "split_info_multi_L2": 1
+    },
+    {
+        "slide_id": "18S52000-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/18S52000-HE.mrxs",
+        "label_L1": 3,
+        "label_multi_L1": [
+            1,
+            3
+        ],
+        "label_L2": 6,
+        "label_multi_L2": [
+            3,
+            6
+        ],
+        "case_id": 164,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "18S52583-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/18S52583-HE.mrxs",
+        "label_L1": 1,
+        "label_multi_L1": [
+            1
+        ],
+        "label_L2": 2,
+        "label_multi_L2": [
+            2
+        ],
+        "case_id": 165,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 1,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 2
+    },
+    {
+        "slide_id": "18S53634-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/18S53634-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            2,
+            7
+        ],
+        "case_id": 166,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 1,
+        "split_info_multi_L1": 1,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "18S63214-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/18S63214-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            2,
+            7
+        ],
+        "case_id": 167,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "18S63348-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/18S63348-HE.mrxs",
+        "label_L1": 4,
+        "label_multi_L1": [
+            1,
+            4
+        ],
+        "label_L2": 7,
+        "label_multi_L2": [
+            0,
+            2,
+            7
+        ],
+        "case_id": 168,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 1,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "19S03942-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/19S03942-HE.mrxs",
+        "label_L1": 3,
+        "label_multi_L1": [
+            1,
+            3
+        ],
+        "label_L2": 6,
+        "label_multi_L2": [
+            3,
+            6
+        ],
+        "case_id": 169,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 0,
+        "split_info_multi_L2": 0
+    },
+    {
+        "slide_id": "19S04855-HE",
+        "full_path": "/media/a6000/3E5C99E35C9995ED/jcy/dataset/medical/kidney_fomal/19S04855-HE.mrxs",
+        "label_L1": 3,
+        "label_multi_L1": [
+            1,
+            3,
+            4
+        ],
+        "label_L2": 6,
+        "label_multi_L2": [
+            0,
+            2,
+            6
+        ],
+        "case_id": 170,
+        "split_info_single_L1": 0,
+        "split_info_single_L2": 0,
+        "split_info_multi_L1": 2,
+        "split_info_multi_L2": 2
+    }
+]

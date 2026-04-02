@@ -1,0 +1,28 @@
+{
+  "L1": [
+    "Calcineurin Inhibitor Toxicity",
+    "IFTA",
+    "Normal Biopsy Or Nonspecific Changes",
+    "Polyomavirus Nephropathy",
+    "Rejection"
+  ],
+  "L2": [
+    "AMR/MVI",
+    "Calcineurin Inhibitor Toxicity",
+    "IFTA",
+    "Normal Biopsy Or Nonspecific Changes",
+    "Polyomavirus Nephropathy",
+    "TCMR"
+  ],
+  "L3": [
+    "Active AMR",
+    "Acute TCMR",
+    "Calcineurin Inhibitor Toxicity",
+    "Chronic and Chronic Active AMR",
+    "IFTA",
+    "Normal Biopsy Or Nonspecific Changes",
+    "Other MVI and C4d",
+    "Polyomavirus Nephropathy",
+    "Suspicious (Borderline) For Acute TCMR"
+  ]
+}
