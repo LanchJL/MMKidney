@@ -20,6 +20,18 @@ from utils import (
 )
 
 
+def _fmt_level_metrics(metrics: dict, level: str) -> str:
+    m = metrics.get(level, {})
+    parts = [
+        f"AUROC={m.get('AUROC', float('nan')):.4f}",
+        f"AUPRC={m.get('AUPRC', float('nan')):.4f}",
+        f"F1@0.5={m.get('F1@0.5', float('nan')):.4f}",
+    ]
+    if "F1@tuned" in m:
+        parts.append(f"F1@tuned={m.get('F1@tuned', float('nan')):.4f}")
+    return f"{level}: " + ", ".join(parts)
+
+
 def train_loop(
     train_loader,
     val_loader,
@@ -182,12 +194,7 @@ def run_training(conf: TrainConfig, train_samples, val_samples, test_samples=Non
     val_metrics_tuned = evaluate(model, val_loader, forward_fn_eval, device, thresholds=tuned_thresholds)
     save_json(os.path.join(conf.out_dir, "val_best_metrics_tuned.json"), val_metrics_tuned)
 
-    print(
-        "[VAL-TUNED] "
-        f"L1 F1@tuned={val_metrics_tuned.get('L1', {}).get('F1@tuned', 'nan'):.4f} | "
-        f"L2 F1@tuned={val_metrics_tuned.get('L2', {}).get('F1@tuned', 'nan'):.4f} | "
-        f"L3 F1@tuned={val_metrics_tuned.get('L3', {}).get('F1@tuned', 'nan'):.4f}"
-    )
+    print("[VAL-TUNED] " + " | ".join(_fmt_level_metrics(val_metrics_tuned, lv) for lv in ["L1", "L2", "L3"]))
 
     if test_samples:
         test_loader = make_dataloader(
@@ -204,24 +211,8 @@ def run_training(conf: TrainConfig, train_samples, val_samples, test_samples=Non
         test_metrics_tuned = evaluate(model, test_loader, forward_fn_eval, device, thresholds=tuned_thresholds)
         save_json(os.path.join(conf.out_dir, "test_metrics_tuned.json"), test_metrics_tuned)
 
-        print(
-            "[TEST] "
-            f"L1 AUC={test_metrics.get('L1', {}).get('AUROC', 'nan'):.4f} "
-            f"AUPRC={test_metrics.get('L1', {}).get('AUPRC', 'nan'):.4f} "
-            f"F1={test_metrics.get('L1', {}).get('F1@0.5', 'nan'):.4f} | "
-            f"L2 AUC={test_metrics.get('L2', {}).get('AUROC', 'nan'):.4f} "
-            f"AUPRC={test_metrics.get('L2', {}).get('AUPRC', 'nan'):.4f} "
-            f"F1={test_metrics.get('L2', {}).get('F1@0.5', 'nan'):.4f} | "
-            f"L3 AUC={test_metrics.get('L3', {}).get('AUROC', 'nan'):.4f} "
-            f"AUPRC={test_metrics.get('L3', {}).get('AUPRC', 'nan'):.4f} "
-            f"F1={test_metrics.get('L3', {}).get('F1@0.5', 'nan'):.4f}"
-        )
-        print(
-            "[TEST-TUNED] "
-            f"L1 F1@tuned={test_metrics_tuned.get('L1', {}).get('F1@tuned', 'nan'):.4f} | "
-            f"L2 F1@tuned={test_metrics_tuned.get('L2', {}).get('F1@tuned', 'nan'):.4f} | "
-            f"L3 F1@tuned={test_metrics_tuned.get('L3', {}).get('F1@tuned', 'nan'):.4f}"
-        )
+        print("[TEST] " + " | ".join(_fmt_level_metrics(test_metrics, lv) for lv in ["L1", "L2", "L3"]))
+        print("[TEST-TUNED] " + " | ".join(_fmt_level_metrics(test_metrics_tuned, lv) for lv in ["L1", "L2", "L3"]))
 
 
 def main():
