@@ -1,55 +1,40 @@
-# MMKidney (Multimodal, src-only)
+# MMKidney Multimodal Pipeline
 
-This repository now uses a single code path under `src/` for multimodal kidney pathology modeling.
+This implementation adds a three-stage multimodal system:
 
-- WSI-only student (Stage A)
-- Tri-modal teacher (Stage B)
-- Distillation teacher -> student (Stage C)
+1. Stage A: WSI-only student (`train_wsi.py`), supports multi-stain missingness with HE anchor.
+2. Stage B: Tri-modal teacher (`train_teacher.py`) using WSI + tabular + pre-anchor lab summary features.
+3. Stage C: Distillation (`train_distill.py`) from teacher back to WSI-only student while still training on all WSI samples.
 
-Detailed documentation: see [README_multimodal.md](README_multimodal.md).
+## Key guarantees
 
-## 1) Environment
+- HE-only samples can run end-to-end.
+- Missing non-HE stains do not crash forward.
+- Lab features are pre-anchor only by default.
+- Teacher uses bridge cohort; student can train on full WSI cohort.
 
-Current runtime requires at least:
-
-- Python 3.10+
-- `torch`
-- `h5py`
-- `tqdm`
-- `scikit-learn`
-
-Minimal install example:
+## Prepare manifests and features
 
 ```bash
-python3 -m pip install torch h5py tqdm scikit-learn
+python -m src.datasets.build_cohort
+python -m src.datasets.build_tabular_features
+python -m src.datasets.build_lab_features
 ```
 
-Optional (for parquet export):
-
-```bash
-python3 -m pip install pandas pyarrow
-```
-
-## 2) Build manifests and features
-
-```bash
-bash scripts/build_all_manifests.sh
-```
-
-This creates processed assets in `data/processed/`, including:
+Outputs go to `data/processed/`:
 
 - `stain_vocab.json`
 - `cohort_wsi.csv`
 - `cohort_tabular.csv`
 - `cohort_trimodal.csv`
-- `tabular_features.csv`
-- `lab_features.csv`
-- `manifests/*.jsonl`
+- `tabular_features.csv` (+ optional parquet)
+- `lab_features.csv` (+ optional parquet)
+- manifests in `data/processed/manifests/*.jsonl`
 
-## 3) Train WSI-only student (Stage A)
+## Train WSI-only
 
 ```bash
-bash scripts/train_wsi.sh \
+python -m src.training.train_wsi \
   --train-manifest data/processed/manifests/train_manifest.jsonl \
   --val-manifest data/processed/manifests/val_manifest.jsonl \
   --test-manifest data/processed/manifests/test_manifest.jsonl \
@@ -57,10 +42,10 @@ bash scripts/train_wsi.sh \
   --out-dir outputs/wsi
 ```
 
-## 4) Train tri-modal teacher (Stage B)
+## Train teacher
 
 ```bash
-bash scripts/train_teacher.sh \
+python -m src.training.train_teacher \
   --trimodal-manifest data/processed/manifests/trimodal_manifest.jsonl \
   --stain-vocab data/processed/stain_vocab.json \
   --tabular-features data/processed/tabular_features.csv \
@@ -69,10 +54,10 @@ bash scripts/train_teacher.sh \
   --out-dir outputs/teacher
 ```
 
-## 5) Distill to WSI student (Stage C)
+## Distill teacher -> student
 
 ```bash
-bash scripts/train_distill.sh \
+python -m src.training.train_distill \
   --teacher-ckpt outputs/teacher/best_teacher.pt \
   --student-init-ckpt outputs/wsi/best_wsi.pt \
   --train-manifest data/processed/manifests/train_manifest.jsonl \
@@ -85,12 +70,12 @@ bash scripts/train_distill.sh \
   --out-dir outputs/distill
 ```
 
-## 6) Inference + explanations
+## Inference and explanations
 
-WSI student:
+WSI student inference:
 
 ```bash
-bash scripts/infer.sh \
+python -m src.training.infer \
   --model-type wsi \
   --manifest data/processed/manifests/test_manifest.jsonl \
   --stain-vocab data/processed/stain_vocab.json \
@@ -98,10 +83,10 @@ bash scripts/infer.sh \
   --out-dir outputs/explanations
 ```
 
-Teacher:
+Teacher inference with modality gates:
 
 ```bash
-bash scripts/infer.sh \
+python -m src.training.infer \
   --model-type teacher \
   --manifest data/processed/manifests/trimodal_manifest.jsonl \
   --stain-vocab data/processed/stain_vocab.json \
@@ -110,3 +95,18 @@ bash scripts/infer.sh \
   --ckpt outputs/teacher/best_teacher.pt \
   --out-dir outputs/explanations_teacher
 ```
+
+Each sample produces `outputs/explanations/{sample_id}.json` containing:
+
+- `stain_patch_attention_topk`
+- `stain_fusion_weights`
+- `modality_gates` (teacher)
+- hierarchical probabilities
+
+## Shell wrappers
+
+- `scripts/build_all_manifests.sh`
+- `scripts/train_wsi.sh`
+- `scripts/train_teacher.sh`
+- `scripts/train_distill.sh`
+- `scripts/infer.sh`

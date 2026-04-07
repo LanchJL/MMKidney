@@ -1,0 +1,9 @@
+model:
+  feat_dim: 1024
+  proj_dim: 256
+  stain_emb_dim: 64
+  img_dim: 256
+  tab_dim: 128
+  lab_dim: 128
+  fused_dim: 256
+  label_dims: [4, 5, 8]

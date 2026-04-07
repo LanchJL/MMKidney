@@ -1,0 +1,8 @@
+train:
+  seed: 42
+  epochs: 60
+  freeze_wsi_epochs: 10
+  batch_size: 4
+  lr: 2e-4
+  weight_decay: 1e-4
+  amp: true

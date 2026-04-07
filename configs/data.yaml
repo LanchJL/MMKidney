@@ -1,0 +1,10 @@
+data:
+  data_dir: data
+  processed_dir: data/processed
+  train_manifest: data/processed/manifests/train_manifest.jsonl
+  val_manifest: data/processed/manifests/val_manifest.jsonl
+  test_manifest: data/processed/manifests/test_manifest.jsonl
+  trimodal_manifest: data/processed/manifests/trimodal_manifest.jsonl
+  stain_vocab: data/processed/stain_vocab.json
+  tabular_features: data/processed/tabular_features.csv
+  lab_features: data/processed/lab_features.csv

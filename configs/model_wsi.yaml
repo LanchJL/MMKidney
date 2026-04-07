@@ -1,0 +1,10 @@
+model:
+  feat_dim: 1024
+  proj_dim: 256
+  stain_emb_dim: 64
+  fusion_dim: 256
+  num_heads: 4
+  num_set_layers: 2
+  dropout: 0.25
+  label_dims: [4, 5, 8]
+  use_he_adapter: true

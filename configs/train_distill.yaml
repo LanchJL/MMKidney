@@ -1,0 +1,11 @@
+train:
+  seed: 42
+  epochs: 50
+  batch_size: 4
+  lr: 2e-4
+  weight_decay: 1e-4
+  amp: true
+  T: 2.0
+  alpha: 1.0
+  beta: 0.5
+  gamma: 1.0
