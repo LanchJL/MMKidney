@@ -16,9 +16,15 @@ This implementation adds a three-stage multimodal system:
 ## Prepare manifests and features
 
 ```bash
-python -m src.datasets.build_cohort
-python -m src.datasets.build_tabular_features
-python -m src.datasets.build_lab_features
+python3 -m src.datasets.build_cohort
+python3 -m src.datasets.build_tabular_features
+python3 -m src.datasets.build_lab_features
+```
+
+Or use one command:
+
+```bash
+bash scripts/run_pipeline.sh prepare
 ```
 
 Outputs go to `data/processed/`:
@@ -34,7 +40,7 @@ Outputs go to `data/processed/`:
 ## Train WSI-only
 
 ```bash
-python -m src.training.train_wsi \
+python3 -m src.training.train_wsi \
   --train-manifest data/processed/manifests/train_manifest.jsonl \
   --val-manifest data/processed/manifests/val_manifest.jsonl \
   --test-manifest data/processed/manifests/test_manifest.jsonl \
@@ -45,7 +51,7 @@ python -m src.training.train_wsi \
 ## Train teacher
 
 ```bash
-python -m src.training.train_teacher \
+python3 -m src.training.train_teacher \
   --trimodal-manifest data/processed/manifests/trimodal_manifest.jsonl \
   --stain-vocab data/processed/stain_vocab.json \
   --tabular-features data/processed/tabular_features.csv \
@@ -57,7 +63,7 @@ python -m src.training.train_teacher \
 ## Distill teacher -> student
 
 ```bash
-python -m src.training.train_distill \
+python3 -m src.training.train_distill \
   --teacher-ckpt outputs/teacher/best_teacher.pt \
   --student-init-ckpt outputs/wsi/best_wsi.pt \
   --train-manifest data/processed/manifests/train_manifest.jsonl \
@@ -75,7 +81,7 @@ python -m src.training.train_distill \
 WSI student inference:
 
 ```bash
-python -m src.training.infer \
+python3 -m src.training.infer \
   --model-type wsi \
   --manifest data/processed/manifests/test_manifest.jsonl \
   --stain-vocab data/processed/stain_vocab.json \
@@ -86,7 +92,7 @@ python -m src.training.infer \
 Teacher inference with modality gates:
 
 ```bash
-python -m src.training.infer \
+python3 -m src.training.infer \
   --model-type teacher \
   --manifest data/processed/manifests/trimodal_manifest.jsonl \
   --stain-vocab data/processed/stain_vocab.json \
@@ -105,6 +111,8 @@ Each sample produces `outputs/explanations/{sample_id}.json` containing:
 
 ## Shell wrappers
 
+- `scripts/install_deps.sh`
+- `scripts/run_pipeline.sh` (`prepare|stage_a|stage_b|stage_c|infer|all`)
 - `scripts/build_all_manifests.sh`
 - `scripts/train_wsi.sh`
 - `scripts/train_teacher.sh`

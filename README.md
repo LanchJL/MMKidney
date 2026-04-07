@@ -30,6 +30,28 @@ Optional (for parquet export):
 python3 -m pip install pandas pyarrow
 ```
 
+Or directly:
+
+```bash
+bash scripts/install_deps.sh
+```
+
+## Quick Start (One Command Per Stage)
+
+```bash
+bash scripts/run_pipeline.sh prepare
+bash scripts/run_pipeline.sh stage_a
+bash scripts/run_pipeline.sh stage_b
+bash scripts/run_pipeline.sh stage_c
+bash scripts/run_pipeline.sh infer
+```
+
+All-in-one:
+
+```bash
+bash scripts/run_pipeline.sh all
+```
+
 ## 2) Build manifests and features
 
 ```bash
