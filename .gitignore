@@ -6,6 +6,10 @@ checkpoints/
 *.pt
 *.ckpt
 
+data/
+*.csv
+*.xlsx
+
 # Python cache
 __pycache__/
 *.pyc
