@@ -113,8 +113,35 @@ Each sample produces `outputs/explanations/{sample_id}.json` containing:
 
 - `scripts/install_deps.sh`
 - `scripts/run_pipeline.sh` (`prepare|stage_a|stage_b|stage_c|infer|all`)
+- `scripts/build_pseudo_patch_fusion.sh` (HE anchor + optional multi-stain pseudo patch fusion)
 - `scripts/build_all_manifests.sh`
 - `scripts/train_wsi.sh`
 - `scripts/train_teacher.sh`
 - `scripts/train_distill.sh`
 - `scripts/infer.sh`
+
+## Optional: HE vs Multi-stain Pseudo Patch Fusion (for clustering comparison)
+
+Build HE-anchored pseudo fused patch features (minimal-intrusion, no model retraining required):
+
+```bash
+bash scripts/build_pseudo_patch_fusion.sh \
+  --manifest data/processed/manifests/trimodal_manifest.jsonl \
+  --output-dir data/processed/pseudo_patch_fusion \
+  --k 3 \
+  --alpha 0.5 \
+  --max-radius -1
+```
+
+Outputs:
+
+- `data/processed/pseudo_patch_fusion/h5/{sample_id}_fused.h5`
+- `data/processed/pseudo_patch_fusion/fused_manifest.jsonl`
+- `data/processed/pseudo_patch_fusion/fused_summary.json`
+
+You can then run the same clustering pipeline on:
+
+1. HE-only patch features
+2. pseudo fused patch features
+
+to compare clustering behavior.
