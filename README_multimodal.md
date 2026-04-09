@@ -145,3 +145,46 @@ You can then run the same clustering pipeline on:
 2. pseudo fused patch features
 
 to compare clustering behavior.
+
+## Optional: Hierarchical Clustering (L1 -> L2 refinement)
+
+This script follows a CLUSTER-like two-level workflow:
+
+1. fit prototypes
+2. L1 clustering on prototypes
+3. refine L2 inside each L1 cluster
+4. fallback `NA` L2 to L1 as final cluster
+
+Wrapper:
+
+- `scripts/cluster_hierarchical_patches.sh`
+
+Example A (fused features):
+
+```bash
+bash scripts/cluster_hierarchical_patches.sh \
+  --manifest data/processed/pseudo_patch_fusion/fused_manifest.jsonl \
+  --output-dir data/processed/hier_cluster_fused \
+  --l1-method leiden \
+  --n-prototypes 2048 \
+  --l1-resolution 0.45 \
+  --refine-resolution 0.60
+```
+
+Example B (HE-only features; if you prepare an HE-only manifest with `h5` field):
+
+```bash
+bash scripts/cluster_hierarchical_patches.sh \
+  --manifest data/processed/he_only_manifest.jsonl \
+  --output-dir data/processed/hier_cluster_he \
+  --l1-method leiden \
+  --n-prototypes 2048
+```
+
+Main outputs:
+
+- `prototype_centers.npy`
+- `prototype_clusters_L1L2.(parquet|csv)`
+- `patch_final_clusters.(parquet|csv)`
+- `slide_final_cluster_hist.(parquet|csv)`
+- `cluster_meta.json`
