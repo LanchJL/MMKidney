@@ -183,6 +183,9 @@ bash scripts/cluster_hierarchical_patches.sh \
   --n-prototypes 2048
 ```
 
+You can also pass existing `train/val/test_manifest.jsonl` directly (with `h5s` dict).
+The clustering script now auto-selects `h5s["HE"]` by default (`--stain-name HE`).
+
 Example C (HE-only + adaptive L3):
 
 ```bash

@@ -25,6 +25,36 @@ def _read_jsonl(path: Path) -> List[Dict]:
     return rows
 
 
+def _normalize_manifest_rows(manifest_rows: List[Dict], stain_name: str = "HE") -> List[Dict]:
+    """
+    Accept both formats:
+    1) {"sample_id","split","h5": "..."}
+    2) {"sample_id","split","h5s": {"HE":"...", ...}}
+    Return normalized rows with key "h5".
+    """
+    out = []
+    missing = []
+    for rec in manifest_rows:
+        rr = dict(rec)
+        h5 = rr.get("h5", None)
+        if (not h5) and isinstance(rr.get("h5s", None), dict):
+            h5 = rr["h5s"].get(stain_name, None)
+        if not h5:
+            missing.append(str(rr.get("sample_id", "")))
+            continue
+        rr["h5"] = h5
+        out.append(rr)
+
+    if not out:
+        raise RuntimeError(
+            f"No valid rows after manifest normalization for stain='{stain_name}'. "
+            "Expected each record to have `h5` or `h5s[stain]`."
+        )
+    if missing:
+        print(f"[warn] {len(missing)} samples missing stain '{stain_name}', skipped.")
+    return out
+
+
 def _l2_normalize(x: np.ndarray) -> np.ndarray:
     x = x.astype(np.float32, copy=False)
     n = np.linalg.norm(x, axis=1, keepdims=True) + 1e-8
@@ -442,6 +472,7 @@ def _spatial_smooth_majority(
 def main():
     p = argparse.ArgumentParser("Hierarchical clustering (L1->L2) for HE/fused patch features")
     p.add_argument("--manifest", required=True, help="jsonl with fields: sample_id, split, h5")
+    p.add_argument("--stain-name", default="HE", help="Used when manifest has `h5s` dict instead of `h5`.")
     p.add_argument("--output-dir", default="data/processed/hier_cluster")
     p.add_argument("--feature-key", default="features")
     p.add_argument("--n-prototypes", type=int, default=2048)
@@ -477,6 +508,7 @@ def main():
     out_dir.mkdir(parents=True, exist_ok=True)
 
     manifest_rows = _read_jsonl(Path(args.manifest))
+    manifest_rows = _normalize_manifest_rows(manifest_rows, stain_name=args.stain_name)
     if not manifest_rows:
         raise RuntimeError("Empty manifest")
 
