@@ -4,7 +4,7 @@ import json
 import os
 import re
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Tuple
 
 import matplotlib.colors as mcolors
 import matplotlib.pyplot as plt
@@ -31,15 +31,47 @@ def _load_table_auto(path: str) -> pd.DataFrame:
     raise ValueError(f"Unsupported table format: {path}")
 
 
-def _find_wsi_path(wsi_dir: str, sample_id: str) -> Optional[str]:
+def _norm_id(s: str) -> str:
+    s = str(s).strip().lower()
+    s = re.sub(r"\.(mrxs|svs|ndpi|tiff|tif)$", "", s)
+    s = re.sub(r"[\s\-]+", "_", s)
+    return s
+
+
+def _build_wsi_index(wsi_dir: str) -> Tuple[Dict[str, str], List[str]]:
+    exts = [".mrxs", ".svs", ".ndpi", ".tiff", ".tif"]
+    norm2path: Dict[str, str] = {}
+    paths: List[str] = []
+    for ext in exts:
+        for fp in Path(wsi_dir).glob(f"*{ext}"):
+            p = str(fp)
+            paths.append(p)
+            norm2path[_norm_id(fp.stem)] = p
+    return norm2path, paths
+
+
+def _find_wsi_path(sample_id: str, norm2path: Dict[str, str], all_paths: List[str]) -> Optional[str]:
     sid = str(sample_id)
-    for ext in [".mrxs", ".svs", ".ndpi", ".tiff", ".tif"]:
-        p1 = os.path.join(wsi_dir, sid + ext)
-        if os.path.exists(p1):
-            return p1
-        p2 = os.path.join(wsi_dir, sid.split("_")[0] + ext)
-        if os.path.exists(p2):
-            return p2
+    cand_ids = []
+    sid_norm = _norm_id(sid)
+    cand_ids.append(sid_norm)
+    if "_" in sid_norm:
+        cand_ids.append(sid_norm.split("_")[0])
+    if "-" in sid_norm:
+        cand_ids.append(sid_norm.split("-")[0])
+
+    for c in cand_ids:
+        if c in norm2path:
+            return norm2path[c]
+
+    # Fuzzy: filename startswith/contains sample id token.
+    for c in cand_ids:
+        if not c:
+            continue
+        for p in all_paths:
+            stem = _norm_id(Path(p).stem)
+            if stem.startswith(c) or c in stem:
+                return p
     return None
 
 
@@ -207,6 +239,7 @@ def main():
     p.add_argument("--top-n-clusters", type=int, default=0)
     p.add_argument("--filter-clusters", default="", help="comma-separated labels to hide in filtered output")
     p.add_argument("--legend", action="store_true")
+    p.add_argument("--strict-match", action="store_true", help="If set, disable fuzzy id matching.")
     args = p.parse_args()
 
     wsi_dir = args.wsi_dir.strip() if isinstance(args.wsi_dir, str) else ""
@@ -219,6 +252,13 @@ def main():
         )
     if not os.path.isdir(wsi_dir):
         raise ValueError(f"WSI dir does not exist: {wsi_dir}")
+
+    norm2path, all_wsi_paths = _build_wsi_index(wsi_dir)
+    if not all_wsi_paths:
+        raise ValueError(
+            f"No WSI files found in: {wsi_dir}. "
+            "Expected one of [.mrxs, .svs, .ndpi, .tiff, .tif]."
+        )
 
     out_root = Path(args.output_dir)
     out_all = out_root / "all_clusters"
@@ -258,9 +298,36 @@ def main():
 
     filter_clusters = [x.strip() for x in args.filter_clusters.split(",") if x.strip()]
 
+    # preflight match check
+    pre_missing = []
+    for sid in sample_ids:
+        if args.strict_match:
+            k = _norm_id(sid)
+            p = norm2path.get(k, None)
+        else:
+            p = _find_wsi_path(sid, norm2path, all_wsi_paths)
+        if p is None:
+            pre_missing.append(str(sid))
+    matched_n = len(sample_ids) - len(pre_missing)
+    print(
+        f"[precheck] slides={len(sample_ids)}, matched_wsi={matched_n}, "
+        f"missing={len(pre_missing)}, wsi_dir={wsi_dir}"
+    )
+    if pre_missing:
+        pd.DataFrame({"sample_id": pre_missing}).to_csv(out_root / "precheck_missing_wsi.csv", index=False)
+    if matched_n == 0:
+        raise RuntimeError(
+            "Precheck found 0 matched WSI files. "
+            "Please verify --wsi-dir or ID naming rules. "
+            "See output precheck_missing_wsi.csv."
+        )
+
     skipped = []
     for i, sid in enumerate(sample_ids, 1):
-        wsi_path = _find_wsi_path(wsi_dir, sid)
+        if args.strict_match:
+            wsi_path = norm2path.get(_norm_id(sid), None)
+        else:
+            wsi_path = _find_wsi_path(sid, norm2path, all_wsi_paths)
         if wsi_path is None:
             skipped.append(str(sid))
             continue

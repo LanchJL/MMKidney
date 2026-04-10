@@ -223,3 +223,9 @@ Useful outputs:
 - `filtered_clusters/*_overlay_filtered.png`
 - `final_cluster_colors.csv`
 - `overlay_meta.json`
+- `precheck_missing_wsi.csv` (generated when some slide ids cannot be matched to WSI files)
+
+If matching is too loose/too strict:
+
+- add `--strict-match` to require exact `sample_id == WSI stem` (normalized)
+- or pass explicit `--wsi-dir` to override auto-resolved CLUSTER path
