@@ -2,6 +2,7 @@ import argparse
 import gc
 import json
 import os
+import re
 from pathlib import Path
 from typing import Dict, List, Optional
 
@@ -39,6 +40,38 @@ def _find_wsi_path(wsi_dir: str, sample_id: str) -> Optional[str]:
         p2 = os.path.join(wsi_dir, sid.split("_")[0] + ext)
         if os.path.exists(p2):
             return p2
+    return None
+
+
+def _resolve_default_wsi_dir() -> Optional[str]:
+    """
+    Try to reuse the same WSI directory used by CLUSTER scripts.
+    Priority:
+    1) env: MMKIDNEY_WSI_DIR
+    2) parse CLUSTER/*.py for WSI_DIR = "..."
+    """
+    env_path = os.environ.get("MMKIDNEY_WSI_DIR", "").strip()
+    if env_path and os.path.isdir(env_path):
+        return env_path
+
+    cluster_dir = Path("CLUSTER")
+    if not cluster_dir.exists():
+        return None
+
+    candidates = sorted(cluster_dir.glob("*.py"))
+    pat = re.compile(r'^\s*WSI_DIR\s*=\s*["\']([^"\']+)["\']')
+    for fp in candidates:
+        try:
+            text = fp.read_text(encoding="utf-8", errors="ignore")
+        except Exception:
+            continue
+        for line in text.splitlines():
+            m = pat.search(line)
+            if not m:
+                continue
+            wsi_dir = m.group(1).strip()
+            if os.path.isdir(wsi_dir):
+                return wsi_dir
     return None
 
 
@@ -166,7 +199,7 @@ def _overlay_one_slide(df_slide, wsi_path, save_path, color_map, downsample=16, 
 def main():
     p = argparse.ArgumentParser("Overlay hierarchical final clusters back to WSI")
     p.add_argument("--patch-final", required=True, help="patch_final_clusters.(parquet|csv|pkl)")
-    p.add_argument("--wsi-dir", required=True)
+    p.add_argument("--wsi-dir", default="", help="Optional. Auto-resolve from CLUSTER if omitted.")
     p.add_argument("--output-dir", default="data/processed/hier_cluster_overlay")
     p.add_argument("--downsample", type=int, default=16)
     p.add_argument("--alpha", type=float, default=0.4)
@@ -175,6 +208,17 @@ def main():
     p.add_argument("--filter-clusters", default="", help="comma-separated labels to hide in filtered output")
     p.add_argument("--legend", action="store_true")
     args = p.parse_args()
+
+    wsi_dir = args.wsi_dir.strip() if isinstance(args.wsi_dir, str) else ""
+    if not wsi_dir:
+        wsi_dir = _resolve_default_wsi_dir() or ""
+    if not wsi_dir:
+        raise ValueError(
+            "WSI dir not provided and auto-resolve failed. "
+            "Please pass --wsi-dir or set MMKIDNEY_WSI_DIR."
+        )
+    if not os.path.isdir(wsi_dir):
+        raise ValueError(f"WSI dir does not exist: {wsi_dir}")
 
     out_root = Path(args.output_dir)
     out_all = out_root / "all_clusters"
@@ -216,7 +260,7 @@ def main():
 
     skipped = []
     for i, sid in enumerate(sample_ids, 1):
-        wsi_path = _find_wsi_path(args.wsi_dir, sid)
+        wsi_path = _find_wsi_path(wsi_dir, sid)
         if wsi_path is None:
             skipped.append(str(sid))
             continue
@@ -270,7 +314,7 @@ def main():
 
     meta = {
         "patch_final": args.patch_final,
-        "wsi_dir": args.wsi_dir,
+        "wsi_dir": wsi_dir,
         "n_slides": len(sample_ids),
         "n_clusters": len(color_map),
         "top_n_slides": args.top_n_slides,

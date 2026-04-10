@@ -197,19 +197,20 @@ Use final patch-level labels and draw them on WSI thumbnails:
 ```bash
 bash scripts/overlay_hier_clusters_wsi.sh \
   --patch-final data/processed/hier_cluster_fused/patch_final_clusters.parquet \
-  --wsi-dir /path/to/wsi \
   --output-dir data/processed/hier_cluster_fused_overlay \
   --downsample 16 \
   --alpha 0.40 \
   --legend
 ```
 
+By default, `--wsi-dir` is auto-resolved from `CLUSTER/*.py` (`WSI_DIR=...`), so manual input is not required.
+If needed, you can still override it with `--wsi-dir`, or set env `MMKIDNEY_WSI_DIR`.
+
 For HE-only result, change `--patch-final` to the HE clustering output, e.g.:
 
 ```bash
 bash scripts/overlay_hier_clusters_wsi.sh \
   --patch-final data/processed/hier_cluster_he/patch_final_clusters.parquet \
-  --wsi-dir /path/to/wsi \
   --output-dir data/processed/hier_cluster_he_overlay \
   --downsample 16 \
   --alpha 0.40 \
