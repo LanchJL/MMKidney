@@ -114,6 +114,7 @@ Each sample produces `outputs/explanations/{sample_id}.json` containing:
 - `scripts/install_deps.sh`
 - `scripts/run_pipeline.sh` (`prepare|stage_a|stage_b|stage_c|infer|all`)
 - `scripts/build_pseudo_patch_fusion.sh` (HE anchor + optional multi-stain pseudo patch fusion)
+- `scripts/overlay_hier_clusters_wsi.sh` (map final hierarchical cluster labels back onto WSI thumbnails)
 - `scripts/build_all_manifests.sh`
 - `scripts/train_wsi.sh`
 - `scripts/train_teacher.sh`
@@ -188,3 +189,36 @@ Main outputs:
 - `patch_final_clusters.(parquet|csv)`
 - `slide_final_cluster_hist.(parquet|csv)`
 - `cluster_meta.json`
+
+## Optional: Map Cluster Labels Back to WSI (CLUSTER-style overlay)
+
+Use final patch-level labels and draw them on WSI thumbnails:
+
+```bash
+bash scripts/overlay_hier_clusters_wsi.sh \
+  --patch-final data/processed/hier_cluster_fused/patch_final_clusters.parquet \
+  --wsi-dir /path/to/wsi \
+  --output-dir data/processed/hier_cluster_fused_overlay \
+  --downsample 16 \
+  --alpha 0.40 \
+  --legend
+```
+
+For HE-only result, change `--patch-final` to the HE clustering output, e.g.:
+
+```bash
+bash scripts/overlay_hier_clusters_wsi.sh \
+  --patch-final data/processed/hier_cluster_he/patch_final_clusters.parquet \
+  --wsi-dir /path/to/wsi \
+  --output-dir data/processed/hier_cluster_he_overlay \
+  --downsample 16 \
+  --alpha 0.40 \
+  --legend
+```
+
+Useful outputs:
+
+- `all_clusters/*_overlay_all.png`
+- `filtered_clusters/*_overlay_filtered.png`
+- `final_cluster_colors.csv`
+- `overlay_meta.json`
