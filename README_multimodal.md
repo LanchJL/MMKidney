@@ -147,14 +147,15 @@ You can then run the same clustering pipeline on:
 
 to compare clustering behavior.
 
-## Optional: Hierarchical Clustering (L1 -> L2 refinement)
+## Optional: Hierarchical Clustering (L1 -> L2, optional L3 refinement)
 
-This script follows a CLUSTER-like two-level workflow:
+This script follows a CLUSTER-like hierarchical workflow:
 
 1. fit prototypes
 2. L1 clustering on prototypes
 3. refine L2 inside each L1 cluster
-4. fallback `NA` L2 to L1 as final cluster
+4. optional refine L3 inside selected L2 clusters
+5. fallback chain for final labels: `L3 -> L2 -> L1`
 
 Wrapper:
 
@@ -182,6 +183,47 @@ bash scripts/cluster_hierarchical_patches.sh \
   --n-prototypes 2048
 ```
 
+Example C (HE-only + adaptive L3):
+
+```bash
+bash scripts/cluster_hierarchical_patches.sh \
+  --manifest data/processed/he_only_manifest.jsonl \
+  --output-dir data/processed/hier_cluster_he_l3 \
+  --l1-method leiden \
+  --n-prototypes 2048 \
+  --l1-resolution 0.45 \
+  --refine-resolution 0.60 \
+  --enable-l3 \
+  --l3-resolution 0.75 \
+  --min-l2-to-refine-l3 35 \
+  --min-l3-prototypes 10 \
+  --min-l3-slides 3 \
+  --min-l3-patch-frac 0.003 \
+  --min-l3-silhouette 0.06
+```
+
+Recommended robust HE setting (with stability gate + balanced prototype sampling + spatial smoothing):
+
+```bash
+bash scripts/cluster_hierarchical_patches.sh \
+  --manifest data/processed/he_only_manifest.jsonl \
+  --output-dir data/processed/hier_cluster_he_robust \
+  --l1-method leiden \
+  --n-prototypes 2048 \
+  --prototype-patches-per-sample 3000 \
+  --min-prototypes-to-refine 40 \
+  --min-l2-silhouette 0.05 \
+  --stability-n-seeds 3 \
+  --min-stability-ari 0.70 \
+  --min-l2-slides 3 \
+  --min-l2-patch-frac 0.005 \
+  --enable-l3 \
+  --min-l2-to-refine-l3 35 \
+  --min-l3-silhouette 0.06 \
+  --spatial-smooth-k 7 \
+  --spatial-smooth-iter 1
+```
+
 Main outputs:
 
 - `prototype_centers.npy`
@@ -189,6 +231,7 @@ Main outputs:
 - `patch_final_clusters.(parquet|csv)`
 - `slide_final_cluster_hist.(parquet|csv)`
 - `cluster_meta.json`
+- `refine_decisions.json` (records per-parent refine/skip reasons for L2/L3)
 
 ## Optional: Map Cluster Labels Back to WSI (CLUSTER-style overlay)
 
