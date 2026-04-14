@@ -239,7 +239,8 @@ def main():
     p.add_argument("--top-n-clusters", type=int, default=0)
     p.add_argument("--filter-clusters", default="", help="comma-separated labels to hide in filtered output")
     p.add_argument("--legend", action="store_true")
-    p.add_argument("--strict-match", action="store_true", help="If set, disable fuzzy id matching.")
+    p.add_argument("--strict-match", action="store_true", help="Use exact normalized id matching only.")
+    p.add_argument("--allow-fuzzy-match", action="store_true", help="Enable fuzzy id matching (may risk wrong slide mapping).")
     args = p.parse_args()
 
     wsi_dir = args.wsi_dir.strip() if isinstance(args.wsi_dir, str) else ""
@@ -298,10 +299,16 @@ def main():
 
     filter_clusters = [x.strip() for x in args.filter_clusters.split(",") if x.strip()]
 
+    use_strict = True
+    if args.allow_fuzzy_match:
+        use_strict = False
+    elif args.strict_match:
+        use_strict = True
+
     # preflight match check
     pre_missing = []
     for sid in sample_ids:
-        if args.strict_match:
+        if use_strict:
             k = _norm_id(sid)
             p = norm2path.get(k, None)
         else:
@@ -324,7 +331,7 @@ def main():
 
     skipped = []
     for i, sid in enumerate(sample_ids, 1):
-        if args.strict_match:
+        if use_strict:
             wsi_path = norm2path.get(_norm_id(sid), None)
         else:
             wsi_path = _find_wsi_path(sid, norm2path, all_wsi_paths)
@@ -389,6 +396,7 @@ def main():
         "filter_clusters": filter_clusters,
         "downsample": args.downsample,
         "alpha": args.alpha,
+        "strict_match": bool(use_strict),
     }
     with (out_root / "overlay_meta.json").open("w", encoding="utf-8") as f:
         json.dump(meta, f, ensure_ascii=False, indent=2)

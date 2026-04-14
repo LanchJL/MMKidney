@@ -290,7 +290,8 @@ Useful outputs:
 - `overlay_meta.json`
 - `precheck_missing_wsi.csv` (generated when some slide ids cannot be matched to WSI files)
 
-If matching is too loose/too strict:
+Matching policy:
 
-- add `--strict-match` to require exact `sample_id == WSI stem` (normalized)
-- or pass explicit `--wsi-dir` to override auto-resolved CLUSTER path
+- default is strict normalized-id match (safer, prevents cross-slide mapping)
+- add `--allow-fuzzy-match` only if your filenames are inconsistent and strict mode misses too many slides
+- pass explicit `--wsi-dir` to override auto-resolved CLUSTER path
