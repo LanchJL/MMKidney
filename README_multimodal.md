@@ -160,6 +160,7 @@ This script follows a CLUSTER-like hierarchical workflow:
 Wrapper:
 
 - `scripts/cluster_hierarchical_patches.sh`
+- `scripts/cluster_hierarchical_steps.sh` (`fit|assign|l1|l2|final|check`, CLUSTER-like stepwise debug)
 
 Example A (fused features):
 
@@ -235,6 +236,24 @@ Main outputs:
 - `slide_final_cluster_hist.(parquet|csv)`
 - `cluster_meta.json`
 - `refine_decisions.json` (records per-parent refine/skip reasons for L2/L3)
+
+### Step-wise Run (strict CLUSTER-like debugging)
+
+Use this when results look wrong and you want to inspect every stage:
+
+```bash
+OUT=data/processed/hier_cluster_he_steps
+MAN=data/processed/manifests/all_manifest.jsonl
+```
+
+```bash
+bash scripts/cluster_hierarchical_steps.sh --step fit    --manifest "$MAN" --stain-name HE --output-dir "$OUT" --n-prototypes 2048 --prototype-patches-per-sample 3000
+bash scripts/cluster_hierarchical_steps.sh --step assign --manifest "$MAN" --stain-name HE --output-dir "$OUT"
+bash scripts/cluster_hierarchical_steps.sh --step l1     --output-dir "$OUT" --l1-method leiden --l1-resolution 0.45
+bash scripts/cluster_hierarchical_steps.sh --step l2     --output-dir "$OUT" --l1-method leiden --refine-resolution 0.60 --min-prototypes-to-refine 40 --min-l2-silhouette 0.05 --stability-n-seeds 3 --min-stability-ari 0.70 --enable-l3
+bash scripts/cluster_hierarchical_steps.sh --step final  --output-dir "$OUT" --spatial-smooth-k 7 --spatial-smooth-iter 1
+bash scripts/cluster_hierarchical_steps.sh --step check  --output-dir "$OUT"
+```
 
 ## Optional: Map Cluster Labels Back to WSI (CLUSTER-style overlay)
 
