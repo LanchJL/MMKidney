@@ -78,6 +78,27 @@ def _vectorize_row(row: Dict, exclude_prefix: Optional[List[str]] = None, keys: 
     return torch.tensor(vals, dtype=torch.float32), torch.tensor(mask, dtype=torch.float32)
 
 
+def _feature_group_id(key: str) -> int:
+    # 0 structured, 1 banff, 2 timeline, 3 treatment, 4 text_stat/text_kw, 5 text_hash, 6 qwen_global, 7 medbert_local, 8 other
+    if key.startswith("structured_"):
+        return 0
+    if key.startswith("banff_"):
+        return 1
+    if key.startswith("timeline_"):
+        return 2
+    if key.startswith("treatment_"):
+        return 3
+    if key.startswith("text_stat_") or key.startswith("text_kw_") or key.startswith("text_section_present_"):
+        return 4
+    if key.startswith("text_hash_"):
+        return 5
+    if key.startswith("qwen_global_"):
+        return 6
+    if key.startswith("medbert_local_"):
+        return 7
+    return 8
+
+
 class MultiStainPatientDataset(Dataset):
     def __init__(
         self,
@@ -108,6 +129,9 @@ class MultiStainPatientDataset(Dataset):
         if self.tab_map:
             first = next(iter(self.tab_map.values()))
             self.tab_keys = [k for k in sorted(first.keys()) if k not in {"sample_id", "split", "patient_index", "anchor_timestamp", "anchor_date_policy", "anchor_date_raw"} and not k.startswith("raw_")]
+            self.tab_group_ids = torch.tensor([_feature_group_id(k) for k in self.tab_keys], dtype=torch.long)
+        else:
+            self.tab_group_ids = None
         if self.lab_map:
             first = next(iter(self.lab_map.values()))
             self.lab_keys = [k for k in sorted(first.keys()) if k not in {"sample_id", "split", "patient_index", "anchor_timestamp"}]
@@ -169,6 +193,7 @@ class MultiStainPatientDataset(Dataset):
         lab_row = self.lab_map.get(sid)
         tab_vec, tab_mask = _vectorize_row(tab_row, keys=self.tab_keys)
         lab_vec, lab_mask = _vectorize_row(lab_row, keys=self.lab_keys)
+        tab_group_ids = self.tab_group_ids.clone() if tab_vec is not None and self.tab_group_ids is not None else None
 
         modality_mask = torch.tensor(
             [
@@ -189,6 +214,7 @@ class MultiStainPatientDataset(Dataset):
             "labels": labels,
             "tabular": tab_vec,
             "tabular_mask": tab_mask,
+            "tabular_group_ids": tab_group_ids,
             "lab": lab_vec,
             "lab_mask": lab_mask,
             "modality_mask": modality_mask,

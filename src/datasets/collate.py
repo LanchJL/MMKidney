@@ -23,6 +23,7 @@ def collate_patient_batch(samples: List[Dict]) -> Dict:
         },
         "tabular": _stack_optional([s.get("tabular") for s in samples]),
         "tabular_mask": _stack_optional([s.get("tabular_mask") for s in samples]),
+        "tabular_group_ids": _stack_optional([s.get("tabular_group_ids") for s in samples]),
         "lab": _stack_optional([s.get("lab") for s in samples]),
         "lab_mask": _stack_optional([s.get("lab_mask") for s in samples]),
         "modality_mask": torch.stack([s["modality_mask"] for s in samples], dim=0),

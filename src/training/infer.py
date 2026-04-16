@@ -101,6 +101,8 @@ def main():
                 b["tabular"] = batch["tabular"].to(device)
             if batch.get("tabular_mask") is not None:
                 b["tabular_mask"] = batch["tabular_mask"].to(device)
+            if batch.get("tabular_group_ids") is not None:
+                b["tabular_group_ids"] = batch["tabular_group_ids"].to(device)
             if batch.get("lab") is not None:
                 b["lab"] = batch["lab"].to(device)
             if batch.get("lab_mask") is not None:

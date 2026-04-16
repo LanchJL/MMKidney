@@ -4,6 +4,7 @@ import torch
 import torch.nn as nn
 
 from .heads import HierarchicalHeads
+from .clinicopath_encoder import HybridClinicopathEncoder
 from .lab_encoder import LabEncoder
 from .multimodal_fusion import MultiModalFusion
 from .tabular_encoder import TabularEncoder
@@ -42,6 +43,7 @@ class MMKidneyTeacherModel(nn.Module):
             use_he_adapter=use_he_adapter,
         )
         self.tab_encoder = TabularEncoder(in_dim=tab_in_dim, out_dim=tab_dim)
+        self.clinicopath_encoder = HybridClinicopathEncoder(in_dim=tab_in_dim, out_dim=tab_dim)
         self.lab_encoder = LabEncoder(in_dim=lab_in_dim, out_dim=lab_dim)
         self.fusion = MultiModalFusion(img_dim=proj_dim, tab_dim=tab_dim, lab_dim=lab_dim, out_dim=fused_dim)
         self.heads = HierarchicalHeads(in_dim=fused_dim, dims=label_dims, hidden_dim=fused_dim, dropout=dropout)
@@ -51,8 +53,12 @@ class MMKidneyTeacherModel(nn.Module):
         img_repr = img_out["patient_repr"]
 
         tab_repr = None
+        cp_aux = None
         if batch.get("tabular") is not None:
-            tab_repr = self.tab_encoder(batch["tabular"], batch.get("tabular_mask"))
+            if batch.get("tabular_group_ids") is not None:
+                tab_repr, cp_aux = self.clinicopath_encoder(batch["tabular"], batch.get("tabular_mask"), batch["tabular_group_ids"])
+            else:
+                tab_repr = self.tab_encoder(batch["tabular"], batch.get("tabular_mask"))
 
         lab_repr = None
         if batch.get("lab") is not None:
@@ -73,6 +79,7 @@ class MMKidneyTeacherModel(nn.Module):
                 "fused_repr": fused_repr,
                 "gates": gates,
                 "aux": img_out.get("aux", []),
+                "clinicopath_aux": cp_aux,
             }
         )
         return pred
