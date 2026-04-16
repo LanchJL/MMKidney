@@ -16,6 +16,9 @@ PYTHON_BIN="${PYTHON_BIN:-python3}"
 DATA_DIR="${DATA_DIR:-data}"
 PROCESSED_DIR="${PROCESSED_DIR:-data/processed}"
 OUT_ROOT="${OUT_ROOT:-outputs}"
+XLSX_NAME="${XLSX_NAME:-pathology_reports_v7.3_with_GT2__20260414  Censored.xlsx}"
+MAIN_SHEET="${MAIN_SHEET:-移植肾汇总-筛选后}"
+SLICE_NOTE_SHEET="${SLICE_NOTE_SHEET:-切片备注}"
 
 TRAIN_MANIFEST="${TRAIN_MANIFEST:-${PROCESSED_DIR}/manifests/train_manifest.jsonl}"
 VAL_MANIFEST="${VAL_MANIFEST:-${PROCESSED_DIR}/manifests/val_manifest.jsonl}"
@@ -33,7 +36,12 @@ EXPLAIN_OUT="${EXPLAIN_OUT:-${OUT_ROOT}/explanations}"
 
 run_prepare() {
   echo "[run] prepare"
-  "${PYTHON_BIN}" -m src.datasets.build_cohort --data-dir "${DATA_DIR}" --out-dir "${PROCESSED_DIR}"
+  "${PYTHON_BIN}" -m src.datasets.build_cohort \
+    --data-dir "${DATA_DIR}" \
+    --out-dir "${PROCESSED_DIR}" \
+    --xlsx-name "${XLSX_NAME}" \
+    --main-sheet "${MAIN_SHEET}" \
+    --slice-note-sheet "${SLICE_NOTE_SHEET}"
   "${PYTHON_BIN}" -m src.datasets.build_tabular_features --cohort-tabular "${PROCESSED_DIR}/cohort_tabular.csv" --out-dir "${PROCESSED_DIR}"
   "${PYTHON_BIN}" -m src.datasets.build_lab_features --cohort-trimodal "${PROCESSED_DIR}/cohort_trimodal.csv" --lab-csv "${DATA_DIR}/Merged_Lab_Results_Final.csv" --out-dir "${PROCESSED_DIR}"
 }
