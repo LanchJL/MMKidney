@@ -133,10 +133,27 @@ bash scripts/infer.sh \
   --out-dir outputs/explanations_teacher
 ```
 
+## 7) Legacy CLUSTER Reproduction (02->03->04->05->05b->06->07)
 
-bash scripts/cluster_hierarchical_steps.sh --step fit    --manifest "$MAN" --stain-name HE --output-dir "$OUT" --n-prototypes 2048 --prototype-patches-per-sample 3000
-bash scripts/cluster_hierarchical_steps.sh --step assign --manifest "$MAN" --stain-name HE --output-dir "$OUT"
-bash scripts/cluster_hierarchical_steps.sh --step l1     --output-dir "$OUT" --l1-method leiden --l1-resolution 0.45
-bash scripts/cluster_hierarchical_steps.sh --step l2     --output-dir "$OUT" --l1-method leiden --refine-resolution 0.60 --min-prototypes-to-refine 40 --min-l2-silhouette 0.05 --stability-n-seeds 3 --min-stability-ari 0.70 --enable-l3
-bash scripts/cluster_hierarchical_steps.sh --step final  --output-dir "$OUT" --spatial-smooth-k 7 --spatial-smooth-iter 1
-bash scripts/cluster_hierarchical_steps.sh --step check  --output-dir "$OUT"
+To strictly reproduce the original `CLUSTER/` workflow with a manual refinement checkpoint:
+
+```bash
+bash scripts/run_cluster_legacy_pipeline.sh until_manual
+```
+
+At this point, edit:
+
+- `CLUSTER/05b_refine_prototype_clusters.py`
+: adjust `REFINE_CONFIG` (`enabled`, `resolution`, `min_l2_prototypes`, etc.)
+
+Then continue:
+
+```bash
+bash scripts/run_cluster_legacy_pipeline.sh resume
+```
+
+Optional:
+
+```bash
+bash scripts/run_cluster_legacy_pipeline.sh all
+```

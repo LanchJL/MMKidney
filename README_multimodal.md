@@ -115,6 +115,7 @@ Each sample produces `outputs/explanations/{sample_id}.json` containing:
 - `scripts/run_pipeline.sh` (`prepare|stage_a|stage_b|stage_c|infer|all`)
 - `scripts/build_pseudo_patch_fusion.sh` (HE anchor + optional multi-stain pseudo patch fusion)
 - `scripts/overlay_hier_clusters_wsi.sh` (map final hierarchical cluster labels back onto WSI thumbnails)
+- `scripts/run_cluster_legacy_pipeline.sh` (strict CLUSTER 02->07 reproduction with manual pause before 05b)
 - `scripts/build_all_manifests.sh`
 - `scripts/train_wsi.sh`
 - `scripts/train_teacher.sh`
@@ -295,3 +296,22 @@ Matching policy:
 - default is strict normalized-id match (safer, prevents cross-slide mapping)
 - add `--allow-fuzzy-match` only if your filenames are inconsistent and strict mode misses too many slides
 - pass explicit `--wsi-dir` to override auto-resolved CLUSTER path
+
+## Legacy CLUSTER Strict Reproduction (Manual-in-the-loop)
+
+Run the original CLUSTER path with an explicit pause for manual `REFINE_CONFIG` tuning:
+
+```bash
+bash scripts/run_cluster_legacy_pipeline.sh until_manual
+```
+
+Manual intervention point:
+
+- edit `CLUSTER/05b_refine_prototype_clusters.py` `REFINE_CONFIG`
+- inspect L1 outputs (`prototype_umap`, `prototype_cluster_sizes`) before deciding refine targets
+
+Then continue:
+
+```bash
+bash scripts/run_cluster_legacy_pipeline.sh resume
+```
