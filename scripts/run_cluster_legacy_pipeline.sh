@@ -60,6 +60,31 @@ sync_qc_artifact_for_step03() {
   exit 1
 }
 
+sync_prototype_centers_for_step04() {
+  local src_dir="prototype_output_0.6"
+  local dst_dir="prototype_pipeline_output"
+  local files=(
+    "prototype_centers_HE_2048.npy"
+    "prototype_model_HE_2048.pkl"
+    "prototype_training_stats_HE_2048.json"
+  )
+
+  mkdir -p "$dst_dir"
+
+  if [[ ! -f "${src_dir}/prototype_centers_HE_2048.npy" ]]; then
+    echo "[ERROR] Missing prototype centers in ${src_dir}"
+    echo "[ERROR] expected: ${src_dir}/prototype_centers_HE_2048.npy"
+    exit 1
+  fi
+
+  for fn in "${files[@]}"; do
+    if [[ -f "${src_dir}/${fn}" ]]; then
+      cp -f "${src_dir}/${fn}" "${dst_dir}/${fn}"
+      echo "[SYNC] ${src_dir}/${fn} -> ${dst_dir}/${fn}"
+    fi
+  done
+}
+
 manual_notice() {
   cat << 'TXT'
 
@@ -90,6 +115,7 @@ case "$MODE" in
     run_step "CLUSTER/02_compute_tissue_qc.py"
     sync_qc_artifact_for_step03
     run_step "CLUSTER/03_fit_prototypes.py"
+    sync_prototype_centers_for_step04
     run_step "CLUSTER/04_assign_prototypes.py"
     run_step "CLUSTER/05_cluster_prototypes.py"
     manual_notice
@@ -106,6 +132,7 @@ case "$MODE" in
     run_step "CLUSTER/02_compute_tissue_qc.py"
     sync_qc_artifact_for_step03
     run_step "CLUSTER/03_fit_prototypes.py"
+    sync_prototype_centers_for_step04
     run_step "CLUSTER/04_assign_prototypes.py"
     run_step "CLUSTER/05_cluster_prototypes.py"
     echo "[WARN] Running 05b without manual REFINE_CONFIG review."
@@ -119,7 +146,7 @@ case "$MODE" in
     case "$MODE" in
       02) ensure_step01_artifact; run_step "CLUSTER/02_compute_tissue_qc.py" ;;
       03) ensure_step01_artifact; sync_qc_artifact_for_step03; run_step "CLUSTER/03_fit_prototypes.py" ;;
-      04) ensure_step01_artifact; run_step "CLUSTER/04_assign_prototypes.py" ;;
+      04) ensure_step01_artifact; sync_prototype_centers_for_step04; run_step "CLUSTER/04_assign_prototypes.py" ;;
       05) ensure_step01_artifact; run_step "CLUSTER/05_cluster_prototypes.py" ;;
       05b) run_step "CLUSTER/05b_refine_prototype_clusters.py" ;;
       06) run_step "CLUSTER/06_assign_final_clusters.py" ;;
