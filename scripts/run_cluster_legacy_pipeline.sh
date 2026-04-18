@@ -19,6 +19,22 @@ run_step() {
   echo "[OK ] ${step_py}"
 }
 
+ensure_step01_artifact() {
+  local need_file="prototype_pipeline_output/patch_index_raw.parquet"
+  if [[ -f "$need_file" ]]; then
+    return 0
+  fi
+  echo "[INFO] Missing prerequisite: $need_file"
+  echo "[INFO] Auto-running CLUSTER/01_build_patch_index.py first."
+  echo "[NOTE] If it fails, check H5_DIR in CLUSTER/01_build_patch_index.py."
+  run_step "CLUSTER/01_build_patch_index.py"
+  if [[ ! -f "$need_file" ]]; then
+    echo "[ERROR] Still missing: $need_file"
+    echo "[ERROR] Please verify H5_DIR and output path in CLUSTER/01_build_patch_index.py."
+    exit 1
+  fi
+}
+
 manual_notice() {
   cat << 'TXT'
 
@@ -45,6 +61,7 @@ TXT
 
 case "$MODE" in
   until_manual)
+    ensure_step01_artifact
     run_step "CLUSTER/02_compute_tissue_qc.py"
     run_step "CLUSTER/03_fit_prototypes.py"
     run_step "CLUSTER/04_assign_prototypes.py"
@@ -59,6 +76,7 @@ case "$MODE" in
     echo "[DONE] Legacy CLUSTER pipeline finished (through step 07)."
     ;;
   all)
+    ensure_step01_artifact
     run_step "CLUSTER/02_compute_tissue_qc.py"
     run_step "CLUSTER/03_fit_prototypes.py"
     run_step "CLUSTER/04_assign_prototypes.py"
@@ -72,10 +90,10 @@ case "$MODE" in
     ;;
   02|03|04|05|05b|06|07)
     case "$MODE" in
-      02) run_step "CLUSTER/02_compute_tissue_qc.py" ;;
-      03) run_step "CLUSTER/03_fit_prototypes.py" ;;
-      04) run_step "CLUSTER/04_assign_prototypes.py" ;;
-      05) run_step "CLUSTER/05_cluster_prototypes.py" ;;
+      02) ensure_step01_artifact; run_step "CLUSTER/02_compute_tissue_qc.py" ;;
+      03) ensure_step01_artifact; run_step "CLUSTER/03_fit_prototypes.py" ;;
+      04) ensure_step01_artifact; run_step "CLUSTER/04_assign_prototypes.py" ;;
+      05) ensure_step01_artifact; run_step "CLUSTER/05_cluster_prototypes.py" ;;
       05b) run_step "CLUSTER/05b_refine_prototype_clusters.py" ;;
       06) run_step "CLUSTER/06_assign_final_clusters.py" ;;
       07) run_step "CLUSTER/07_overlay_final_clusters.py" ;;
