@@ -35,6 +35,31 @@ ensure_step01_artifact() {
   fi
 }
 
+sync_qc_artifact_for_step03() {
+  local src_a="prototype_output_0.6/patch_index_qc.parquet"
+  local src_b="prototype_output_0.6/patch_index_qc.pkl"
+  local dst_dir="prototype_pipeline_output"
+  local dst_a="${dst_dir}/patch_index_qc.parquet"
+  local dst_b="${dst_dir}/patch_index_qc.pkl"
+
+  mkdir -p "$dst_dir"
+
+  if [[ -f "$src_a" ]]; then
+    cp -f "$src_a" "$dst_a"
+    echo "[SYNC] $src_a -> $dst_a"
+    return 0
+  fi
+  if [[ -f "$src_b" ]]; then
+    cp -f "$src_b" "$dst_b"
+    echo "[SYNC] $src_b -> $dst_b"
+    return 0
+  fi
+
+  echo "[ERROR] QC output not found in prototype_output_0.6"
+  echo "[ERROR] expected one of: $src_a or $src_b"
+  exit 1
+}
+
 manual_notice() {
   cat << 'TXT'
 
@@ -63,6 +88,7 @@ case "$MODE" in
   until_manual)
     ensure_step01_artifact
     run_step "CLUSTER/02_compute_tissue_qc.py"
+    sync_qc_artifact_for_step03
     run_step "CLUSTER/03_fit_prototypes.py"
     run_step "CLUSTER/04_assign_prototypes.py"
     run_step "CLUSTER/05_cluster_prototypes.py"
@@ -78,6 +104,7 @@ case "$MODE" in
   all)
     ensure_step01_artifact
     run_step "CLUSTER/02_compute_tissue_qc.py"
+    sync_qc_artifact_for_step03
     run_step "CLUSTER/03_fit_prototypes.py"
     run_step "CLUSTER/04_assign_prototypes.py"
     run_step "CLUSTER/05_cluster_prototypes.py"
@@ -91,7 +118,7 @@ case "$MODE" in
   02|03|04|05|05b|06|07)
     case "$MODE" in
       02) ensure_step01_artifact; run_step "CLUSTER/02_compute_tissue_qc.py" ;;
-      03) ensure_step01_artifact; run_step "CLUSTER/03_fit_prototypes.py" ;;
+      03) ensure_step01_artifact; sync_qc_artifact_for_step03; run_step "CLUSTER/03_fit_prototypes.py" ;;
       04) ensure_step01_artifact; run_step "CLUSTER/04_assign_prototypes.py" ;;
       05) ensure_step01_artifact; run_step "CLUSTER/05_cluster_prototypes.py" ;;
       05b) run_step "CLUSTER/05b_refine_prototype_clusters.py" ;;
