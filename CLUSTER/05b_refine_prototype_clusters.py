@@ -25,28 +25,82 @@ PROTOTYPE_CLUSTERS_L1 = os.path.join(
 # enabled=False 表示跳过细分，直接保留 L1
 # --------------------------------------------------
 REFINE_CONFIG = {
-    "0": {
+    # Dominant patch-mass cluster (~86.9%): prioritize refinement.
+    "2": {
         "enabled": True,
-        "n_pcs": 30,
-        "n_neighbors": 12,
-        "resolution": 0.60,     # 比之前高，试着把大类再拆开
+        "n_pcs": 40,
+        "n_neighbors": 15,
+        "resolution": 0.75,
         "umap_min_dist": 0.25,
         "umap_spread": 1.0,
         "min_prototypes_to_refine": 30,
-        "min_l2_prototypes": 15,  # 小于这个 prototype 数的 L2 子类，回退到 L1
+        "min_l2_prototypes": 20,
     },
-    "1": {
+    # Secondary cluster (~9.0%): moderate refinement.
+    "4": {
         "enabled": True,
         "n_pcs": 30,
         "n_neighbors": 12,
-        "resolution": 0.45,     # 保持你之前效果不错的参数
+        "resolution": 0.55,
         "umap_min_dist": 0.25,
         "umap_spread": 1.0,
         "min_prototypes_to_refine": 30,
         "min_l2_prototypes": 15,
     },
-    "2": {
-        "enabled": False,       # 不再细分，直接保留 L1
+    # Smaller but non-trivial clusters: light refinement.
+    "5": {
+        "enabled": True,
+        "n_pcs": 25,
+        "n_neighbors": 10,
+        "resolution": 0.45,
+        "umap_min_dist": 0.25,
+        "umap_spread": 1.0,
+        "min_prototypes_to_refine": 30,
+        "min_l2_prototypes": 12,
+    },
+    "6": {
+        "enabled": True,
+        "n_pcs": 25,
+        "n_neighbors": 10,
+        "resolution": 0.45,
+        "umap_min_dist": 0.25,
+        "umap_spread": 1.0,
+        "min_prototypes_to_refine": 30,
+        "min_l2_prototypes": 12,
+    },
+    # Tiny/low-mass clusters: keep as L1 in first pass.
+    "0": {
+        "enabled": False,
+        "n_pcs": 30,
+        "n_neighbors": 12,
+        "resolution": 0.45,
+        "umap_min_dist": 0.25,
+        "umap_spread": 1.0,
+        "min_prototypes_to_refine": 30,
+        "min_l2_prototypes": 15,
+    },
+    "1": {
+        "enabled": False,
+        "n_pcs": 30,
+        "n_neighbors": 12,
+        "resolution": 0.45,
+        "umap_min_dist": 0.25,
+        "umap_spread": 1.0,
+        "min_prototypes_to_refine": 30,
+        "min_l2_prototypes": 15,
+    },
+    "3": {
+        "enabled": False,
+        "n_pcs": 30,
+        "n_neighbors": 12,
+        "resolution": 0.45,
+        "umap_min_dist": 0.25,
+        "umap_spread": 1.0,
+        "min_prototypes_to_refine": 30,
+        "min_l2_prototypes": 15,
+    },
+    "7": {
+        "enabled": False,
         "n_pcs": 30,
         "n_neighbors": 12,
         "resolution": 0.45,
