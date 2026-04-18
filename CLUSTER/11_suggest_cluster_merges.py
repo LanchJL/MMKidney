@@ -138,7 +138,7 @@ def main():
                 "topk_any_parent": "|".join(cand_all),
                 "topk_same_parent": "|".join(cand_same),
                 "recommendation": "merge_to_same_parent" if len(cand_same) else "merge_to_nearest",
-+                "enabled": 1,
+                "enabled": 1,
             }
         )
 
