@@ -7,12 +7,13 @@ source ./github_tools/config.sh
 usage() {
   cat <<'USAGE'
 用法:
-  bash github_tools/pull_latest_changes.sh [--current | --branch <name> | --all]
+  bash github_tools/pull_latest_changes.sh [--current | --branch <name> | --all] [--create-if-missing]
 
 说明:
   --current         拉取当前分支
   --branch <name>   拉取指定分支（会切换到该分支执行 pull 后切回）
   --all             依次拉取所有本地分支（需要干净工作区）
+  --create-if-missing  与 --branch 一起使用：本地分支不存在时，自动从 origin/<name> 创建
 
 不带参数时会进入交互选择。
 USAGE
@@ -24,6 +25,7 @@ is_clean_worktree() {
 
 MODE=""
 TARGET_BRANCH=""
+CREATE_IF_MISSING="no"
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
@@ -38,6 +40,10 @@ while [[ $# -gt 0 ]]; do
       ;;
     --all)
       MODE="all"
+      shift
+      ;;
+    --create-if-missing)
+      CREATE_IF_MISSING="yes"
       shift
       ;;
     -h|--help)
@@ -83,8 +89,27 @@ elif [[ "$MODE" == "branch" ]]; then
     exit 1
   fi
   if ! git show-ref --verify --quiet "refs/heads/$TARGET_BRANCH"; then
-    echo "本地分支不存在: $TARGET_BRANCH"
-    exit 1
+    if [[ "$CREATE_IF_MISSING" == "yes" ]]; then
+      echo "本地分支不存在，尝试从远程创建: $TARGET_BRANCH"
+      git fetch origin
+      if git ls-remote --exit-code --heads origin "$TARGET_BRANCH" >/dev/null 2>&1; then
+        if ! is_clean_worktree; then
+          echo "当前工作区有未提交变更，无法安全创建并切换分支。请先提交或暂存。"
+          exit 1
+        fi
+        git checkout -b "$TARGET_BRANCH" "origin/$TARGET_BRANCH"
+        git pull --ff-only origin "$TARGET_BRANCH"
+        git checkout "$CURRENT_BRANCH"
+        exit 0
+      else
+        echo "远程分支不存在: origin/$TARGET_BRANCH"
+        exit 1
+      fi
+    else
+      echo "本地分支不存在: $TARGET_BRANCH"
+      echo "可加 --create-if-missing 自动从 origin/$TARGET_BRANCH 创建。"
+      exit 1
+    fi
   fi
 
   if [[ "$CURRENT_BRANCH" == "$TARGET_BRANCH" ]]; then

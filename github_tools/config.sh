@@ -10,6 +10,3 @@ REPO_URL="git@github.com:$GITHUB_USER/$REPO_NAME.git"
 
 # 你本地的默认分支
 BRANCH_NAME="cluster"
-
-# 专用分支别名（可按需修改）
-CLUSTER_BRANCH="cluster"
