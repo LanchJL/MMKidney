@@ -9,4 +9,4 @@ REPO_NAME="MMKidney"
 REPO_URL="git@github.com:$GITHUB_USER/$REPO_NAME.git"
 
 # 你本地的默认分支
-BRANCH_NAME="multi"
+BRANCH_NAME="cluster"
