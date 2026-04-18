@@ -90,17 +90,32 @@ def main():
         },
     }
 
+    patch_mass_rows = []
     if usage_df is not None and "n_patches" in usage_df.columns:
-        merged = cluster_df.merge(usage_df, on="proto_id", how="left")
-        agg = (
-            merged.groupby("proto_cluster", as_index=False)["n_patches"]
-            .sum()
-            .sort_values("n_patches", ascending=False)
-        )
-        agg["patch_ratio"] = agg["n_patches"] / max(1, agg["n_patches"].sum())
-        report["patch_mass_by_l1"] = agg.to_dict(orient="records")
-    else:
-        report["patch_mass_by_l1"] = []
+        merged = cluster_df.merge(usage_df, on="proto_id", how="left", suffixes=("_cluster", "_usage"))
+
+        # Compatible with both:
+        # 1) cluster_df has n_patches + usage_df has n_patches -> n_patches_cluster / n_patches_usage
+        # 2) cluster_df without n_patches + usage_df has n_patches -> n_patches
+        if "n_patches_usage" in merged.columns:
+            patch_col = "n_patches_usage"
+        elif "n_patches" in merged.columns:
+            patch_col = "n_patches"
+        elif "n_patches_cluster" in merged.columns:
+            patch_col = "n_patches_cluster"
+        else:
+            patch_col = ""
+
+        if patch_col:
+            agg = (
+                merged.groupby("proto_cluster", as_index=False)[patch_col]
+                .sum()
+                .rename(columns={patch_col: "n_patches"})
+                .sort_values("n_patches", ascending=False)
+            )
+            agg["patch_ratio"] = agg["n_patches"] / max(1, agg["n_patches"].sum())
+            patch_mass_rows = agg.to_dict(orient="records")
+    report["patch_mass_by_l1"] = patch_mass_rows
 
     suggest_cfg = build_refine_config(
         size_df=size_df,
@@ -135,4 +150,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
