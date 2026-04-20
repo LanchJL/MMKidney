@@ -144,7 +144,12 @@ def main():
         he_stain_id=he_stain_id,
         use_he_adapter=True,
     ).to(device)
-    teacher.load_state_dict(torch.load(args.teacher_ckpt, map_location=device), strict=False)
+    t_state = torch.load(args.teacher_ckpt, map_location=device)
+    model_state = teacher.state_dict()
+    copied = {k: v for k, v in t_state.items() if k in model_state and model_state[k].shape == v.shape}
+    model_state.update(copied)
+    teacher.load_state_dict(model_state)
+    print(f"[distill] loaded {len(copied)} compatible teacher params from {args.teacher_ckpt}")
     teacher.eval()
     for p_ in teacher.parameters():
         p_.requires_grad = False

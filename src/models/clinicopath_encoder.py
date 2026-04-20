@@ -82,7 +82,7 @@ class TimelineEncoder(nn.Module):
     def __init__(self, in_dim: int, out_dim: int):
         super().__init__()
         self.net = nn.Sequential(
-            nn.Linear(in_dim * 2, out_dim),
+            nn.Linear(in_dim + 1, out_dim),
             nn.LayerNorm(out_dim),
             nn.GELU(),
             nn.Linear(out_dim, out_dim),
@@ -96,7 +96,7 @@ class TreatmentEncoder(nn.Module):
     def __init__(self, in_dim: int, out_dim: int):
         super().__init__()
         self.net = nn.Sequential(
-            nn.Linear(in_dim * 2, out_dim),
+            nn.Linear(in_dim + 1, out_dim),
             nn.LayerNorm(out_dim),
             nn.GELU(),
             nn.Linear(out_dim, out_dim),
