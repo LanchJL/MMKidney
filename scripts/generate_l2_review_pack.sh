@@ -14,6 +14,17 @@ if [[ -z "${OUT_DIR}" ]]; then
   OUT_DIR="$(dirname "${PATCH_FINAL}")/l2_review_pack"
 fi
 
+# Backward compatibility:
+# Only pass new args when current visualization script supports them.
+HELP_TXT="$(python3 CLUSTER/19_visualize_final_cluster_patches.py --help 2>&1 || true)"
+EXTRA_ARGS=()
+if echo "${HELP_TXT}" | grep -q -- "--min-center-dist"; then
+  EXTRA_ARGS+=(--min-center-dist 512)
+fi
+if echo "${HELP_TXT}" | grep -q -- "--drop-black-white"; then
+  EXTRA_ARGS+=(--drop-black-white)
+fi
+
 python3 CLUSTER/19_visualize_final_cluster_patches.py \
   --patch-final "${PATCH_FINAL}" \
   --wsi-dir "${WSI_DIR}" \
@@ -25,7 +36,5 @@ python3 CLUSTER/19_visualize_final_cluster_patches.py \
   --core-quantile 0.30 \
   --consistency-max-per-slide 0 \
   --max-per-slide 3 \
-  --min-center-dist 512 \
-  --drop-black-white \
-  --patch-size 512
-
+  --patch-size 512 \
+  "${EXTRA_ARGS[@]}"
