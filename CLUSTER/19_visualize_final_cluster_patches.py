@@ -27,6 +27,16 @@ def _norm_token(x: str) -> str:
     return re.sub(r"[^a-z0-9]+", "", str(x).lower())
 
 
+def _safe_filename_token(x: str) -> str:
+    s = str(x).strip()
+    if not s:
+        return "EMPTY"
+    s = re.sub(r"[\\/:*?\"<>|]+", "_", s)
+    s = re.sub(r"\s+", "_", s)
+    s = re.sub(r"_+", "_", s).strip("_")
+    return s if s else "EMPTY"
+
+
 def build_wsi_index(wsi_dir: str) -> Dict[str, str]:
     exts = {".mrxs", ".svs", ".ndpi", ".tiff", ".tif"}
     index: Dict[str, str] = {}
@@ -349,11 +359,12 @@ def main():
 
             has_any = True
             montage = make_montage(tiles, labels, n_cols=max(1, int(args.n_cols)), tile_size=256, pad=8)
-            out_png = out_dir / f"cluster_{cluster_name}_{mode_name}_top{len(tiles)}.png"
+            cluster_name_safe = _safe_filename_token(cluster_name)
+            out_png = out_dir / f"cluster_{cluster_name_safe}_{mode_name}_top{len(tiles)}.png"
             montage.save(out_png)
             print(f"[saved] {out_png}")
 
-            out_csv = out_dir / f"cluster_{cluster_name}_{mode_name}_selected.csv"
+            out_csv = out_dir / f"cluster_{cluster_name_safe}_{mode_name}_selected.csv"
             pd.DataFrame(out_rows).to_csv(out_csv, index=False)
             selected_all.extend(out_rows)
 
