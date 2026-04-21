@@ -44,6 +44,13 @@ DEF_CROP = "reference"
 BIG_MAX_PROC = 1200
 BIG_MAX_NONR = 1400
 BIG_CROP = "overlap"
+HUGE_SIDE_PX = 30000
+HUGE_MAX_PROC = 1000
+HUGE_MAX_NONR = 1024
+FALLBACK1_MAX_PROC = 1000
+FALLBACK1_MAX_NONR = 1024
+FALLBACK2_MAX_PROC = 800
+FALLBACK2_MAX_NONR = 1024
 
 
 @dataclass
@@ -59,6 +66,19 @@ class SkippedCase:
     case_id: str
     reason: str
     details: str
+
+
+@dataclass
+class RegAttempt:
+    case_id: str
+    attempt: int
+    strategy: str
+    non_rigid: bool
+    max_proc: int
+    max_nonrigid: int
+    n_slides: int
+    status: str
+    error: str
 
 
 def normalize_stain(stain: str) -> str:
@@ -190,6 +210,18 @@ def write_skip_report(skipped_cases: Sequence[SkippedCase], skip_log: Path) -> N
             f.write(f"{s.case_id}\t{s.reason}\t{s.details}\n")
 
 
+def write_attempt_report(attempts: Sequence[RegAttempt], report_f: Path) -> None:
+    report_f.parent.mkdir(parents=True, exist_ok=True)
+    with report_f.open("w", encoding="utf-8") as f:
+        f.write("case_id\tattempt\tstrategy\tnon_rigid\tmax_proc\tmax_nonrigid\tn_slides\tstatus\terror\n")
+        for a in attempts:
+            err = a.error.replace("\n", " ").replace("\t", " ")
+            f.write(
+                f"{a.case_id}\t{a.attempt}\t{a.strategy}\t{int(a.non_rigid)}\t{a.max_proc}\t{a.max_nonrigid}\t"
+                f"{a.n_slides}\t{a.status}\t{err}\n"
+            )
+
+
 def level0_max_side(slide_f: Path) -> int:
     try:
         from valis import slide_io
@@ -203,6 +235,36 @@ def level0_max_side(slide_f: Path) -> int:
         return int(max(w0, h0))
     except Exception:
         return 0
+
+
+def estimate_tissue_fraction(slide_f: Path) -> Optional[float]:
+    try:
+        import numpy as np
+        from valis import slide_io
+
+        reader_cls = slide_io.get_slide_reader(str(slide_f), series=0)
+        reader = reader_cls(str(slide_f), series=0)
+        sizes = reader.metadata.slide_dimensions
+        if not sizes:
+            return None
+        level = max(0, len(sizes) - 1)
+        img = reader.slide2image(level=level, series=0)
+        if img is None:
+            return None
+        arr = np.asarray(img)
+        if arr.ndim == 3:
+            gray = arr[..., :3].mean(axis=2)
+        else:
+            gray = arr.astype(np.float32)
+        if gray.size == 0:
+            return None
+        # Quick tissue proxy on thumbnail: darker-than-background pixels.
+        p95 = float(np.percentile(gray, 95))
+        thresh = max(20.0, p95 * 0.88)
+        tissue = (gray < thresh).astype(np.uint8)
+        return float(tissue.mean())
+    except Exception:
+        return None
 
 
 def calc_big_case(slides: Iterable[Path], big_side_px: int) -> Tuple[bool, int]:
@@ -219,8 +281,11 @@ def run_case_registration(
     case_group: CaseGroup,
     results_base: Path,
     big_side_px: int,
+    huge_side_px: int,
     run_micro: bool,
-) -> None:
+    tissue_min_frac: float,
+    use_tissue_filter: bool,
+) -> List[RegAttempt]:
     from valis import registration
 
     case_id = case_group.case_id
@@ -231,6 +296,7 @@ def run_case_registration(
     max_nonrigid = BIG_MAX_NONR if big_case else DEF_MAX_NONR
     crop_mode = BIG_CROP if big_case else DEF_CROP
     do_micro = run_micro and (not big_case)
+    attempts: List[RegAttempt] = []
 
     print(f"\n=== {case_id} ===")
     print(f"[INFO] reference: {case_group.reference_slide.name}")
@@ -241,36 +307,168 @@ def run_case_registration(
             f"max_nonrigid={max_nonrigid}, crop={crop_mode}, register_micro={do_micro}"
         )
 
+    slide_stats: Dict[Path, Tuple[int, Optional[float]]] = {}
+    huge_case = False
+    for s in case_group.slides:
+        side = level0_max_side(s)
+        tf = estimate_tissue_fraction(s) if use_tissue_filter else None
+        slide_stats[s] = (side, tf)
+        if side >= huge_side_px:
+            huge_case = True
+
+    selected_slides = list(case_group.slides)
+    if use_tissue_filter:
+        filtered: List[Path] = [case_group.reference_slide]
+        for s in case_group.slides:
+            if s == case_group.reference_slide:
+                continue
+            _, tf = slide_stats[s]
+            if tf is None or tf >= tissue_min_frac:
+                filtered.append(s)
+        selected_slides = sorted(set(filtered))
+        print(f"[INFO] tissue filter kept {len(selected_slides)}/{len(case_group.slides)} slides")
+
+    if len(selected_slides) < 2:
+        raise RuntimeError("Too few slides after filtering (<2), skip")
+
+    if huge_case:
+        max_proc = min(max_proc, HUGE_MAX_PROC)
+        max_nonrigid = min(max_nonrigid, HUGE_MAX_NONR)
+        crop_mode = "overlap"
+        do_micro = False
+        print(
+            f"[INFO] HUGE-GUARD -> side>={huge_side_px}, force max_proc={max_proc}, "
+            f"max_nonrigid={max_nonrigid}, non_rigid baseline may downgrade"
+        )
+
+    candidates_without_ref = [s for s in selected_slides if s != case_group.reference_slide]
+    candidates_without_ref = sorted(
+        candidates_without_ref,
+        key=lambda x: (slide_stats[x][1] if slide_stats[x][1] is not None else 1.0),
+        reverse=True,
+    )
+    small_set = [case_group.reference_slide] + candidates_without_ref[: min(6, len(candidates_without_ref))]
+
+    strategies = [
+        {
+            "name": "default_or_huge_guard",
+            "slides": selected_slides,
+            "max_proc": max_proc,
+            "max_nonrigid": max_nonrigid,
+            "non_rigid": (not huge_case),
+            "imgs_ordered": True,
+            "align_to_reference": True,
+            "do_micro": do_micro and (not huge_case),
+            "crop": crop_mode,
+        },
+        {
+            "name": "fallback_rigid_1000",
+            "slides": selected_slides,
+            "max_proc": FALLBACK1_MAX_PROC,
+            "max_nonrigid": FALLBACK1_MAX_NONR,
+            "non_rigid": False,
+            "imgs_ordered": True,
+            "align_to_reference": True,
+            "do_micro": False,
+            "crop": "overlap",
+        },
+        {
+            "name": "fallback_rigid_800_smallset",
+            "slides": sorted(set(small_set)),
+            "max_proc": FALLBACK2_MAX_PROC,
+            "max_nonrigid": FALLBACK2_MAX_NONR,
+            "non_rigid": False,
+            "imgs_ordered": True,
+            "align_to_reference": True,
+            "do_micro": False,
+            "crop": "overlap",
+        },
+    ]
+
     src_dir = Path(os.path.commonpath([str(p.parent) for p in case_group.slides]))
-    try:
-        registrar = registration.Valis(
-            str(src_dir),
-            str(results_dst_dir),
-            max_processed_image_dim_px=max_proc,
-            max_non_rigid_registration_dim_px=max_nonrigid,
-            create_masks=True,
-            reference_img_f=str(case_group.reference_slide),
-            img_list=[str(p) for p in case_group.slides],
-            micro_rigid_registrar_cls=None,
-            crop_for_rigid_reg=False,
-            check_for_reflections=False,
-        )
-        registrar.register()
-        if do_micro:
-            registrar.register_micro(
-                max_non_rigid_registration_dim_px=max_nonrigid,
-                align_to_reference=True,
+    last_error = ""
+    for i, st in enumerate(strategies, start=1):
+        if len(st["slides"]) < 2:
+            attempts.append(
+                RegAttempt(
+                    case_id=case_id,
+                    attempt=i,
+                    strategy=st["name"],
+                    non_rigid=bool(st["non_rigid"]),
+                    max_proc=int(st["max_proc"]),
+                    max_nonrigid=int(st["max_nonrigid"]),
+                    n_slides=len(st["slides"]),
+                    status="SKIP",
+                    error="n_slides<2",
+                )
             )
-        registrar.warp_and_save_slides(
-            str(registered_slide_dst_dir),
-            crop=crop_mode,
-            non_rigid=True,
+            continue
+        print(
+            f"[INFO] attempt={i} strategy={st['name']} n_slides={len(st['slides'])} "
+            f"max_proc={st['max_proc']} max_nonrigid={st['max_nonrigid']} non_rigid={st['non_rigid']}"
         )
-    finally:
         try:
-            registration.kill_jvm()
-        except Exception:
-            pass
+            registrar = registration.Valis(
+                str(src_dir),
+                str(results_dst_dir),
+                max_processed_image_dim_px=int(st["max_proc"]),
+                max_non_rigid_registration_dim_px=int(st["max_nonrigid"]),
+                create_masks=True,
+                reference_img_f=str(case_group.reference_slide),
+                img_list=[str(p) for p in st["slides"]],
+                imgs_ordered=bool(st["imgs_ordered"]),
+                align_to_reference=bool(st["align_to_reference"]),
+                micro_rigid_registrar_cls=None,
+                crop_for_rigid_reg=False,
+                check_for_reflections=False,
+            )
+            registrar.register()
+            if bool(st["do_micro"]):
+                registrar.register_micro(
+                    max_non_rigid_registration_dim_px=int(st["max_nonrigid"]),
+                    align_to_reference=True,
+                )
+            registrar.warp_and_save_slides(
+                str(registered_slide_dst_dir),
+                crop=str(st["crop"]),
+                non_rigid=bool(st["non_rigid"]),
+            )
+            attempts.append(
+                RegAttempt(
+                    case_id=case_id,
+                    attempt=i,
+                    strategy=st["name"],
+                    non_rigid=bool(st["non_rigid"]),
+                    max_proc=int(st["max_proc"]),
+                    max_nonrigid=int(st["max_nonrigid"]),
+                    n_slides=len(st["slides"]),
+                    status="SUCCESS",
+                    error="",
+                )
+            )
+            return attempts
+        except Exception as e:
+            last_error = str(e)
+            attempts.append(
+                RegAttempt(
+                    case_id=case_id,
+                    attempt=i,
+                    strategy=st["name"],
+                    non_rigid=bool(st["non_rigid"]),
+                    max_proc=int(st["max_proc"]),
+                    max_nonrigid=int(st["max_nonrigid"]),
+                    n_slides=len(st["slides"]),
+                    status="FAIL",
+                    error=str(e),
+                )
+            )
+        finally:
+            try:
+                registration.kill_jvm()
+            except Exception:
+                pass
+
+    raise RuntimeError(f"all registration strategies failed: {last_error}")
 
 
 def print_case_preview(case_groups: Sequence[CaseGroup], limit_cases: int, limit_slides: int) -> None:
@@ -304,6 +502,7 @@ def parse_args() -> argparse.Namespace:
         help="Path to save skipped case report. Default: <results-base>/skipped_cases_he_rule.tsv",
     )
     p.add_argument("--big-side-px", type=int, default=12000, help="Any slide edge >= this is treated as BIG case")
+    p.add_argument("--huge-side-px", type=int, default=HUGE_SIDE_PX, help="Any slide edge >= this triggers hard downgrade")
     p.add_argument("--run-micro", action="store_true", help="Enable register_micro on non-BIG cases")
     p.add_argument("--dry-run", action="store_true", help="Only print parsed case groups and filenames")
     p.add_argument("--limit-cases", type=int, default=50, help="Preview max case groups to print")
@@ -313,6 +512,13 @@ def parse_args() -> argparse.Namespace:
         "--dedup-stain",
         action="store_true",
         help="Keep only one slide per canonical stain (e.g. HE/HE_v2 -> pick one)",
+    )
+    p.add_argument("--tissue-min-frac", type=float, default=0.01, help="Min tissue fraction for non-reference slides")
+    p.add_argument("--disable-tissue-filter", action="store_true", help="Disable thumbnail tissue fraction filter")
+    p.add_argument(
+        "--attempt-log",
+        default=None,
+        help="Path to save registration attempts report. Default: <results-base>/registration_attempts.tsv",
     )
     return p.parse_args()
 
@@ -370,20 +576,46 @@ def main() -> None:
         print("[INFO] please run this script in VALIS docker image: cdgatenbee/valis-wsi:1.2.0")
         sys.exit(1)
 
+    all_attempts: List[RegAttempt] = []
     for cg in case_groups:
         try:
-            run_case_registration(
+            case_attempts = run_case_registration(
                 case_group=cg,
                 results_base=results_base,
                 big_side_px=args.big_side_px,
+                huge_side_px=args.huge_side_px,
                 run_micro=args.run_micro,
+                tissue_min_frac=args.tissue_min_frac,
+                use_tissue_filter=(not args.disable_tissue_filter),
             )
+            all_attempts.extend(case_attempts)
         except Exception as e:
             print(f"[ERROR] case={cg.case_id} failed: {e}")
+            all_attempts.append(
+                RegAttempt(
+                    case_id=cg.case_id,
+                    attempt=0,
+                    strategy="terminal",
+                    non_rigid=False,
+                    max_proc=0,
+                    max_nonrigid=0,
+                    n_slides=len(cg.slides),
+                    status="FAIL",
+                    error=str(e),
+                )
+            )
             try:
                 registration.kill_jvm()
             except Exception:
                 pass
+
+    attempt_log = (
+        Path(args.attempt_log).expanduser().resolve()
+        if args.attempt_log
+        else (results_base / "registration_attempts.tsv")
+    )
+    write_attempt_report(all_attempts, attempt_log)
+    print(f"[INFO] registration attempt report saved: {attempt_log}")
 
 
 if __name__ == "__main__":
