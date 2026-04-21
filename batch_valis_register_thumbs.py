@@ -9,6 +9,34 @@ from typing import Dict, Iterable, List, Optional, Sequence, Tuple
 
 SUPPORTED_EXTS = {".mrxs", ".svs", ".ndpi", ".svslide", ".tif", ".tiff"}
 DEFAULT_REF_STAINS = ["HE", "H&E", "HEMATOXYLIN_EOSIN"]
+DEFAULT_STAIN_ALIASES = [
+    (r"CK\W*PAN|PAN\W*CK|CK\{PAN\}|CK_PAN", "CK_PAN"),
+    (r"H\s*&\s*E|HEMATOXYLIN[_\s-]*EOSIN|\bHE\b", "HE"),
+    (r"GRANZYME\W*B|\bGRANB\b", "GRANB"),
+    (r"\bPERFORIN\b", "PERFORIN"),
+    (r"\bMASSON\b", "MASSON"),
+    (r"\bPASM\b", "PASM"),
+    (r"\bPAS\b", "PAS"),
+    (r"\bC4D\b", "C4D"),
+    (r"\bCMV\b", "CMV"),
+    (r"\bEBER\b", "EBER"),
+    (r"\bSV40\b", "SV40"),
+    (r"\bFOX[P]?[3]\b", "FOXP3"),
+    (r"\bKI\W*67\b", "KI67"),
+    (r"\bTLXW\b", "TLXW"),
+    (r"\bHB[C]AG\b", "HBCAG"),
+    (r"\bHB[S]AG\b", "HBSAG"),
+    (r"\bBM\b", "BM"),
+    (r"\bRS\b", "RS"),
+    (r"\bTIA\b", "TIA"),
+    (r"\bCD20\b", "CD20"),
+    (r"\bCD79\b", "CD79"),
+    (r"\bCD68\b", "CD68"),
+    (r"\bCD8\b", "CD8"),
+    (r"\bCD4\b", "CD4"),
+    (r"\bCD3\b", "CD3"),
+    (r"\bCK\b", "CK"),
+]
 
 DEF_MAX_PROC = 1500
 DEF_MAX_NONR = 2200
@@ -26,11 +54,22 @@ class CaseGroup:
     reference_slide: Path
 
 
+@dataclass
+class SkippedCase:
+    case_id: str
+    reason: str
+    details: str
+
+
 def normalize_stain(stain: str) -> str:
-    s = stain.strip().upper()
-    if s in {"H&E", "HE", "H E"}:
-        return "HE"
-    return s.replace("&", "").replace(" ", "_")
+    raw = stain.strip().upper().replace("Α", "A")
+    version_match = re.search(r"[_\s-]V(\d+)$", raw)
+    version = f"_V{version_match.group(1)}" if version_match else ""
+    cleaned = re.sub(r"[^A-Z0-9]+", " ", raw).strip()
+    for pat, canon in DEFAULT_STAIN_ALIASES:
+        if re.search(pat, cleaned):
+            return f"{canon}{version}"
+    return re.sub(r"[^A-Z0-9]+", "_", raw).strip("_")
 
 
 def parse_case_and_stain_from_filename(
@@ -38,15 +77,28 @@ def parse_case_and_stain_from_filename(
 ) -> Tuple[str, str]:
     stem = slide_path.stem
     if case_stain_splitter in stem:
-        parts = [x for x in stem.split(case_stain_splitter) if x]
-        if len(parts) >= 2:
-            case_id = parts[0]
-            stain = parts[-1]
+        parts = stem.split(case_stain_splitter, 1)
+        if len(parts) == 2:
+            case_id = parts[0].strip()
+            stain = parts[1].strip()
             return case_id, normalize_stain(stain)
     match = re.match(r"^([A-Za-z0-9]+)[-_ ]+(.+)$", stem)
     if match:
         return match.group(1), normalize_stain(match.group(2))
     return stem, "UNK"
+
+
+def stain_base(stain: str) -> str:
+    return re.sub(r"_V\d+$", "", stain)
+
+
+def choose_best_slide_for_stain(slides: Sequence[Path], base_stain: str) -> Path:
+    def score(p: Path) -> Tuple[int, int, str]:
+        stem = p.stem.upper()
+        has_exact = int(stem.endswith(f"-{base_stain}") or stem.endswith(f"_{base_stain}") or stem == base_stain)
+        return (-has_exact, len(p.name), p.name)
+
+    return sorted(slides, key=score)[0]
 
 
 def discover_slides(data_root: Path, recursive: bool) -> List[Path]:
@@ -61,9 +113,8 @@ def discover_slides(data_root: Path, recursive: bool) -> List[Path]:
 def build_case_groups(
     slides: Sequence[Path],
     case_stain_splitter: str,
-    ref_stains: Sequence[str],
-    strict_ref: bool,
-) -> List[CaseGroup]:
+    dedup_stain: bool,
+) -> Tuple[List[CaseGroup], List[SkippedCase]]:
     grouped: Dict[str, List[Path]] = defaultdict(list)
     stains_by_case: Dict[str, Dict[str, List[Path]]] = defaultdict(lambda: defaultdict(list))
 
@@ -72,28 +123,71 @@ def build_case_groups(
         grouped[case_id].append(slide)
         stains_by_case[case_id][stain].append(slide)
 
-    norm_ref_stains = [normalize_stain(s) for s in ref_stains]
     case_groups: List[CaseGroup] = []
+    skipped_cases: List[SkippedCase] = []
     for case_id in sorted(grouped):
-        stain_map = stains_by_case[case_id]
-        ref_slide: Optional[Path] = None
-        for ref_stain in norm_ref_stains:
-            if ref_stain in stain_map:
-                ref_slide = sorted(stain_map[ref_stain])[0]
-                break
-        if ref_slide is None:
-            if strict_ref:
-                continue
-            ref_slide = sorted(grouped[case_id])[0]
+        raw_stain_map = stains_by_case[case_id]
+        selected_slides = sorted(grouped[case_id])
+        selected_stain_map: Dict[str, List[Path]] = {k: sorted(v) for k, v in raw_stain_map.items()}
+
+        he_candidates: List[Path] = []
+        for st, items in selected_stain_map.items():
+            if stain_base(st) == "HE":
+                he_candidates.extend(items)
+        he_candidates = sorted(he_candidates)
+
+        if len(he_candidates) == 0:
+            skipped_cases.append(
+                SkippedCase(
+                    case_id=case_id,
+                    reason="MISSING_HE",
+                    details="No HE slide found in this case",
+                )
+            )
+            continue
+        if len(he_candidates) > 1:
+            skipped_cases.append(
+                SkippedCase(
+                    case_id=case_id,
+                    reason="MULTIPLE_HE",
+                    details=";".join(x.name for x in he_candidates),
+                )
+            )
+            continue
+        ref_slide = he_candidates[0]
+
+        if dedup_stain:
+            base_to_candidates: Dict[str, List[Path]] = defaultdict(list)
+            for st, items in selected_stain_map.items():
+                base_to_candidates[stain_base(st)].extend(items)
+            dedup_picks: List[Path] = []
+            dedup_map: Dict[str, List[Path]] = {}
+            for base, candidates in sorted(base_to_candidates.items()):
+                if base == "HE":
+                    picked = ref_slide
+                else:
+                    picked = choose_best_slide_for_stain(candidates, base)
+                dedup_picks.append(picked)
+                dedup_map[base] = [picked]
+            selected_slides = sorted(dedup_picks)
+            selected_stain_map = dedup_map
         case_groups.append(
             CaseGroup(
                 case_id=case_id,
-                slides=sorted(grouped[case_id]),
-                stain_map={k: sorted(v) for k, v in stain_map.items()},
+                slides=selected_slides,
+                stain_map=selected_stain_map,
                 reference_slide=ref_slide,
             )
         )
-    return case_groups
+    return case_groups, skipped_cases
+
+
+def write_skip_report(skipped_cases: Sequence[SkippedCase], skip_log: Path) -> None:
+    skip_log.parent.mkdir(parents=True, exist_ok=True)
+    with skip_log.open("w", encoding="utf-8") as f:
+        f.write("case_id\treason\tdetails\n")
+        for s in skipped_cases:
+            f.write(f"{s.case_id}\t{s.reason}\t{s.details}\n")
 
 
 def level0_max_side(slide_f: Path) -> int:
@@ -205,18 +299,21 @@ def parse_args() -> argparse.Namespace:
         help="Tokenizer between case id and stain in filename stem, default='-'",
     )
     p.add_argument(
-        "--ref-stains",
-        nargs="+",
-        default=DEFAULT_REF_STAINS,
-        help="Reference stain priority list",
+        "--skip-log",
+        default=None,
+        help="Path to save skipped case report. Default: <results-base>/skipped_cases_he_rule.tsv",
     )
-    p.add_argument("--strict-ref", action="store_true", help="Skip cases without requested reference stain")
     p.add_argument("--big-side-px", type=int, default=12000, help="Any slide edge >= this is treated as BIG case")
     p.add_argument("--run-micro", action="store_true", help="Enable register_micro on non-BIG cases")
     p.add_argument("--dry-run", action="store_true", help="Only print parsed case groups and filenames")
     p.add_argument("--limit-cases", type=int, default=50, help="Preview max case groups to print")
     p.add_argument("--limit-slides", type=int, default=30, help="Preview max slides per case to print")
     p.add_argument("--skip-done", action="store_true", help="Skip case_id if results-base/case_id already exists")
+    p.add_argument(
+        "--dedup-stain",
+        action="store_true",
+        help="Keep only one slide per canonical stain (e.g. HE/HE_v2 -> pick one)",
+    )
     return p.parse_args()
 
 
@@ -234,20 +331,31 @@ def main() -> None:
         print(f"[WARN] no supported WSI files under {data_root}")
         return
 
-    case_groups = build_case_groups(
+    case_groups, skipped_cases = build_case_groups(
         slides=slides,
         case_stain_splitter=args.case_stain_splitter,
-        ref_stains=args.ref_stains,
-        strict_ref=args.strict_ref,
+        dedup_stain=args.dedup_stain,
     )
     if not case_groups:
         print("[WARN] no valid case groups after parsing filenames")
-        return
+    print(f"[INFO] skipped cases by HE rule: {len(skipped_cases)}")
+    for s in skipped_cases[:20]:
+        print(f"[WARN] skip {s.case_id}: {s.reason} ({s.details})")
+    if len(skipped_cases) > 20:
+        print("[INFO] ... skipped list truncated in console (see skip log file)")
 
     if args.skip_done and results_base.is_dir():
         done_cases = {d.name for d in results_base.iterdir() if d.is_dir()}
         case_groups = [cg for cg in case_groups if cg.case_id not in done_cases]
         print(f"[INFO] remaining cases after skip-done: {len(case_groups)}")
+
+    skip_log = Path(args.skip_log).expanduser().resolve() if args.skip_log else (results_base / "skipped_cases_he_rule.tsv")
+    write_skip_report(skipped_cases, skip_log)
+    print(f"[INFO] skip report saved: {skip_log}")
+
+    if not case_groups:
+        print("[WARN] no cases left for registration after HE rule/skip-done")
+        return
 
     print_case_preview(case_groups, limit_cases=args.limit_cases, limit_slides=args.limit_slides)
     if args.dry_run:
