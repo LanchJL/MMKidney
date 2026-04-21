@@ -236,6 +236,8 @@ def main():
     p.add_argument("--output-dir", required=True)
     p.add_argument("--patch-size", type=int, default=512)
     p.add_argument("--n-per-cluster", type=int, default=9)
+    p.add_argument("--n-cols", type=int, default=3, help="Montage columns")
+    p.add_argument("--cluster-col", type=str, default="final_cluster", help="Cluster column to group by")
     p.add_argument("--max-per-slide", type=int, default=2)
     p.add_argument(
         "--review-mode",
@@ -264,15 +266,16 @@ def main():
     id_col = "slide_id" if "slide_id" in df.columns else ("sample_id" if "sample_id" in df.columns else "")
     if not id_col:
         raise ValueError("patch-final missing slide_id/sample_id")
-    for c in ["final_cluster", "x", "y"]:
+    cluster_col = str(args.cluster_col)
+    for c in [cluster_col, "x", "y"]:
         if c not in df.columns:
             raise ValueError(f"patch-final missing {c}")
 
-    df["final_cluster"] = df["final_cluster"].astype(str)
+    df[cluster_col] = df[cluster_col].astype(str)
     df["x"] = pd.to_numeric(df["x"], errors="coerce").fillna(0).astype(int)
     df["y"] = pd.to_numeric(df["y"], errors="coerce").fillna(0).astype(int)
 
-    cluster_order = df["final_cluster"].value_counts()
+    cluster_order = df[cluster_col].value_counts()
     if args.top_n_clusters > 0:
         cluster_order = cluster_order.head(args.top_n_clusters)
 
@@ -280,7 +283,7 @@ def main():
     missing_wsi_rows = []
     per_cluster_stats = []
     for i, cluster_name in enumerate(cluster_order.index.tolist(), 1):
-        dc = df[df["final_cluster"] == cluster_name].copy()
+        dc = df[df[cluster_col] == cluster_name].copy()
         mode_to_sel = {}
         if args.review_mode in ("both", "consistency"):
             mode_to_sel["core"] = select_consistency_core(
@@ -299,7 +302,7 @@ def main():
                 max_per_slide=args.max_per_slide,
             )
 
-        cluster_stat = {"final_cluster": cluster_name}
+        cluster_stat = {"cluster_col": cluster_col, "cluster": cluster_name}
         has_any = False
         for mode_name, sel in mode_to_sel.items():
             if len(sel) == 0:
@@ -317,7 +320,7 @@ def main():
                 wsi_path = find_wsi_path(wsi_index, sid)
                 if not wsi_path:
                     missing_wsi_rows.append(
-                        {"mode": mode_name, "final_cluster": cluster_name, id_col: sid, "x": x, "y": y}
+                        {"mode": mode_name, "cluster_col": cluster_col, "cluster": cluster_name, id_col: sid, "x": x, "y": y}
                     )
                     continue
                 try:
@@ -330,7 +333,8 @@ def main():
                 out_rows.append(
                     {
                         "mode": mode_name,
-                        "final_cluster": cluster_name,
+                        "cluster_col": cluster_col,
+                        "cluster": cluster_name,
                         id_col: sid,
                         "x": x,
                         "y": y,
@@ -344,7 +348,7 @@ def main():
                 continue
 
             has_any = True
-            montage = make_montage(tiles, labels, n_cols=3, tile_size=256, pad=8)
+            montage = make_montage(tiles, labels, n_cols=max(1, int(args.n_cols)), tile_size=256, pad=8)
             out_png = out_dir / f"cluster_{cluster_name}_{mode_name}_top{len(tiles)}.png"
             montage.save(out_png)
             print(f"[saved] {out_png}")
