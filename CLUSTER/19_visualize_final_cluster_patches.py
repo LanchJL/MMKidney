@@ -39,9 +39,7 @@ def build_wsi_index(wsi_dir: str) -> Dict[str, str]:
             full = os.path.join(root, fn)
             keys = {
                 stem,
-                stem.split("_")[0],
                 _norm_token(stem),
-                _norm_token(stem.split("_")[0]),
             }
             for k in keys:
                 if k and k not in index:
@@ -49,22 +47,28 @@ def build_wsi_index(wsi_dir: str) -> Dict[str, str]:
     return index
 
 
-def find_wsi_path(wsi_index: Dict[str, str], slide_id: str):
+def find_wsi_path(wsi_index: Dict[str, str], slide_id: str, allow_prefix_fallback: bool = False):
     sid = str(slide_id).strip()
     sid_stem = os.path.splitext(sid)[0]
     cands = [
         sid,
         sid_stem,
-        sid.split("_")[0],
-        sid_stem.split("_")[0],
         _norm_token(sid),
         _norm_token(sid_stem),
-        _norm_token(sid.split("_")[0]),
-        _norm_token(sid_stem.split("_")[0]),
     ]
     for k in cands:
         if k in wsi_index:
             return wsi_index[k]
+    if allow_prefix_fallback:
+        cands2 = [
+            sid.split("_")[0],
+            sid_stem.split("_")[0],
+            _norm_token(sid.split("_")[0]),
+            _norm_token(sid_stem.split("_")[0]),
+        ]
+        for k in cands2:
+            if k in wsi_index:
+                return wsi_index[k]
     return None
 
 
@@ -201,6 +205,26 @@ def read_patch(wsi_path: str, x: int, y: int, patch_size: int) -> Image.Image:
     return img
 
 
+def is_black_or_white_patch(img: Image.Image, black_thr=8.0, white_thr=245.0, std_thr=8.0) -> bool:
+    arr = np.asarray(img.convert("RGB"), dtype=np.float32)
+    mean = float(arr.mean())
+    std = float(arr.std())
+    if mean <= black_thr and std <= std_thr:
+        return True
+    if mean >= white_thr and std <= std_thr:
+        return True
+    return False
+
+
+def in_slide_overlap(selected_xy: List[Tuple[int, int]], x: int, y: int, min_center_dist: int) -> bool:
+    if min_center_dist <= 0:
+        return False
+    for sx, sy in selected_xy:
+        if abs(int(x) - int(sx)) < min_center_dist and abs(int(y) - int(sy)) < min_center_dist:
+            return True
+    return False
+
+
 def make_montage(
     tiles: List[Image.Image],
     labels: List[str],
@@ -251,6 +275,17 @@ def main():
         help="Disable prototype-anchored core selection",
     )
     p.add_argument("--top-n-clusters", type=int, default=0)
+    p.add_argument("--allow-prefix-fallback", action="store_true", help="Allow slide-id prefix fallback matching")
+    p.add_argument("--drop-black-white", action="store_true", help="Drop near pure black/white patches")
+    p.add_argument("--black-thr", type=float, default=8.0)
+    p.add_argument("--white-thr", type=float, default=245.0)
+    p.add_argument("--std-thr", type=float, default=8.0)
+    p.add_argument(
+        "--min-center-dist",
+        type=int,
+        default=384,
+        help="Avoid near-overlapped selections on same slide within each cluster/mode",
+    )
     args = p.parse_args()
 
     out_dir = Path(args.output_dir)
@@ -310,23 +345,40 @@ def main():
             tiles: List[Image.Image] = []
             labels: List[str] = []
             out_rows = []
+            selected_xy_per_slide: Dict[str, List[Tuple[int, int]]] = {}
 
             for _, r in sel.iterrows():
                 sid = str(r[id_col])
                 x, y = int(r["x"]), int(r["y"])
-                wsi_path = find_wsi_path(wsi_index, sid)
+                if in_slide_overlap(selected_xy_per_slide.get(sid, []), x, y, args.min_center_dist):
+                    continue
+                wsi_path = find_wsi_path(wsi_index, sid, allow_prefix_fallback=args.allow_prefix_fallback)
                 if not wsi_path:
                     missing_wsi_rows.append(
                         {"mode": mode_name, "final_cluster": cluster_name, id_col: sid, "x": x, "y": y}
                     )
                     continue
                 try:
-                    img = read_patch(wsi_path, x, y, args.patch_size)
+                    slide = openslide.OpenSlide(wsi_path)
+                    w, h = slide.dimensions
+                    if x < 0 or y < 0 or x + args.patch_size > w or y + args.patch_size > h:
+                        slide.close()
+                        continue
+                    img = slide.read_region((int(x), int(y)), 0, (args.patch_size, args.patch_size)).convert("RGB")
+                    slide.close()
                 except Exception:
+                    continue
+                if args.drop_black_white and is_black_or_white_patch(
+                    img,
+                    black_thr=args.black_thr,
+                    white_thr=args.white_thr,
+                    std_thr=args.std_thr,
+                ):
                     continue
                 txt = f"{sid[:12]} ({x},{y})"
                 tiles.append(img)
                 labels.append(txt)
+                selected_xy_per_slide.setdefault(sid, []).append((x, y))
                 out_rows.append(
                     {
                         "mode": mode_name,
