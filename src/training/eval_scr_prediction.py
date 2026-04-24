@@ -341,6 +341,14 @@ def _load_run_config(run_dir: Path) -> Dict:
         return json.load(f)
 
 
+def _load_norm_stats(run_dir: Path) -> Dict:
+    p = run_dir / "normalization_stats.json"
+    if not p.exists():
+        return {}
+    with p.open("r", encoding="utf-8") as f:
+        return json.load(f)
+
+
 def main():
     p = argparse.ArgumentParser("Evaluate trained short-horizon sCr model on one split")
     p.add_argument("--run-dir", default="")
@@ -381,9 +389,11 @@ def main():
     p.add_argument("--scr-seq-out-dim", type=int, default=64)
     args = p.parse_args()
 
+    norm_stats = {}
     if args.run_dir:
         run_dir = Path(args.run_dir)
         cfg = _load_run_config(run_dir)
+        norm_stats = _load_norm_stats(run_dir)
         for k in [
             "cohort_csv",
             "feature_manifest",
@@ -448,6 +458,8 @@ def main():
         split=args.split,
         max_patches_per_stain=args.max_patches,
     )
+    if norm_stats:
+        ds.set_normalization_stats(norm_stats)
 
     if len(ds) == 0:
         raise RuntimeError(f"Empty split after filtering: split={args.split}")
@@ -501,6 +513,7 @@ def main():
         "lab_features": args.lab_features,
         "scr_seq_features": args.scr_seq_features,
         "use_scr_seq": bool(args.use_scr_seq),
+        "norm_stats_loaded": bool(norm_stats),
     }
     _write_json(out_dir / f"{args.split}_run_meta.json", run_meta)
 

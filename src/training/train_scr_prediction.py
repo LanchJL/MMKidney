@@ -2,6 +2,7 @@ import argparse
 import csv
 import json
 import math
+import statistics
 from pathlib import Path
 from typing import Dict, List
 
@@ -170,6 +171,112 @@ def _move_to_device(batch: Dict, device: torch.device) -> Dict:
     return out
 
 
+def _fit_vec_stats(ds, sample_ids: List[str], cols: List[str], source_map: Dict[str, Dict]) -> Dict[str, List[float]]:
+    means = []
+    stds = []
+    for c in cols:
+        vals = []
+        for sid in sample_ids:
+            row = source_map.get(sid)
+            if row is None:
+                continue
+            fv = row.get(c, "")
+            try:
+                x = float(fv)
+            except Exception:
+                continue
+            vals.append(x)
+        if vals:
+            mu = float(sum(vals) / len(vals))
+            sd = float(statistics.pstdev(vals)) if len(vals) > 1 else 1.0
+            if sd < 1e-8:
+                sd = 1.0
+        else:
+            mu, sd = 0.0, 1.0
+        means.append(mu)
+        stds.append(sd)
+    return {"mean": means, "std": stds}
+
+
+def _fit_seq_stats(ds, sample_ids: List[str]) -> Dict[str, List[float]]:
+    v_vals = []
+    d_vals = []
+    for sid in sample_ids:
+        row = ds.rows_by_sid.get(sid)
+        if row is None:
+            continue
+        baseline = None
+        try:
+            baseline = float(row.get("baseline_scr_umol", ""))
+        except Exception:
+            baseline = None
+        seq_row = ds.scr_seq_map.get(sid)
+        if seq_row is None:
+            continue
+        try:
+            arr_days = json.loads(seq_row.get("scr_days_json", "[]") or "[]")
+            arr_vals = json.loads(seq_row.get("scr_values_umol_json", "[]") or "[]")
+        except Exception:
+            continue
+        for d, v in zip(arr_days, arr_vals):
+            try:
+                fd = float(d)
+                fv = float(v)
+            except Exception:
+                continue
+            if fd < 0 or fv <= 0:
+                continue
+            if baseline is not None and baseline > 1e-8:
+                vv = math.log(fv / baseline)
+            else:
+                vv = math.log(max(fv, 1e-8))
+            dd = fd / 365.0
+            v_vals.append(vv)
+            d_vals.append(dd)
+
+    def _mu_sd(xs):
+        if not xs:
+            return 0.0, 1.0
+        mu = float(sum(xs) / len(xs))
+        sd = float(statistics.pstdev(xs)) if len(xs) > 1 else 1.0
+        if sd < 1e-8:
+            sd = 1.0
+        return mu, sd
+
+    mu_v, sd_v = _mu_sd(v_vals)
+    mu_d, sd_d = _mu_sd(d_vals)
+    return {"mean": [mu_v, mu_d], "std": [sd_v, sd_d]}
+
+
+def _build_norm_stats(ds_train) -> Dict:
+    sids = [r["sample_id"] for r in ds_train.rows]
+    stats = {
+        "tabular": _fit_vec_stats(ds_train, sids, ds_train.tab_cols, ds_train.tab_map),
+        "lab": _fit_vec_stats(ds_train, sids, ds_train.lab_cols, ds_train.lab_map),
+        "scr_seq": _fit_seq_stats(ds_train, sids),
+    }
+    return stats
+
+
+def _split_target_coverage(ds, horizons: List[int]) -> Dict:
+    out = {"n_samples": len(ds), "by_horizon": {}}
+    for h in horizons:
+        n = 0
+        for r in ds.rows:
+            mk = r.get(f"mask_d{h}", "0")
+            try:
+                m = float(mk)
+            except Exception:
+                m = 0.0
+            if m > 0.5:
+                n += 1
+        out["by_horizon"][f"d{h}"] = {
+            "n_labeled": n,
+            "rate": (float(n) / float(len(ds))) if len(ds) > 0 else 0.0,
+        }
+    return out
+
+
 class SCRMultiHorizonModel(nn.Module):
     def __init__(
         self,
@@ -245,14 +352,19 @@ class SCRMultiHorizonModel(nn.Module):
         return out
 
 
-def masked_huber_loss(pred: torch.Tensor, target: torch.Tensor, mask: torch.Tensor, delta: float = 1.0) -> torch.Tensor:
+def masked_huber_loss(pred: torch.Tensor, target: torch.Tensor, mask: torch.Tensor, delta: float = 1.0, horizon_weights: torch.Tensor = None) -> torch.Tensor:
     err = pred - target
     abs_e = torch.abs(err)
     quad = torch.minimum(abs_e, torch.tensor(delta, device=abs_e.device))
     lin = abs_e - quad
     huber = 0.5 * quad * quad + delta * lin
-    num = (huber * mask).sum()
-    den = torch.clamp(mask.sum(), min=1.0)
+    if horizon_weights is not None:
+        w = horizon_weights.view(1, -1).to(huber.device)
+        wm = mask * w
+    else:
+        wm = mask
+    num = (huber * wm).sum()
+    den = torch.clamp(wm.sum(), min=1.0)
     return num / den
 
 
@@ -360,11 +472,18 @@ def main():
     p.add_argument("--scr-seq-out-dim", type=int, default=64)
     p.add_argument("--early-stop-patience", type=int, default=15)
     p.add_argument("--amp", action="store_true")
+    p.add_argument("--horizon-loss-weights", default="", help="comma weights aligned with --horizons-days, e.g. 1,1,1,0.9,0.9,0.8,0.8")
     args = p.parse_args()
 
     horizons = _parse_ints(args.horizons_days)
     if not horizons:
         raise ValueError("--horizons-days is empty")
+    if args.horizon_loss_weights:
+        w_list = [float(x.strip()) for x in args.horizon_loss_weights.split(",") if x.strip()]
+        if len(w_list) != len(horizons):
+            raise ValueError("--horizon-loss-weights length must equal horizons length")
+    else:
+        w_list = [1.0] * len(horizons)
 
     out_dir = Path(args.out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -417,6 +536,12 @@ def main():
         max_patches_per_stain=args.max_patches,
     )
 
+    # Fit normalization stats on train split only, then apply to all splits.
+    norm_stats = _build_norm_stats(ds_train)
+    ds_train.set_normalization_stats(norm_stats)
+    ds_val.set_normalization_stats(norm_stats)
+    ds_test.set_normalization_stats(norm_stats)
+
     if len(ds_train) == 0 or len(ds_val) == 0:
         raise RuntimeError(f"Empty split after filtering: train={len(ds_train)} val={len(ds_val)}")
 
@@ -459,10 +584,21 @@ def main():
     cfg = dict(vars(args))
     cfg["tab_in_dim"] = tab_in
     cfg["lab_in_dim"] = lab_in
+    cfg["horizon_loss_weights_effective"] = w_list
     _write_json(out_dir / "config.json", cfg)
+    _write_json(out_dir / "normalization_stats.json", norm_stats)
+    _write_json(
+        out_dir / "target_coverage.json",
+        {
+            "train": _split_target_coverage(ds_train, horizons),
+            "val": _split_target_coverage(ds_val, horizons),
+            "test": _split_target_coverage(ds_test, horizons),
+        },
+    )
 
     best = 1e18
     best_path = out_dir / "best_scr_model.pt"
+    loss_w = torch.tensor(w_list, dtype=torch.float32, device=device)
 
     for ep in range(1, args.epochs + 1):
         model.train()
@@ -473,7 +609,7 @@ def main():
             optim.zero_grad(set_to_none=True)
             with torch.cuda.amp.autocast(enabled=scaler.is_enabled()):
                 out = model(b)
-                loss = masked_huber_loss(out["pred"], b["target"], b["target_mask"], delta=1.0)
+                loss = masked_huber_loss(out["pred"], b["target"], b["target_mask"], delta=1.0, horizon_weights=loss_w)
             scaler.scale(loss).backward()
             torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
             scaler.step(optim)

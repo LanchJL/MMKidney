@@ -1,7 +1,7 @@
 import csv
 import json
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Tuple
 
 import torch
 from torch.utils.data import Dataset
@@ -168,9 +168,11 @@ class SCRPredictionDataset(Dataset):
                     self.wsi_map[sid] = rec.get("h5s", {})
 
         self.rows = [r for r in self.rows if (r.get("sample_id", "") in self.wsi_map)]
+        self.rows_by_sid = {r.get("sample_id", ""): r for r in self.rows}
 
         self.max_patches_per_stain = max_patches_per_stain
         self.reader = H5BagReader(cache_size=h5_cache_size)
+        self.norm_stats: Optional[Dict] = None
 
     def __len__(self):
         return len(self.rows)
@@ -187,7 +189,27 @@ class SCRPredictionDataset(Dataset):
             coords = coords[idx]
         return feats, coords
 
-    def _vectorize(self, row: Optional[Dict], cols: List[str]):
+    def set_normalization_stats(self, stats: Optional[Dict]) -> None:
+        self.norm_stats = stats
+
+    def _normalize_vector(self, vals: List[float], masks: List[float], modality: str) -> List[float]:
+        if not self.norm_stats:
+            return vals
+        mstats = self.norm_stats.get(modality, {})
+        means = mstats.get("mean", [])
+        stds = mstats.get("std", [])
+        if len(means) != len(vals) or len(stds) != len(vals):
+            return vals
+        out = []
+        for i, (v, m) in enumerate(zip(vals, masks)):
+            if m < 0.5:
+                out.append(0.0)
+                continue
+            sd = float(stds[i]) if float(stds[i]) > 1e-8 else 1.0
+            out.append((float(v) - float(means[i])) / sd)
+        return out
+
+    def _vectorize(self, row: Optional[Dict], cols: List[str], modality: str):
         if row is None:
             vals = torch.zeros(len(cols), dtype=torch.float32)
             mask = torch.zeros(len(cols), dtype=torch.float32)
@@ -202,6 +224,7 @@ class SCRPredictionDataset(Dataset):
             else:
                 vals.append(float(fv))
                 mask.append(1.0)
+        vals = self._normalize_vector(vals, mask, modality=modality)
         m = 1.0 if any(x > 0.0 for x in mask) else 0.0
         return torch.tensor(vals, dtype=torch.float32), torch.tensor(mask, dtype=torch.float32), m
 
@@ -227,7 +250,25 @@ class SCRPredictionDataset(Dataset):
                 ms.append(1.0)
         return torch.tensor(ys, dtype=torch.float32), torch.tensor(ms, dtype=torch.float32)
 
-    def _scr_sequence(self, sample_id: str):
+    def _seq_normalize(self, seq_x: torch.Tensor, seq_mask: torch.Tensor) -> torch.Tensor:
+        if not self.norm_stats:
+            return seq_x
+        sstats = self.norm_stats.get("scr_seq", {})
+        means = sstats.get("mean", [])
+        stds = sstats.get("std", [])
+        if len(means) != 2 or len(stds) != 2:
+            return seq_x
+        out = seq_x.clone()
+        for j in range(2):
+            sd = float(stds[j]) if float(stds[j]) > 1e-8 else 1.0
+            out[:, j] = torch.where(
+                seq_mask > 0.5,
+                (out[:, j] - float(means[j])) / sd,
+                torch.zeros_like(out[:, j]),
+            )
+        return out
+
+    def _scr_sequence(self, sample_id: str, baseline_scr_umol: Optional[float]):
         row = self.scr_seq_map.get(sample_id)
         max_len = self.scr_seq_max_len
         vals = [0.0] * max_len
@@ -266,8 +307,13 @@ class SCRPredictionDataset(Dataset):
         if n > 0:
             present = 1.0
             for i, (d, v) in enumerate(seq):
-                vals[i] = v
-                days[i] = d
+                # value channel uses relative baseline to reduce inter-patient scale variance.
+                if baseline_scr_umol is not None and baseline_scr_umol > 1e-8:
+                    vals[i] = float(torch.log(torch.tensor(v / baseline_scr_umol)).item())
+                else:
+                    vals[i] = float(torch.log(torch.tensor(max(v, 1e-8))).item())
+                # days channel in years
+                days[i] = float(d) / 365.0
                 msk[i] = 1.0
 
         x = torch.stack(
@@ -277,7 +323,9 @@ class SCRPredictionDataset(Dataset):
             ],
             dim=1,
         )
-        return x, torch.tensor(msk, dtype=torch.float32), present
+        m = torch.tensor(msk, dtype=torch.float32)
+        x = self._seq_normalize(x, m)
+        return x, m, present
 
     def __getitem__(self, idx: int):
         r = self.rows[idx]
@@ -299,9 +347,10 @@ class SCRPredictionDataset(Dataset):
         if not stains:
             raise RuntimeError(f"No readable stains for sample {sid}")
 
-        tab_vec, tab_mask, tab_present = self._vectorize(self.tab_map.get(sid), self.tab_cols)
-        lab_vec, lab_mask, lab_present = self._vectorize(self.lab_map.get(sid), self.lab_cols)
-        scr_seq, scr_seq_mask, scr_seq_present = self._scr_sequence(sid)
+        tab_vec, tab_mask, tab_present = self._vectorize(self.tab_map.get(sid), self.tab_cols, modality="tabular")
+        lab_vec, lab_mask, lab_present = self._vectorize(self.lab_map.get(sid), self.lab_cols, modality="lab")
+        baseline = _safe_float(r.get("baseline_scr_umol", ""))
+        scr_seq, scr_seq_mask, scr_seq_present = self._scr_sequence(sid, baseline_scr_umol=baseline)
         y, y_mask = self._targets(r)
 
         return {
