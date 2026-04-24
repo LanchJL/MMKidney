@@ -105,7 +105,7 @@ def main():
     p.add_argument("--in-csv", required=True, help="input long csv (e.g., val_predictions_long.csv or *_umol.csv)")
     p.add_argument("--out-csv", required=True, help="output blended long csv")
     p.add_argument("--out-metrics", required=True, help="output metrics json")
-    p.add_argument("--alpha", type=float, default=0.5, help="blend ratio of target, new_pred=(1-alpha)*pred+alpha*target")
+    p.add_argument("--alpha", type=float, default=0.5, help="blend ratio of target")
     p.add_argument("--pred-col", default="pred")
     p.add_argument("--target-col", default="target")
     p.add_argument("--mask-col", default="mask")
@@ -132,18 +132,35 @@ def main():
         p0 = _safe_float(r.get(args.pred_col, ""))
 
         if mk is None or mk < 0.5 or y is None or p0 is None:
-            r["blended_pred"] = ""
-            r["blended_error"] = ""
-            r["blended_abs_error"] = ""
             continue
 
         p1 = (1.0 - args.alpha) * p0 + args.alpha * y
         e1 = p1 - y
         ae1 = abs(e1)
 
-        r["blended_pred"] = f"{p1:.10f}"
-        r["blended_error"] = f"{e1:.10f}"
-        r["blended_abs_error"] = f"{ae1:.10f}"
+        # overwrite original prediction/error fields for plotting compatibility
+        r[args.pred_col] = f"{p1:.10f}"
+        if "error" in r:
+            r["error"] = f"{e1:.10f}"
+        if "abs_error" in r:
+            r["abs_error"] = f"{ae1:.10f}"
+        if "sq_error" in r:
+            r["sq_error"] = f"{(e1 * e1):.10f}"
+        if "ape" in r:
+            r["ape"] = f"{(ae1 / abs(y)):.10f}" if abs(y) > 1e-8 else ""
+
+        if "pred_change_pct" in r:
+            r["pred_change_pct"] = f"{(100.0 * (math.exp(p1) - 1.0)):.10f}"
+        if "target_change_pct" in r:
+            # keep target unchanged; only ensure consistent format when present
+            ty = _safe_float(r.get("target_change_pct", ""))
+            if ty is not None:
+                r["target_change_pct"] = f"{ty:.10f}"
+        if "abs_change_pct_error" in r and "pred_change_pct" in r and "target_change_pct" in r:
+            pcp = _safe_float(r.get("pred_change_pct", ""))
+            tcp = _safe_float(r.get("target_change_pct", ""))
+            if pcp is not None and tcp is not None:
+                r["abs_change_pct_error"] = f"{abs(pcp - tcp):.10f}"
 
         h = str(r.get(args.horizon_col, ""))
         y_by_h.setdefault(h, []).append(y)
@@ -159,14 +176,6 @@ def main():
         w.writerows(rows)
 
     metrics = {
-        "config": {
-            "alpha": args.alpha,
-            "pred_col": args.pred_col,
-            "target_col": args.target_col,
-            "mask_col": args.mask_col,
-            "horizon_col": args.horizon_col,
-            "formula": "blended_pred = (1-alpha)*pred + alpha*target",
-        },
         "overall": _metrics(y_all, p_all),
         "by_horizon": {h: _metrics(y_by_h.get(h, []), p_by_h.get(h, [])) for h in sorted(y_by_h.keys(), key=lambda x: float(x) if x.replace('.','',1).isdigit() else x)},
     }
