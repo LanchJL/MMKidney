@@ -7,11 +7,26 @@ from pathlib import Path
 
 
 def _read_csv(path: Path):
+    if not path.exists():
+        raise FileNotFoundError(
+            f"Required file not found: {path}\n"
+            "Run prognosis cohort build first:\n"
+            "  python3 -m src.datasets.build_prognosis_cohort "
+            "--cohort-tabular data/processed/cohort_tabular.csv "
+            "--tabular-features data/processed/tabular_features.csv "
+            "--lab-features data/processed/lab_features.csv "
+            "--out-dir data/processed --t0-source biopsy_proxy --endpoint graft_loss"
+        )
     with path.open("r", encoding="utf-8", newline="") as f:
         return list(csv.DictReader(f))
 
 
 def _load_manifest(path: Path):
+    if not path.exists():
+        raise FileNotFoundError(
+            f"Required file not found: {path}\n"
+            "Expected output from build_prognosis_cohort."
+        )
     with path.open("r", encoding="utf-8") as f:
         return json.load(f)
 

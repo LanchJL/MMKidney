@@ -57,6 +57,15 @@ LEAKAGE_KEYWORDS = [
 
 
 def _read_csv(path: Path) -> List[Dict[str, str]]:
+    if not path.exists():
+        raise FileNotFoundError(
+            f"Required file not found: {path}\n"
+            "Build prerequisites first:\n"
+            "  1) python3 -m src.datasets.build_cohort\n"
+            "  2) python3 -m src.datasets.build_tabular_features\n"
+            "  3) python3 -m src.datasets.build_lab_features\n"
+            "Then rerun build_prognosis_cohort."
+        )
     with path.open("r", encoding="utf-8", newline="") as f:
         return list(csv.DictReader(f))
 
