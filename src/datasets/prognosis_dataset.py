@@ -76,6 +76,7 @@ class PrognosisDataset(Dataset):
         split: Optional[str] = None,
         max_patches_per_stain: Optional[int] = None,
         h5_cache_size: int = 32,
+        exclude_feature_prefixes: Optional[List[str]] = None,
     ):
         self.rows = _read_csv(Path(prognosis_cohort_csv))
         if split is not None:
@@ -84,6 +85,9 @@ class PrognosisDataset(Dataset):
         with Path(feature_manifest_json).open("r", encoding="utf-8") as f:
             feat_manifest = json.load(f)
         self.tab_cols = list(feat_manifest.get("selected_input_features", []))
+        ex_pf = exclude_feature_prefixes or []
+        if ex_pf:
+            self.tab_cols = [c for c in self.tab_cols if not any(c.startswith(pf) for pf in ex_pf)]
         self.tab_group_ids = torch.tensor([_feature_group_id(k) for k in self.tab_cols], dtype=torch.long)
 
         self.tab_map = {r.get("sample_id", ""): r for r in _read_csv(Path(tabular_feature_csv))}

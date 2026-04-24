@@ -47,6 +47,9 @@ def main():
     p.add_argument("--lr", type=float, default=2e-4)
     p.add_argument("--weight-decay", type=float, default=1e-4)
     p.add_argument("--max-patches", type=int, default=512)
+    p.add_argument("--profile", choices=["baseline_v1", "full_v1", "full_v2"], default="full_v1")
+    p.add_argument("--strict-treatment-history", action="store_true")
+    p.add_argument("--save-plots", action="store_true")
     p.add_argument("--survival-head", choices=["cox", "discrete"], default="discrete")
     p.add_argument("--time-bins-days", default="365,1095,1825")
     p.add_argument("--horizons-days", default="365,1095,1825")
@@ -127,6 +130,10 @@ def main():
                 str(args.weight_decay),
                 "--max-patches",
                 str(args.max_patches),
+                "--profile",
+                args.profile,
+                "--strict-treatment-history" if args.strict_treatment_history else "",
+                "--save-plots" if args.save_plots else "",
                 "--survival-head",
                 args.survival_head,
                 "--time-bins-days",
@@ -134,6 +141,7 @@ def main():
                 "--horizons-days",
                 args.horizons_days,
             ]
+            cmd = [x for x in cmd if x != ""]
             print("[cv] running:", " ".join(cmd))
             subprocess.run(cmd, check=True)
 

@@ -12,7 +12,8 @@ from src.datasets.prognosis_dataset import PrognosisDataset, collate_prognosis_b
 from src.models.prognosis_heads import cox_ph_loss, discrete_time_nll, horizon_risk_from_logits, survival_probs_from_logits
 from src.models.prognosis_teacher_model import MMKidneyPrognosisTeacher
 from src.training.callbacks import EarlyStopper
-from src.training.prognosis_metrics import aggregate_horizon_metrics, harrell_c_index, horizon_metrics
+from src.training.prognosis_metrics import aggregate_horizon_metrics, harrell_c_index, horizon_metrics, risk_group_summary
+from src.training.prognosis_plots import plot_calibration_curve, plot_km_by_risk_group
 from src.utils.seed import set_seed
 
 
@@ -128,6 +129,7 @@ def evaluate(model, loader, device, head_type: str, bins_days: List[int], horizo
         hm[f"{h}_days"] = horizon_metrics(times, events, risk_h[h], h)
     out_m["horizons"] = hm
     out_m.update(aggregate_horizon_metrics(hm))
+    out_m["risk_groups"] = risk_group_summary(times, events, risk, n_groups=3)
     return {"metrics": out_m, "predictions": pred_rows}
 
 
@@ -156,6 +158,9 @@ def main():
     p.add_argument("--lab-dim", type=int, default=128)
     p.add_argument("--fused-dim", type=int, default=256)
     p.add_argument("--dropout", type=float, default=0.25)
+    p.add_argument("--profile", choices=["baseline_v1", "full_v1", "full_v2"], default="full_v1")
+    p.add_argument("--strict-treatment-history", action="store_true")
+    p.add_argument("--save-plots", action="store_true")
     p.add_argument("--survival-head", choices=["cox", "discrete"], default="discrete")
     p.add_argument("--time-bins-days", default="365,1095,1825")
     p.add_argument("--horizons-days", default="365,1095,1825")
@@ -170,6 +175,9 @@ def main():
 
     bins_days = _parse_bins(args.time_bins_days)
     horizons = _parse_bins(args.horizons_days)
+    use_clinicopath_encoder = args.profile in {"full_v1", "full_v2"}
+    strict_treatment = bool(args.strict_treatment_history or args.profile == "full_v2")
+    exclude_feature_prefixes = ["treatment_"] if strict_treatment else None
 
     manifest_paths = [args.train_manifest, args.val_manifest, args.test_manifest]
     ds_train = PrognosisDataset(
@@ -181,6 +189,7 @@ def main():
         manifest_paths=manifest_paths,
         split="train",
         max_patches_per_stain=args.max_patches,
+        exclude_feature_prefixes=exclude_feature_prefixes,
     )
     ds_val = PrognosisDataset(
         prognosis_cohort_csv=args.prognosis_cohort,
@@ -191,6 +200,7 @@ def main():
         manifest_paths=manifest_paths,
         split="val",
         max_patches_per_stain=args.max_patches,
+        exclude_feature_prefixes=exclude_feature_prefixes,
     )
     ds_test = PrognosisDataset(
         prognosis_cohort_csv=args.prognosis_cohort,
@@ -201,6 +211,7 @@ def main():
         manifest_paths=manifest_paths,
         split="test",
         max_patches_per_stain=args.max_patches,
+        exclude_feature_prefixes=exclude_feature_prefixes,
     )
 
     if len(ds_train) == 0 or len(ds_val) == 0:
@@ -234,7 +245,7 @@ def main():
         use_he_adapter=True,
         head_type=args.survival_head,
         n_bins=n_bins,
-        use_clinicopath_encoder=True,
+        use_clinicopath_encoder=use_clinicopath_encoder,
     ).to(device)
 
     optim = torch.optim.AdamW(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
@@ -243,7 +254,10 @@ def main():
 
     best = -1e9
     best_path = out_dir / "best_prognosis.pt"
-    _write_json(out_dir / "config.json", vars(args))
+    cfg = dict(vars(args))
+    cfg["use_clinicopath_encoder"] = bool(use_clinicopath_encoder)
+    cfg["strict_treatment_history_effective"] = bool(strict_treatment)
+    _write_json(out_dir / "config.json", cfg)
 
     for ep in range(1, args.epochs + 1):
         model.train()
@@ -286,6 +300,12 @@ def main():
     test_out = evaluate(model, test_loader, device, args.survival_head, bins_days=bins_days, horizons=horizons)
     _write_json(out_dir / "test_metrics.json", test_out["metrics"])
     _write_predictions(out_dir / "test_predictions.csv", test_out["predictions"])
+    if args.save_plots:
+        ok_km = plot_km_by_risk_group(test_out["predictions"], str(out_dir / "km_by_risk_group.png"), n_groups=3)
+        cal = {}
+        for h in horizons:
+            cal[str(h)] = plot_calibration_curve(test_out["predictions"], horizon_days=h, out_png=str(out_dir / f"calibration_{h}d.png"))
+        _write_json(out_dir / "plot_status.json", {"km_by_risk_group": bool(ok_km), "calibration": cal})
     print("[done] best_val_c_index:", float(best), "test_c_index:", float(test_out["metrics"]["c_index"]))
 
 

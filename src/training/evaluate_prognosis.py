@@ -7,6 +7,7 @@ from torch.utils.data import DataLoader
 
 from src.datasets.prognosis_dataset import PrognosisDataset, collate_prognosis_batch
 from src.models.prognosis_teacher_model import MMKidneyPrognosisTeacher
+from src.training.prognosis_plots import plot_calibration_curve, plot_km_by_risk_group
 from src.training.train_prognosis import _parse_bins, _write_json, _write_predictions, evaluate
 
 
@@ -33,6 +34,9 @@ def main():
     p.add_argument("--lab-dim", type=int, default=128)
     p.add_argument("--fused-dim", type=int, default=256)
     p.add_argument("--dropout", type=float, default=0.25)
+    p.add_argument("--profile", choices=["baseline_v1", "full_v1", "full_v2"], default="full_v1")
+    p.add_argument("--strict-treatment-history", action="store_true")
+    p.add_argument("--save-plots", action="store_true")
     p.add_argument("--survival-head", choices=["cox", "discrete"], default="discrete")
     p.add_argument("--time-bins-days", default="365,1095,1825")
     p.add_argument("--horizons-days", default="365,1095,1825")
@@ -43,6 +47,9 @@ def main():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     bins_days = _parse_bins(args.time_bins_days)
     horizons = _parse_bins(args.horizons_days)
+    use_clinicopath_encoder = args.profile in {"full_v1", "full_v2"}
+    strict_treatment = bool(args.strict_treatment_history or args.profile == "full_v2")
+    exclude_feature_prefixes = ["treatment_"] if strict_treatment else None
 
     manifest_paths = [args.train_manifest, args.val_manifest, args.test_manifest]
     ds = PrognosisDataset(
@@ -54,6 +61,7 @@ def main():
         manifest_paths=manifest_paths,
         split=args.split,
         max_patches_per_stain=args.max_patches,
+        exclude_feature_prefixes=exclude_feature_prefixes,
     )
     loader = DataLoader(ds, batch_size=args.batch_size, shuffle=False, num_workers=args.num_workers, collate_fn=collate_prognosis_batch)
 
@@ -80,7 +88,7 @@ def main():
         use_he_adapter=True,
         head_type=args.survival_head,
         n_bins=n_bins,
-        use_clinicopath_encoder=True,
+        use_clinicopath_encoder=use_clinicopath_encoder,
     ).to(device)
     model.load_state_dict(torch.load(args.ckpt, map_location=device), strict=True)
     model.eval()
@@ -88,6 +96,16 @@ def main():
     out = evaluate(model, loader, device, args.survival_head, bins_days=bins_days, horizons=horizons)
     _write_json(out_dir / f"{args.split}_metrics.json", out["metrics"])
     _write_predictions(out_dir / f"{args.split}_predictions.csv", out["predictions"])
+    if args.save_plots:
+        ok_km = plot_km_by_risk_group(out["predictions"], str(out_dir / f"{args.split}_km_by_risk_group.png"), n_groups=3)
+        cal = {}
+        for h in horizons:
+            cal[str(h)] = plot_calibration_curve(
+                out["predictions"],
+                horizon_days=h,
+                out_png=str(out_dir / f"{args.split}_calibration_{h}d.png"),
+            )
+        _write_json(out_dir / f"{args.split}_plot_status.json", {"km_by_risk_group": bool(ok_km), "calibration": cal})
     print("[eval] split:", args.split, "c_index:", float(out["metrics"]["c_index"]))
     print("[eval] outputs:", out_dir)
 
