@@ -111,6 +111,8 @@ class SCRPredictionDataset(Dataset):
         horizons_days: List[int],
         target_type: str = "delta_log",
         feature_manifest_json: str = "",
+        scr_seq_feature_csv: str = "",
+        scr_seq_max_len: int = 32,
         split: Optional[str] = None,
         max_patches_per_stain: Optional[int] = None,
         h5_cache_size: int = 32,
@@ -122,6 +124,7 @@ class SCRPredictionDataset(Dataset):
 
         self.horizons = list(horizons_days)
         self.target_type = target_type
+        self.scr_seq_max_len = int(max(1, scr_seq_max_len))
 
         tab_rows = _read_csv(Path(tabular_feature_csv))
         self.tab_map = {r.get("sample_id", ""): r for r in tab_rows}
@@ -146,6 +149,13 @@ class SCRPredictionDataset(Dataset):
         lab_rows = _read_csv(Path(lab_feature_csv))
         self.lab_map = {r.get("sample_id", ""): r for r in lab_rows}
         self.lab_cols = _infer_numeric_cols(lab_rows, meta_cols=META_LAB)
+
+        self.scr_seq_map = {}
+        if scr_seq_feature_csv:
+            p = Path(scr_seq_feature_csv)
+            if p.exists():
+                seq_rows = _read_csv(p)
+                self.scr_seq_map = {r.get("sample_id", ""): r for r in seq_rows}
 
         with Path(stain_vocab_path).open("r", encoding="utf-8") as f:
             self.stain_vocab = json.load(f)
@@ -217,6 +227,58 @@ class SCRPredictionDataset(Dataset):
                 ms.append(1.0)
         return torch.tensor(ys, dtype=torch.float32), torch.tensor(ms, dtype=torch.float32)
 
+    def _scr_sequence(self, sample_id: str):
+        row = self.scr_seq_map.get(sample_id)
+        max_len = self.scr_seq_max_len
+        vals = [0.0] * max_len
+        days = [0.0] * max_len
+        msk = [0.0] * max_len
+        present = 0.0
+        if row is None:
+            return (
+                torch.zeros((max_len, 2), dtype=torch.float32),
+                torch.zeros(max_len, dtype=torch.float32),
+                present,
+            )
+
+        try:
+            arr_days = json.loads(row.get("scr_days_json", "[]") or "[]")
+        except Exception:
+            arr_days = []
+        try:
+            arr_vals = json.loads(row.get("scr_values_umol_json", "[]") or "[]")
+        except Exception:
+            arr_vals = []
+
+        seq = []
+        for d, v in zip(arr_days, arr_vals):
+            fd = _safe_float(str(d))
+            fv = _safe_float(str(v))
+            if fd is None or fv is None:
+                continue
+            if fd < 0:
+                continue
+            seq.append((float(fd), float(fv)))
+        seq = sorted(seq, key=lambda x: x[0])
+        if len(seq) > max_len:
+            seq = seq[-max_len:]
+        n = len(seq)
+        if n > 0:
+            present = 1.0
+            for i, (d, v) in enumerate(seq):
+                vals[i] = v
+                days[i] = d
+                msk[i] = 1.0
+
+        x = torch.stack(
+            [
+                torch.tensor(vals, dtype=torch.float32),
+                torch.tensor(days, dtype=torch.float32),
+            ],
+            dim=1,
+        )
+        return x, torch.tensor(msk, dtype=torch.float32), present
+
     def __getitem__(self, idx: int):
         r = self.rows[idx]
         sid = r["sample_id"]
@@ -239,6 +301,7 @@ class SCRPredictionDataset(Dataset):
 
         tab_vec, tab_mask, tab_present = self._vectorize(self.tab_map.get(sid), self.tab_cols)
         lab_vec, lab_mask, lab_present = self._vectorize(self.lab_map.get(sid), self.lab_cols)
+        scr_seq, scr_seq_mask, scr_seq_present = self._scr_sequence(sid)
         y, y_mask = self._targets(r)
 
         return {
@@ -251,6 +314,9 @@ class SCRPredictionDataset(Dataset):
             "lab": lab_vec,
             "lab_mask": lab_mask,
             "modality_mask": torch.tensor([1.0, tab_present, lab_present], dtype=torch.float32),
+            "scr_seq": scr_seq,
+            "scr_seq_mask": scr_seq_mask,
+            "scr_seq_present": torch.tensor(float(scr_seq_present), dtype=torch.float32),
             "target": y,
             "target_mask": y_mask,
         }
@@ -267,6 +333,9 @@ def collate_scr_prediction_batch(samples: List[Dict]) -> Dict:
         "lab": torch.stack([s["lab"] for s in samples], dim=0),
         "lab_mask": torch.stack([s["lab_mask"] for s in samples], dim=0),
         "modality_mask": torch.stack([s["modality_mask"] for s in samples], dim=0),
+        "scr_seq": torch.stack([s["scr_seq"] for s in samples], dim=0),
+        "scr_seq_mask": torch.stack([s["scr_seq_mask"] for s in samples], dim=0),
+        "scr_seq_present": torch.stack([s["scr_seq_present"] for s in samples], dim=0),
         "target": torch.stack([s["target"] for s in samples], dim=0),
         "target_mask": torch.stack([s["target_mask"] for s in samples], dim=0),
     }

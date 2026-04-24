@@ -11,6 +11,7 @@ from tqdm import tqdm
 
 from src.datasets.scr_prediction_dataset import SCRPredictionDataset, collate_scr_prediction_batch
 from src.models.prognosis_teacher_model import MMKidneyPrognosisTeacher
+from src.models.scr_seq_encoder import SCRSeqEncoder
 from src.training.callbacks import EarlyStopper
 from src.utils.seed import set_seed
 
@@ -50,6 +51,9 @@ def _move_to_device(batch: Dict, device: torch.device) -> Dict:
     out["lab"] = batch["lab"].to(device)
     out["lab_mask"] = batch["lab_mask"].to(device)
     out["modality_mask"] = batch["modality_mask"].to(device)
+    out["scr_seq"] = batch["scr_seq"].to(device)
+    out["scr_seq_mask"] = batch["scr_seq_mask"].to(device)
+    out["scr_seq_present"] = batch["scr_seq_present"].to(device)
     out["target"] = batch["target"].to(device)
     out["target_mask"] = batch["target_mask"].to(device)
 
@@ -83,8 +87,14 @@ class SCRMultiHorizonModel(nn.Module):
         dropout: float = 0.25,
         he_stain_id: int = 0,
         use_clinicopath_encoder: bool = True,
+        use_scr_seq: bool = False,
+        scr_seq_hidden_dim: int = 64,
+        scr_seq_layers: int = 1,
+        scr_seq_out_dim: int = 64,
     ):
         super().__init__()
+        self.use_scr_seq = bool(use_scr_seq)
+        self.scr_seq_out_dim = int(scr_seq_out_dim) if self.use_scr_seq else 0
         self.backbone = MMKidneyPrognosisTeacher(
             feat_dim=feat_dim,
             proj_dim=proj_dim,
@@ -102,8 +112,20 @@ class SCRMultiHorizonModel(nn.Module):
             n_bins=4,
             use_clinicopath_encoder=use_clinicopath_encoder,
         )
+        if self.use_scr_seq:
+            self.scr_seq_encoder = SCRSeqEncoder(
+                in_dim=2,
+                hidden_dim=int(scr_seq_hidden_dim),
+                num_layers=int(scr_seq_layers),
+                out_dim=int(scr_seq_out_dim),
+                dropout=dropout,
+            )
+        else:
+            self.scr_seq_encoder = None
+
+        head_in = int(fused_dim) + self.scr_seq_out_dim
         self.reg_head = nn.Sequential(
-            nn.Linear(fused_dim, fused_dim),
+            nn.Linear(head_in, fused_dim),
             nn.LayerNorm(fused_dim),
             nn.GELU(),
             nn.Dropout(dropout),
@@ -112,7 +134,14 @@ class SCRMultiHorizonModel(nn.Module):
 
     def forward(self, batch: Dict) -> Dict:
         out = self.backbone(batch)
-        pred = self.reg_head(out["fused_repr"])
+        fused = out["fused_repr"]
+        if self.use_scr_seq and self.scr_seq_encoder is not None:
+            seq_repr = self.scr_seq_encoder(batch["scr_seq"], batch["scr_seq_mask"])
+            seq_present = batch["scr_seq_present"].unsqueeze(1)
+            seq_repr = seq_repr * seq_present
+            fused = torch.cat([fused, seq_repr], dim=1)
+            out["scr_seq_repr"] = seq_repr
+        pred = self.reg_head(fused)
         out["pred"] = pred
         return out
 
@@ -178,6 +207,7 @@ def main():
     p.add_argument("--feature-manifest", default="data/processed/prognosis_feature_manifest.json")
     p.add_argument("--tabular-features", default="data/processed/tabular_features.csv")
     p.add_argument("--lab-features", default="data/processed/lab_features.csv")
+    p.add_argument("--scr-seq-features", default="data/processed/scr_sequence_features.csv")
     p.add_argument("--stain-vocab", default="data/processed/stain_vocab.json")
     p.add_argument("--train-manifest", default="data/processed/manifests/train_manifest.jsonl")
     p.add_argument("--val-manifest", default="data/processed/manifests/val_manifest.jsonl")
@@ -202,6 +232,11 @@ def main():
     p.add_argument("--fused-dim", type=int, default=256)
     p.add_argument("--dropout", type=float, default=0.25)
     p.add_argument("--profile", choices=["baseline_v1", "full_v1"], default="full_v1")
+    p.add_argument("--use-scr-seq", action="store_true")
+    p.add_argument("--scr-seq-max-len", type=int, default=32)
+    p.add_argument("--scr-seq-hidden-dim", type=int, default=64)
+    p.add_argument("--scr-seq-layers", type=int, default=1)
+    p.add_argument("--scr-seq-out-dim", type=int, default=64)
     p.add_argument("--early-stop-patience", type=int, default=15)
     p.add_argument("--amp", action="store_true")
     args = p.parse_args()
@@ -227,6 +262,8 @@ def main():
         horizons_days=horizons,
         target_type=args.target_type,
         feature_manifest_json=args.feature_manifest,
+        scr_seq_feature_csv=args.scr_seq_features,
+        scr_seq_max_len=args.scr_seq_max_len,
         split="train",
         max_patches_per_stain=args.max_patches,
     )
@@ -239,6 +276,8 @@ def main():
         horizons_days=horizons,
         target_type=args.target_type,
         feature_manifest_json=args.feature_manifest,
+        scr_seq_feature_csv=args.scr_seq_features,
+        scr_seq_max_len=args.scr_seq_max_len,
         split="val",
         max_patches_per_stain=args.max_patches,
     )
@@ -251,6 +290,8 @@ def main():
         horizons_days=horizons,
         target_type=args.target_type,
         feature_manifest_json=args.feature_manifest,
+        scr_seq_feature_csv=args.scr_seq_features,
+        scr_seq_max_len=args.scr_seq_max_len,
         split="test",
         max_patches_per_stain=args.max_patches,
     )
@@ -284,6 +325,10 @@ def main():
         dropout=args.dropout,
         he_stain_id=he_stain_id,
         use_clinicopath_encoder=use_clinicopath_encoder,
+        use_scr_seq=args.use_scr_seq,
+        scr_seq_hidden_dim=args.scr_seq_hidden_dim,
+        scr_seq_layers=args.scr_seq_layers,
+        scr_seq_out_dim=args.scr_seq_out_dim,
     ).to(device)
 
     optim = torch.optim.AdamW(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
