@@ -36,6 +36,30 @@ Or directly:
 bash scripts/install_deps.sh
 ```
 
+### TRIDENT environment (recommended for end-to-end WSI)
+
+For `Section 7` (TRIDENT + CONCHv1.5), use a dedicated conda env:
+
+```bash
+conda env create -f envs/trident_environment.yml
+conda activate trident
+pip install -e external/TRIDENT
+```
+
+If the environment already exists, update it with:
+
+```bash
+conda env update -n trident -f envs/trident_environment.yml --prune
+conda activate trident
+pip install -e external/TRIDENT
+```
+
+To re-export current env after changes:
+
+```bash
+conda env export -n trident | sed '/^prefix:/d' > envs/trident_environment.yml
+```
+
 ## Quick Start (One Command Per Stage)
 
 ```bash
@@ -132,3 +156,36 @@ bash scripts/infer.sh \
   --ckpt outputs/teacher/best_teacher.pt \
   --out-dir outputs/explanations_teacher
 ```
+
+## 7) End-to-end single WSI (TRIDENT + CONCHv1.5 + MMKidney)
+
+This repo now includes a single-slide end-to-end inference entry:
+- tissue segmentation
+- patch coordinate extraction
+- CONCHv1.5 patch feature extraction
+- MMKidney WSI model prediction
+
+One command:
+
+```bash
+bash scripts/infer_single_wsi_end2end.sh \
+  --slide-path /abs/path/to/your_HE_slide.svs \
+  --stain-name HE \
+  --ckpt outputs/distill/best_distilled_student.pt \
+  --stain-vocab data/processed/stain_vocab.json \
+  --trident-dir external/TRIDENT \
+  --trident-job-dir outputs/trident_single_wsi \
+  --out-dir outputs/end2end_single_wsi \
+  --gpu 0 \
+  --segmenter hest \
+  --patch-encoder conch_v15 \
+  --mag 20 \
+  --patch-size 512 \
+  --overlap 0
+```
+
+Notes:
+- TRIDENT source is placed under `external/TRIDENT` and used as-is.
+- You can directly use the exported env file at `envs/trident_environment.yml`.
+- To force TRIDENT part to run in that env, pass `--trident-python /home/a6000/anaconda3/envs/trident/bin/python`.
+- If features are already extracted, add `--skip-trident` to only run MMKidney inference from existing `--trident-job-dir`.
