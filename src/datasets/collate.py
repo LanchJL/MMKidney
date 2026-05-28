@@ -29,3 +29,20 @@ def collate_patient_batch(samples: List[Dict]) -> Dict:
         "modality_mask": torch.stack([s["modality_mask"] for s in samples], dim=0),
     }
     return batch
+
+
+def collate_banff_patient_batch(samples: List[Dict]) -> Dict:
+    task_names = list(samples[0]["banff_labels"].keys())
+    return {
+        "sample_ids": [s["sample_id"] for s in samples],
+        "splits": [s.get("split", "") for s in samples],
+        "wsi": [{"stains": s["wsi_stains_list"]} for s in samples],
+        "banff_labels": {
+            task: torch.stack([s["banff_labels"][task] for s in samples], dim=0)
+            for task in task_names
+        },
+        "banff_masks": {
+            task: torch.stack([s["banff_masks"][task] for s in samples], dim=0)
+            for task in task_names
+        },
+    }

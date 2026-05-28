@@ -92,7 +92,71 @@ This creates processed assets in `data/processed/`, including:
 - `lab_features.csv`
 - `manifests/*.jsonl`
 
-## 3) Train WSI-only student (Stage A)
+## 3) Banff-first multitask path
+
+The Banff-first workflow builds WSI-level Banff labels from the censored pathology
+spreadsheet, reports which targets are currently trainable, and trains separate
+task heads with stain-aware supervision.
+
+```bash
+bash scripts/build_banff_first_manifests.sh
+```
+
+This writes:
+
+- `data/processed_banff/manifests/*_banff_manifest.jsonl`
+- `data/processed_banff/manifests/banff_feasibility_report.json`
+
+Core training defaults to `ci,ct,c4d,pvl,cg,g`. Sparse 0-3 targets with poor
+class support are trained as binary-first (`0` vs `>0`) by default. For `ci`
+and `ct`, the default input mode is `MASSON+HE` so good-quality HE can support
+cases where Masson is faded or missing:
+
+```bash
+python -m src.training.train_banff \
+  --train-manifest data/processed_banff/manifests/train_banff_manifest.jsonl \
+  --val-manifest data/processed_banff/manifests/val_banff_manifest.jsonl \
+  --test-manifest data/processed_banff/manifests/test_banff_manifest.jsonl \
+  --stain-vocab data/processed/stain_vocab.json \
+  --out-dir outputs/banff_first \
+  --tasks ci,ct,c4d,pvl,cg,g \
+  --binary-tasks auto \
+  --ci-ct-stain-mode masson_he
+```
+
+Run `ci/ct` ablations to verify whether HE is helping:
+
+```bash
+python -m src.training.train_banff \
+  --tasks ci,ct \
+  --binary-tasks none \
+  --ci-ct-stain-mode masson \
+  --out-dir outputs/banff_first_ci_ct_masson
+
+python -m src.training.train_banff \
+  --tasks ci,ct \
+  --binary-tasks none \
+  --ci-ct-stain-mode he \
+  --out-dir outputs/banff_first_ci_ct_he
+
+python -m src.training.train_banff \
+  --tasks ci,ct \
+  --binary-tasks none \
+  --ci-ct-stain-mode masson_he \
+  --out-dir outputs/banff_first_ci_ct_masson_he
+```
+
+Feasibility tiers in the report:
+
+- `ready_slide_mil`: enough WSI-aligned labels to start slide-level MIL.
+- `binary_first`: train `0` vs `>0` first; multiclass needs more positives or
+  stronger annotation.
+- `needs_extra_annotation`: WSI labels alone are not reliable enough for the
+  requested lesion score; add region/cell/tissue-compartment annotations before
+  making it a primary model target.
+- `exclude_now`: target is intentionally removed from the Banff-first setup.
+
+## 4) Train WSI-only student (Stage A)
 
 ```bash
 bash scripts/train_wsi.sh \
@@ -103,7 +167,7 @@ bash scripts/train_wsi.sh \
   --out-dir outputs/wsi
 ```
 
-## 4) Train tri-modal teacher (Stage B)
+## 5) Train tri-modal teacher (Stage B)
 
 ```bash
 bash scripts/train_teacher.sh \
@@ -115,7 +179,7 @@ bash scripts/train_teacher.sh \
   --out-dir outputs/teacher
 ```
 
-## 5) Distill to WSI student (Stage C)
+## 6) Distill to WSI student (Stage C)
 
 ```bash
 bash scripts/train_distill.sh \
@@ -131,7 +195,7 @@ bash scripts/train_distill.sh \
   --out-dir outputs/distill
 ```
 
-## 6) Inference + explanations
+## 7) Inference + explanations
 
 WSI student:
 
@@ -157,7 +221,7 @@ bash scripts/infer.sh \
   --out-dir outputs/explanations_teacher
 ```
 
-## 7) End-to-end single WSI (TRIDENT + CONCHv1.5 + MMKidney)
+## 8) End-to-end single WSI (TRIDENT + CONCHv1.5 + MMKidney)
 
 This repo now includes a single-slide end-to-end inference entry:
 - tissue segmentation
