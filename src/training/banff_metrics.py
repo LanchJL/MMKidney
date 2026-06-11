@@ -33,16 +33,30 @@ def summarize_banff_metrics(
         accuracy = float((pred == yy).float().mean().item())
         recalls = []
         class_counts = {}
+        pred_class_counts = {}
+        classes = sorted(set(yy.tolist()) | set(pred.tolist()))
         for cls in sorted(set(yy.tolist())):
             cls_mask = yy == int(cls)
             class_counts[str(int(cls))] = int(cls_mask.sum().item())
             recalls.append(float((pred[cls_mask] == yy[cls_mask]).float().mean().item()))
+        for cls in sorted(set(pred.tolist())):
+            pred_class_counts[str(int(cls))] = int((pred == int(cls)).sum().item())
+        confusion = []
+        for true_cls in classes:
+            row = []
+            true_mask = yy == int(true_cls)
+            for pred_cls in classes:
+                row.append(int((true_mask & (pred == int(pred_cls))).sum().item()))
+            confusion.append(row)
         macro_recall = float(sum(recalls) / len(recalls)) if recalls else None
         summary[task] = {
             "n": n,
             "accuracy": accuracy,
             "macro_recall": macro_recall,
             "class_counts": class_counts,
+            "pred_class_counts": pred_class_counts,
+            "confusion_classes": [int(c) for c in classes],
+            "confusion_matrix": confusion,
         }
         accuracies.append(accuracy)
         if macro_recall is not None:

@@ -12,6 +12,9 @@ from src.datasets.patient_dataset import apply_stain_dropout
 from src.datasets.stain_utils import normalize_stain_name
 
 
+LABEL_MODES = {"ordinal", "zero_vs_positive", "low_vs_high"}
+
+
 def read_banff_manifest(path: Path) -> List[Dict]:
     rows = []
     with path.open("r", encoding="utf-8") as f:
@@ -22,13 +25,25 @@ def read_banff_manifest(path: Path) -> List[Dict]:
     return rows
 
 
+def transform_banff_label(y: int, mode: str) -> int:
+    if mode not in LABEL_MODES:
+        raise ValueError(f"Unknown Banff label mode: {mode}. Expected one of {sorted(LABEL_MODES)}")
+    if mode == "ordinal":
+        return int(y)
+    if mode == "zero_vs_positive":
+        return 1 if int(y) > 0 else 0
+    return 1 if int(y) >= 2 else 0
+
+
 def labels_from_banff_record(
     rec: Dict,
     tasks: Optional[List[str]] = None,
     binary_tasks: Optional[List[str]] = None,
+    label_modes: Optional[Dict[str, str]] = None,
 ) -> Tuple[Dict[str, torch.Tensor], Dict[str, torch.Tensor]]:
     task_names = tasks or list(BANFF_TASKS)
     binary_set = set(binary_tasks or [])
+    mode_by_task = dict(label_modes or {})
     raw_labels = rec.get("banff_labels", {})
     raw_masks = rec.get("banff_masks", {})
     labels = {}
@@ -41,6 +56,8 @@ def labels_from_banff_record(
             m = 0.0
         elif task in binary_set:
             y = 1 if y > 0 else 0
+        else:
+            y = transform_banff_label(y, mode_by_task.get(task, "ordinal"))
         labels[task] = torch.tensor(y, dtype=torch.long)
         masks[task] = torch.tensor(m, dtype=torch.float32)
     return labels, masks
@@ -53,6 +70,7 @@ class BanffPatientDataset(Dataset):
         stain_vocab_path: str,
         tasks: Optional[List[str]] = None,
         binary_tasks: Optional[List[str]] = None,
+        label_modes: Optional[Dict[str, str]] = None,
         stain_dropout_p: float = 0.0,
         train_mode: bool = False,
         max_patches_per_stain: Optional[int] = None,
@@ -63,6 +81,7 @@ class BanffPatientDataset(Dataset):
             self.stain_vocab = json.load(f)
         self.tasks = tasks or list(BANFF_TASKS)
         self.binary_tasks = binary_tasks or []
+        self.label_modes = dict(label_modes or {})
         self.stain_dropout_p = float(stain_dropout_p)
         self.train_mode = bool(train_mode)
         self.max_patches_per_stain = max_patches_per_stain
@@ -107,7 +126,12 @@ class BanffPatientDataset(Dataset):
         if not stains:
             raise RuntimeError(f"No readable stains for sample {sid}")
 
-        labels, masks = labels_from_banff_record(rec, tasks=self.tasks, binary_tasks=self.binary_tasks)
+        labels, masks = labels_from_banff_record(
+            rec,
+            tasks=self.tasks,
+            binary_tasks=self.binary_tasks,
+            label_modes=self.label_modes,
+        )
         return {
             "sample_id": sid,
             "split": rec.get("split", ""),

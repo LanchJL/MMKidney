@@ -8,7 +8,7 @@ from torch.utils.data import DataLoader
 from tqdm import tqdm
 
 from src.banff.schema import BANFF_TASKS, CI_CT_STAIN_MODES, resolve_ci_ct_stains
-from src.datasets.banff_dataset import BanffPatientDataset
+from src.datasets.banff_dataset import LABEL_MODES, BanffPatientDataset
 from src.datasets.collate import collate_banff_patient_batch
 from src.losses.banff_loss import compute_banff_loss
 from src.models.banff_model import BanffFirstWSIModel
@@ -47,19 +47,58 @@ def parse_binary_tasks(value: str, tasks: List[str]) -> List[str]:
     return binary_tasks
 
 
+def parse_task_label_modes(value: str, tasks: List[str]) -> Dict[str, str]:
+    if not value or value.strip().lower() == "none":
+        return {}
+    out = {}
+    task_set = set(tasks)
+    for item in value.split(","):
+        item = item.strip()
+        if not item:
+            continue
+        if "=" not in item:
+            raise ValueError(f"Invalid --task-label-modes item: {item}. Expected task=mode.")
+        task, mode = [x.strip() for x in item.split("=", 1)]
+        if task not in task_set:
+            raise ValueError(f"Label mode override task must be included in --tasks: {task}")
+        if mode not in LABEL_MODES:
+            raise ValueError(f"Unknown label mode for {task}: {mode}. Expected one of {sorted(LABEL_MODES)}")
+        out[task] = mode
+    return out
+
+
+def build_label_modes(
+    tasks: List[str],
+    default_label_mode: str,
+    binary_tasks: List[str] = None,
+    overrides: Dict[str, str] = None,
+) -> Dict[str, str]:
+    if default_label_mode not in LABEL_MODES:
+        raise ValueError(f"Unknown --label-mode: {default_label_mode}. Expected one of {sorted(LABEL_MODES)}")
+    modes = {task: default_label_mode for task in tasks}
+    for task in binary_tasks or []:
+        modes[task] = "zero_vs_positive"
+    modes.update(overrides or {})
+    return modes
+
+
 def banff_task_config(
     tasks: List[str],
     binary_tasks: List[str] = None,
     ci_ct_stain_mode: str = "masson_he",
+    label_modes: Dict[str, str] = None,
 ) -> Dict[str, Dict]:
     binary_set = set(binary_tasks or [])
+    mode_by_task = dict(label_modes or {})
     ci_ct_stains = resolve_ci_ct_stains(ci_ct_stain_mode)
     config = {}
     for name in tasks:
-        stains = ci_ct_stains if name in {"ci", "ct"} else list(BANFF_TASKS[name].stains)
+        stains = ci_ct_stains if name in {"ci", "ct", "ifta"} else list(BANFF_TASKS[name].stains)
+        label_mode = "zero_vs_positive" if name in binary_set else mode_by_task.get(name, "ordinal")
         config[name] = {
-            "num_classes": 2 if name in binary_set else BANFF_TASKS[name].num_classes,
+            "num_classes": 2 if label_mode != "ordinal" else BANFF_TASKS[name].num_classes,
             "stains": stains,
+            "label_mode": label_mode,
         }
     return config
 
@@ -119,6 +158,8 @@ def main():
     parser.add_argument("--out-dir", default="outputs/banff_first")
     parser.add_argument("--tasks", default=",".join(DEFAULT_CORE_TASKS))
     parser.add_argument("--binary-tasks", default="auto")
+    parser.add_argument("--label-mode", choices=sorted(LABEL_MODES), default="ordinal")
+    parser.add_argument("--task-label-modes", default="none")
     parser.add_argument("--ci-ct-stain-mode", choices=sorted(CI_CT_STAIN_MODES), default="masson_he")
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--epochs", type=int, default=80)
@@ -141,14 +182,23 @@ def main():
 
     tasks = parse_tasks(args.tasks)
     binary_tasks = parse_binary_tasks(args.binary_tasks, tasks)
+    task_label_overrides = parse_task_label_modes(args.task_label_modes, tasks)
+    label_modes = build_label_modes(tasks, args.label_mode, binary_tasks, task_label_overrides)
     out_dir = Path(args.out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
-    task_config = banff_task_config(tasks, binary_tasks, ci_ct_stain_mode=args.ci_ct_stain_mode)
+    task_config = banff_task_config(
+        tasks,
+        binary_tasks=[],
+        ci_ct_stain_mode=args.ci_ct_stain_mode,
+        label_modes=label_modes,
+    )
     save_json(
         str(out_dir / "tasks.json"),
         {
             "tasks": tasks,
             "binary_tasks": binary_tasks,
+            "label_mode": args.label_mode,
+            "task_label_modes": label_modes,
             "ci_ct_stain_mode": args.ci_ct_stain_mode,
             "task_config": task_config,
         },
@@ -161,7 +211,8 @@ def main():
         manifest_path=args.train_manifest,
         stain_vocab_path=args.stain_vocab,
         tasks=tasks,
-        binary_tasks=binary_tasks,
+        binary_tasks=[],
+        label_modes=label_modes,
         stain_dropout_p=args.stain_dropout,
         train_mode=True,
         max_patches_per_stain=args.max_patches,
@@ -170,7 +221,8 @@ def main():
         manifest_path=args.val_manifest,
         stain_vocab_path=args.stain_vocab,
         tasks=tasks,
-        binary_tasks=binary_tasks,
+        binary_tasks=[],
+        label_modes=label_modes,
         train_mode=False,
         max_patches_per_stain=args.max_patches,
     )
@@ -178,7 +230,8 @@ def main():
         manifest_path=args.test_manifest,
         stain_vocab_path=args.stain_vocab,
         tasks=tasks,
-        binary_tasks=binary_tasks,
+        binary_tasks=[],
+        label_modes=label_modes,
         train_mode=False,
         max_patches_per_stain=args.max_patches,
     )

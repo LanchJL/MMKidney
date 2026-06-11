@@ -37,6 +37,7 @@ def resolve_ci_ct_stains(mode: str) -> List[str]:
 BANFF_TASKS: Dict[str, BanffTaskSpec] = {
     "ci": BanffTaskSpec("ci", "ci", 4, list(CI_CT_STAIN_MODES["masson_he"])),
     "ct": BanffTaskSpec("ct", "ct", 4, list(CI_CT_STAIN_MODES["masson_he"])),
+    "ifta": BanffTaskSpec("ifta", "__derived_ifta_grade__", 4, list(CI_CT_STAIN_MODES["masson_he"])),
     "c4d": BanffTaskSpec("c4d", "C4d.1", 4, ["C4d"]),
     "pvl": BanffTaskSpec("pvl", "pvl", 4, ["SV40"]),
     "cg": BanffTaskSpec("cg", "cg", 4, ["BM", "PASM"]),

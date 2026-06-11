@@ -109,6 +109,24 @@ def test_labels_from_banff_record_can_collapse_binary_first_tasks():
     assert masks["c4d"].item() == 1.0
 
 
+def test_labels_from_banff_record_supports_low_vs_high_label_mode():
+    rec = {
+        "banff_labels": {"ci": 1, "ct": 2, "ifta": 3},
+        "banff_masks": {"ci": 1.0, "ct": 1.0, "ifta": 1.0},
+    }
+
+    labels, masks = labels_from_banff_record(
+        rec,
+        tasks=["ci", "ct", "ifta"],
+        label_modes={"ci": "zero_vs_positive", "ct": "low_vs_high", "ifta": "low_vs_high"},
+    )
+
+    assert labels["ci"].item() == 1
+    assert labels["ct"].item() == 1
+    assert labels["ifta"].item() == 1
+    assert masks["ifta"].item() == 1.0
+
+
 def test_summarize_banff_metrics_uses_masks():
     probs = {
         "ci": torch.tensor(
@@ -127,6 +145,8 @@ def test_summarize_banff_metrics_uses_masks():
     assert summary["ci"]["n"] == 2
     assert summary["ci"]["accuracy"] == 1.0
     assert summary["mean_accuracy"] == 1.0
+    assert summary["ci"]["pred_class_counts"] == {"0": 1, "2": 1}
+    assert summary["ci"]["confusion_matrix"] == [[1, 0], [0, 1]]
 
 
 def test_banff_task_config_can_switch_ci_ct_stain_mode():
@@ -138,3 +158,17 @@ def test_banff_task_config_can_switch_ci_ct_stain_mode():
 
     combined = banff_task_config(["ci"], binary_tasks=[], ci_ct_stain_mode="masson_he")
     assert combined["ci"]["stains"] == ["MASSON", "HE"]
+
+
+def test_banff_task_config_uses_label_modes_for_num_classes():
+    config = banff_task_config(
+        ["ci", "ct", "ifta"],
+        binary_tasks=[],
+        ci_ct_stain_mode="he",
+        label_modes={"ci": "zero_vs_positive", "ct": "low_vs_high", "ifta": "low_vs_high"},
+    )
+
+    assert config["ci"]["num_classes"] == 2
+    assert config["ct"]["num_classes"] == 2
+    assert config["ifta"]["num_classes"] == 2
+    assert config["ifta"]["stains"] == ["HE"]

@@ -146,6 +146,39 @@ python -m src.training.train_banff \
   --out-dir outputs/banff_first_ci_ct_masson_he
 ```
 
+Recommended first-pass chronic-injury validation uses binary label modes before
+returning to 0/1/2/3 ordinal scoring:
+
+```bash
+python -m src.training.train_banff \
+  --tasks ci \
+  --binary-tasks none \
+  --label-mode zero_vs_positive \
+  --ci-ct-stain-mode he \
+  --out-dir outputs/banff_first_ci_zero_vs_positive_he
+
+python -m src.training.train_banff \
+  --tasks ci \
+  --binary-tasks none \
+  --label-mode low_vs_high \
+  --ci-ct-stain-mode he \
+  --out-dir outputs/banff_first_ci_low_vs_high_he
+
+python -m src.training.train_banff \
+  --tasks ct \
+  --binary-tasks none \
+  --label-mode low_vs_high \
+  --ci-ct-stain-mode he \
+  --out-dir outputs/banff_first_ct_low_vs_high_he
+
+python -m src.training.train_banff \
+  --tasks ifta \
+  --binary-tasks none \
+  --label-mode low_vs_high \
+  --ci-ct-stain-mode he \
+  --out-dir outputs/banff_first_ifta_low_vs_high_he
+```
+
 Feasibility tiers in the report:
 
 - `ready_slide_mil`: enough WSI-aligned labels to start slide-level MIL.

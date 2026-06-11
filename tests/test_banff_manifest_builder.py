@@ -47,15 +47,20 @@ def test_build_banff_records_normalizes_labels_masks_and_derived_outputs():
 
     assert out[0]["banff_labels"]["ci"] == 1
     assert out[0]["banff_labels"]["ct"] == 2
+    assert out[0]["banff_labels"]["ifta"] == 2
     assert out[0]["banff_labels"]["c4d"] == 2
     assert out[0]["banff_labels"]["cg"] == 1
     assert out[0]["banff_masks"]["ci"] == 1.0
+    assert out[0]["banff_masks"]["ifta"] == 1.0
     assert out[0]["banff_masks"]["g"] == 0.0
     assert out[0]["derived"]["ifta_grade"] == 2
     assert out[0]["derived"]["pvn_class"] == 1
     assert out[1]["banff_masks"]["ci"] == 1.0
+    assert out[1]["banff_labels"]["ifta"] == 0
+    assert out[1]["banff_masks"]["ifta"] == 1.0
     assert out[1]["banff_masks"]["g"] == 1.0
     assert report["tasks"]["ci"]["aligned_count"] == 2
+    assert report["tasks"]["ifta"]["aligned_count"] == 2
     assert report["tasks"]["g"]["aligned_count"] == 1
 
 

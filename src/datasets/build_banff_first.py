@@ -68,6 +68,8 @@ def _has_task_stain(h5s: Dict[str, str], stains: List[str]) -> bool:
 
 
 def _row_label(row, source_col: str) -> Optional[int]:
+    if source_col == "__derived_ifta_grade__":
+        return derive_ifta_grade(row.get("ci"), row.get("ct"))
     if source_col not in row:
         return None
     score = parse_banff_score(row[source_col])
@@ -107,7 +109,7 @@ def build_banff_records(df: pd.DataFrame, wsi_records: List[Dict]) -> Tuple[List
                 stats[name]["class_counts"][str(label)] += 1
             if has_label and has_stain:
                 stats[name]["aligned_count"] += 1
-            if name in {"ci", "ct"} and has_label:
+            if name in {"ci", "ct", "ifta"} and has_label:
                 for mode, stains in CI_CT_STAIN_MODES.items():
                     if _has_task_stain(h5s, stains):
                         stats[name]["stain_mode_aligned_counts"][mode] += 1
@@ -153,7 +155,7 @@ def build_banff_records(df: pd.DataFrame, wsi_records: List[Dict]) -> Tuple[List
             "recommendation": feasibility.recommendation,
             "reason": feasibility.reason,
         }
-        if name in {"ci", "ct"}:
+        if name in {"ci", "ct", "ifta"}:
             task_report[name]["stain_mode_aligned_counts"] = {
                 mode: int(stats[name]["stain_mode_aligned_counts"].get(mode, 0))
                 for mode in CI_CT_STAIN_MODES
